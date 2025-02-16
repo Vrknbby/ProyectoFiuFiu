@@ -8,7 +8,7 @@ using System.Data;
 
 namespace PruebaUIs.DB
 {
-    class ConexionBD
+    public class ConexionBD
     {
         private readonly string cadenaConexion;
 
