@@ -1,0 +1,54 @@
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\bin\Debug\PruebaUIs.exe.config
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\bin\Debug\PruebaUIs.exe
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\bin\Debug\PruebaUIs.pdb
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\bin\Debug\MaterialSkin.dll
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.AssemblyReference.cache
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Properties.Resources.resources
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.GenerateResource.cache
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.CoreCompileInputs.cache
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.CopyComplete
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.exe
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.pdb
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Menu.resources
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Login.resources
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\bin\Debug\Interop.WMPLib.dll
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\obj\Debug\Interop.WMPLib.dll
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\ragna\Desktop\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.ResolveComReference.cache
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\bin\Debug\PruebaUIs.exe.config
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\bin\Debug\PruebaUIs.exe
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\bin\Debug\PruebaUIs.pdb
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\bin\Debug\MaterialSkin.dll
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\bin\Debug\Interop.WMPLib.dll
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.AssemblyReference.cache
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\obj\Debug\Interop.WMPLib.dll
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.ResolveComReference.cache
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Login.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Menu.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Properties.Resources.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.GenerateResource.cache
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.CoreCompileInputs.cache
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.CopyComplete
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.exe
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.pdb
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\bin\Debug\PruebaUIs.exe.config
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\bin\Debug\PruebaUIs.exe
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\bin\Debug\PruebaUIs.pdb
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\bin\Debug\MaterialSkin.dll
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\bin\Debug\Interop.WMPLib.dll
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\Interop.WMPLib.dll
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.ResolveComReference.cache
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Login.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Menu.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Properties.Resources.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.GenerateResource.cache
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.csproj.CopyComplete
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.exe
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.pdb
