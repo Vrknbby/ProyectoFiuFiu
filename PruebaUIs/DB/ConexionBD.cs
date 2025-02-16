@@ -8,5 +8,6 @@ namespace PruebaUIs.DB
 {
     class ConexionBD
     {
+        string Conn = "cadena de coneccioon";
     }
 }
