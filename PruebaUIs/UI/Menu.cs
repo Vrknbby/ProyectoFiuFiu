@@ -254,9 +254,7 @@ namespace PruebaUIs
                 string numeroStr = ultimoCodigo.Substring(1);
                 if (int.TryParse(numeroStr, out int numero)) nuevoNumero = numero + 1;
             }
-
             int longDigito = nuevoNumero.ToString().Length + 1;
-
             string nuevoCodigo = $"U{nuevoNumero:D9}";
             while (usuarios.Any(u => u.COD_USER == nuevoCodigo))
             {
