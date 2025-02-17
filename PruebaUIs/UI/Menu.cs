@@ -26,12 +26,12 @@ namespace PruebaUIs
         int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
         int nWidthEllipse, int nHeightEllipse);
 
-
+        UsuarioRepository usuarioRepository = new UsuarioRepository();
 
         public Menu()
         {
             InitializeComponent();
-
+            CargarUsuarios();
 
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 25, 25));
@@ -63,174 +63,12 @@ namespace PruebaUIs
             tabPage2.BackColor = Color.White;
         }
 
-        private void label24_Click(object sender, EventArgs e)
+
+        private void btnCompraArticulo_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox10_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialLabel12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
+            Compra_Articulo nuevoform = new Compra_Articulo();
+            nuevoform.Show();
+            this.Hide();
         }
 
 
@@ -240,7 +78,7 @@ namespace PruebaUIs
             UsuarioRepository usuarioRepository = new UsuarioRepository();
             DateTime fechaActual = DateTime.Now;
             Usuario user = null;
-            user = new Usuario(GenerarCodigoUsuario(), descripcionUserTxt.Text, correoUserTxt.Text, passwordUserTxt.Text, true, fechaActual);
+            //user = new Usuario(GenerarCodigoUsuario(), descripcionUserTxt.Text, correoUserTxt.Text, passwordUserTxt.Text, true, fechaActual);
             usuarioRepository.InsertarUsuario(user);
         }
 
@@ -264,6 +102,45 @@ namespace PruebaUIs
                 nuevoCodigo = $"U{nuevoNumero:D9}";
             }
             return nuevoCodigo;
+        }
+
+        private void btnUserRegistrar_Click_1(object sender, EventArgs e)
+        {
+            
+            DateTime fechaActual = DateTime.Now;
+            Usuario user = null;
+            user = new Usuario(GenerarCodigoUsuario(), descripcionUserTxt.Text, correoUserTxt.Text, passwordUserTxt.Text, true, fechaActual);
+            usuarioRepository.InsertarUsuario(user);
+            CargarUsuarios();
+        }
+
+        private void CargarUsuarios()
+        {
+            if (materialListView1.Columns.Count == 0)
+            {
+                materialListView1.Columns.Add("Cod_User", 150);
+                materialListView1.Columns.Add("Descripcion", 300);
+                materialListView1.Columns.Add("Email", 300);
+                materialListView1.Columns.Add("Clave", 150);
+                materialListView1.Columns.Add("Estado", 100);
+                materialListView1.Columns.Add("Fecha Creacion", 300);
+
+            }
+
+            materialListView1.Items.Clear();
+
+            List<Usuario> Usuarios = usuarioRepository.BuscarTodosLosUsuarios();
+
+            foreach (Usuario usuario in Usuarios)
+            {
+                ListViewItem item = new ListViewItem(usuario.COD_USER);
+                item.SubItems.Add(usuario.DES_USER);
+                item.SubItems.Add(usuario.EMAIL_USER);
+                item.SubItems.Add(usuario.CLAVE_USER);
+                item.SubItems.Add(usuario.FLG_EST_USER.ToString());
+                item.SubItems.Add(usuario.FEC_ABM.ToString());
+                materialListView1.Items.Add(item);
+            }
         }
     }
 }
