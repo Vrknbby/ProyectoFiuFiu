@@ -233,6 +233,8 @@ namespace PruebaUIs
 
         }
 
+
+        //SECCION USUSARIO
         private void btnUserRegistrar_Click(object sender, EventArgs e)
         {
             UsuarioRepository usuarioRepository = new UsuarioRepository();
