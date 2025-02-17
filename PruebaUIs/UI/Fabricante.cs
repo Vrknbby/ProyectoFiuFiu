@@ -13,17 +13,19 @@ using System.Windows.Forms;
 
 namespace PruebaUIs
 {
-    public partial class Login : MaterialForm
+    public partial class Fabricante : MaterialForm
     {
 
+        //VARIABLES PARA EL BORDE
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
         int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
         int nWidthEllipse, int nHeightEllipse);
 
-        public Login()
+        public Fabricante()
         {
             InitializeComponent();
+
 
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 25, 25));
@@ -39,22 +41,9 @@ namespace PruebaUIs
                 TextShade.WHITE);
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void Fabricante_Load(object sender, EventArgs e)
         {
-            
-        }
 
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            PasswordTxt.Password = !PasswordTxt.Password;
-        }
-
-        private void btnIngresar_Click(object sender, EventArgs e)
-        {
-            Menu nuevoform = new Menu();
-            nuevoform.Show();
-            this.Hide();
         }
     }
 }
