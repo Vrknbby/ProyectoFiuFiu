@@ -56,6 +56,6 @@ namespace PruebaUIs
             PasswordTxt.Password = !PasswordTxt.Password;
         }
 
-        
+      
     }
 }
