@@ -109,6 +109,9 @@ namespace PruebaUIs
             this.materialLabel22 = new MaterialSkin.Controls.MaterialLabel();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.btnUserRegistrar = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.passwordUserTxt = new MaterialSkin.Controls.MaterialTextBox();
             this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
             this.materialDivider6 = new MaterialSkin.Controls.MaterialDivider();
             this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
@@ -122,9 +125,6 @@ namespace PruebaUIs
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.passwordUserTxt = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.btnUserRegistrar = new MaterialSkin.Controls.MaterialButton();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -225,7 +225,7 @@ namespace PruebaUIs
             this.materialLabel26.Location = new System.Drawing.Point(30, 424);
             this.materialLabel26.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel26.Name = "materialLabel26";
-            this.materialLabel26.Size = new System.Drawing.Size(187, 19);
+            this.materialLabel26.Size = new System.Drawing.Size(187, 20);
             this.materialLabel26.TabIndex = 7;
             this.materialLabel26.Text = "Ajuste por Iventario Fisico:";
             // 
@@ -237,7 +237,7 @@ namespace PruebaUIs
             this.materialLabel23.Location = new System.Drawing.Point(31, 373);
             this.materialLabel23.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel23.Name = "materialLabel23";
-            this.materialLabel23.Size = new System.Drawing.Size(121, 19);
+            this.materialLabel23.Size = new System.Drawing.Size(121, 20);
             this.materialLabel23.TabIndex = 6;
             this.materialLabel23.Text = "Inventario Fisico:";
             // 
@@ -249,7 +249,7 @@ namespace PruebaUIs
             this.materialLabel24.Location = new System.Drawing.Point(30, 324);
             this.materialLabel24.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel24.Name = "materialLabel24";
-            this.materialLabel24.Size = new System.Drawing.Size(138, 19);
+            this.materialLabel24.Size = new System.Drawing.Size(138, 20);
             this.materialLabel24.TabIndex = 5;
             this.materialLabel24.Text = "Ajuste por Faltante:";
             // 
@@ -261,7 +261,7 @@ namespace PruebaUIs
             this.materialLabel11.Location = new System.Drawing.Point(30, 270);
             this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel11.Name = "materialLabel11";
-            this.materialLabel11.Size = new System.Drawing.Size(144, 19);
+            this.materialLabel11.Size = new System.Drawing.Size(143, 20);
             this.materialLabel11.TabIndex = 4;
             this.materialLabel11.Text = "Ajuste por Sobrante:";
             // 
@@ -273,7 +273,7 @@ namespace PruebaUIs
             this.materialLabel10.Location = new System.Drawing.Point(31, 215);
             this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel10.Name = "materialLabel10";
-            this.materialLabel10.Size = new System.Drawing.Size(188, 19);
+            this.materialLabel10.Size = new System.Drawing.Size(188, 20);
             this.materialLabel10.TabIndex = 3;
             this.materialLabel10.Text = "Ajuste por Error de Codigo:";
             // 
@@ -285,7 +285,7 @@ namespace PruebaUIs
             this.materialLabel9.Location = new System.Drawing.Point(30, 154);
             this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(189, 19);
+            this.materialLabel9.Size = new System.Drawing.Size(189, 20);
             this.materialLabel9.TabIndex = 2;
             this.materialLabel9.Text = "Entrada por Transferencia:";
             // 
@@ -297,7 +297,7 @@ namespace PruebaUIs
             this.materialLabel8.Location = new System.Drawing.Point(30, 94);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(179, 19);
+            this.materialLabel8.Size = new System.Drawing.Size(178, 20);
             this.materialLabel8.TabIndex = 1;
             this.materialLabel8.Text = "Salida por Transferencia:";
             // 
@@ -1686,7 +1686,7 @@ namespace PruebaUIs
             this.materialLabel18.Location = new System.Drawing.Point(31, 384);
             this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel18.Name = "materialLabel18";
-            this.materialLabel18.Size = new System.Drawing.Size(201, 19);
+            this.materialLabel18.Size = new System.Drawing.Size(198, 20);
             this.materialLabel18.TabIndex = 11;
             this.materialLabel18.Text = "Notas de Credito por Venta\r\n";
             // 
@@ -1698,7 +1698,7 @@ namespace PruebaUIs
             this.materialLabel19.Location = new System.Drawing.Point(31, 320);
             this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel19.Name = "materialLabel19";
-            this.materialLabel19.Size = new System.Drawing.Size(186, 19);
+            this.materialLabel19.Size = new System.Drawing.Size(185, 20);
             this.materialLabel19.TabIndex = 10;
             this.materialLabel19.Text = "Notas de Debito por Venta";
             // 
@@ -1710,7 +1710,7 @@ namespace PruebaUIs
             this.materialLabel20.Location = new System.Drawing.Point(31, 262);
             this.materialLabel20.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel20.Name = "materialLabel20";
-            this.materialLabel20.Size = new System.Drawing.Size(150, 19);
+            this.materialLabel20.Size = new System.Drawing.Size(150, 20);
             this.materialLabel20.TabIndex = 9;
             this.materialLabel20.Text = "Venta de Mercaderia:";
             // 
@@ -1722,7 +1722,7 @@ namespace PruebaUIs
             this.materialLabel21.Location = new System.Drawing.Point(31, 198);
             this.materialLabel21.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel21.Name = "materialLabel21";
-            this.materialLabel21.Size = new System.Drawing.Size(127, 19);
+            this.materialLabel21.Size = new System.Drawing.Size(127, 20);
             this.materialLabel21.TabIndex = 8;
             this.materialLabel21.Text = "Cierre de Pedidos:";
             // 
@@ -1734,7 +1734,7 @@ namespace PruebaUIs
             this.materialLabel22.Location = new System.Drawing.Point(31, 134);
             this.materialLabel22.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel22.Name = "materialLabel22";
-            this.materialLabel22.Size = new System.Drawing.Size(141, 19);
+            this.materialLabel22.Size = new System.Drawing.Size(141, 20);
             this.materialLabel22.TabIndex = 7;
             this.materialLabel22.Text = "Creacion de Pedido:";
             // 
@@ -1777,6 +1777,59 @@ namespace PruebaUIs
             this.materialCard1.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.materialCard1.Size = new System.Drawing.Size(1502, 749);
             this.materialCard1.TabIndex = 0;
+            // 
+            // btnUserRegistrar
+            // 
+            this.btnUserRegistrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnUserRegistrar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnUserRegistrar.Depth = 0;
+            this.btnUserRegistrar.HighEmphasis = true;
+            this.btnUserRegistrar.Icon = null;
+            this.btnUserRegistrar.Location = new System.Drawing.Point(1015, 238);
+            this.btnUserRegistrar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnUserRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnUserRegistrar.Name = "btnUserRegistrar";
+            this.btnUserRegistrar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnUserRegistrar.Size = new System.Drawing.Size(164, 36);
+            this.btnUserRegistrar.TabIndex = 178;
+            this.btnUserRegistrar.Text = "Registrar Usuario";
+            this.btnUserRegistrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnUserRegistrar.UseAccentColor = false;
+            this.btnUserRegistrar.UseVisualStyleBackColor = true;
+            this.btnUserRegistrar.Click += new System.EventHandler(this.btnUserRegistrar_Click_1);
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(719, 185);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(159, 20);
+            this.materialLabel1.TabIndex = 152;
+            this.materialLabel1.Text = "Confirmar contraseña:";
+            // 
+            // passwordUserTxt
+            // 
+            this.passwordUserTxt.AnimateReadOnly = false;
+            this.passwordUserTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.passwordUserTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordUserTxt.Depth = 0;
+            this.passwordUserTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.passwordUserTxt.Hint = "Ingrese su contraseña";
+            this.passwordUserTxt.LeadingIcon = null;
+            this.passwordUserTxt.Location = new System.Drawing.Point(894, 129);
+            this.passwordUserTxt.MaxLength = 50;
+            this.passwordUserTxt.MouseState = MaterialSkin.MouseState.OUT;
+            this.passwordUserTxt.Multiline = false;
+            this.passwordUserTxt.Name = "passwordUserTxt";
+            this.passwordUserTxt.Size = new System.Drawing.Size(276, 36);
+            this.passwordUserTxt.TabIndex = 151;
+            this.passwordUserTxt.Text = "";
+            this.passwordUserTxt.TrailingIcon = null;
+            this.passwordUserTxt.UseTallSize = false;
             // 
             // materialListView1
             // 
@@ -1919,7 +1972,7 @@ namespace PruebaUIs
             this.materialLabel4.Location = new System.Drawing.Point(719, 132);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(86, 19);
+            this.materialLabel4.Size = new System.Drawing.Size(86, 20);
             this.materialLabel4.TabIndex = 3;
             this.materialLabel4.Text = "Contraseña:";
             // 
@@ -1932,7 +1985,7 @@ namespace PruebaUIs
             this.materialLabel3.Location = new System.Drawing.Point(335, 134);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(51, 19);
+            this.materialLabel3.Size = new System.Drawing.Size(51, 20);
             this.materialLabel3.TabIndex = 2;
             this.materialLabel3.Text = "Correo:";
             // 
@@ -1945,7 +1998,7 @@ namespace PruebaUIs
             this.materialLabel2.Location = new System.Drawing.Point(335, 185);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(88, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(87, 20);
             this.materialLabel2.TabIndex = 1;
             this.materialLabel2.Text = "Descripcion:";
             // 
@@ -1978,59 +2031,6 @@ namespace PruebaUIs
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
-            // 
-            // passwordUserTxt
-            // 
-            this.passwordUserTxt.AnimateReadOnly = false;
-            this.passwordUserTxt.BackColor = System.Drawing.SystemColors.Window;
-            this.passwordUserTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordUserTxt.Depth = 0;
-            this.passwordUserTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.passwordUserTxt.Hint = "Ingrese su contraseña";
-            this.passwordUserTxt.LeadingIcon = null;
-            this.passwordUserTxt.Location = new System.Drawing.Point(894, 129);
-            this.passwordUserTxt.MaxLength = 50;
-            this.passwordUserTxt.MouseState = MaterialSkin.MouseState.OUT;
-            this.passwordUserTxt.Multiline = false;
-            this.passwordUserTxt.Name = "passwordUserTxt";
-            this.passwordUserTxt.Size = new System.Drawing.Size(276, 36);
-            this.passwordUserTxt.TabIndex = 151;
-            this.passwordUserTxt.Text = "";
-            this.passwordUserTxt.TrailingIcon = null;
-            this.passwordUserTxt.UseTallSize = false;
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(719, 185);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(159, 19);
-            this.materialLabel1.TabIndex = 152;
-            this.materialLabel1.Text = "Confirmar contraseña:";
-            // 
-            // btnUserRegistrar
-            // 
-            this.btnUserRegistrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnUserRegistrar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnUserRegistrar.Depth = 0;
-            this.btnUserRegistrar.HighEmphasis = true;
-            this.btnUserRegistrar.Icon = null;
-            this.btnUserRegistrar.Location = new System.Drawing.Point(1015, 238);
-            this.btnUserRegistrar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnUserRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnUserRegistrar.Name = "btnUserRegistrar";
-            this.btnUserRegistrar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnUserRegistrar.Size = new System.Drawing.Size(155, 36);
-            this.btnUserRegistrar.TabIndex = 178;
-            this.btnUserRegistrar.Text = "Registrar Usuario";
-            this.btnUserRegistrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnUserRegistrar.UseAccentColor = false;
-            this.btnUserRegistrar.UseVisualStyleBackColor = true;
-            this.btnUserRegistrar.Click += new System.EventHandler(this.btnUserRegistrar_Click_1);
             // 
             // Menu
             // 
