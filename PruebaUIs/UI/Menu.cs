@@ -186,5 +186,11 @@ namespace PruebaUIs
                 materialListView1.Items.Add(item);
             }
         }
+
+        private void btnPersona_Click(object sender, EventArgs e)
+        {
+            Persona nuevoform = new Persona();
+            nuevoform.Show();
+        }
     }
 }

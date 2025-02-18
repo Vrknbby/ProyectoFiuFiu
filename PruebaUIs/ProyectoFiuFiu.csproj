@@ -52,6 +52,12 @@
   <ItemGroup>
     <Compile Include="Model\Locacion.cs" />
     <Compile Include="Model\Proveedor.cs" />
+    <Compile Include="UI\Persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Persona.Designer.cs">
+      <DependentUpon>Persona.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repository\LocacionRepository.cs" />
     <Compile Include="Repository\ProveedorRepository.cs" />
     <Compile Include="UI\Fabricante.cs">
@@ -111,6 +117,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Persona.resx">
+      <DependentUpon>Persona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Provedor.resx">
       <DependentUpon>Provedor.cs</DependentUpon>
