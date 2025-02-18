@@ -112,7 +112,7 @@ namespace PruebaUIs
             user = new Usuario(GenerarCodigoUsuario(), descripcionUserTxt.Text, correoUserTxt.Text, passwordUserTxt.Text, true, fechaActual);
             usuarioRepository.InsertarUsuario(user);
         }
-
+       
 
     }
 }

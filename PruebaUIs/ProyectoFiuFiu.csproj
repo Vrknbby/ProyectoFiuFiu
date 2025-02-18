@@ -50,6 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Locacion.cs" />
+    <Compile Include="Model\Proveedor.cs" />
+    <Compile Include="Repository\LocacionRepository.cs" />
+    <Compile Include="Repository\ProveedorRepository.cs" />
     <Compile Include="UI\Fabricante.cs">
       <SubType>Form</SubType>
     </Compile>

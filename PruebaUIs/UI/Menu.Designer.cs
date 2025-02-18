@@ -2024,7 +2024,7 @@ namespace PruebaUIs
             this.btnUserRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnUserRegistrar.Name = "btnUserRegistrar";
             this.btnUserRegistrar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnUserRegistrar.Size = new System.Drawing.Size(155, 36);
+            this.btnUserRegistrar.Size = new System.Drawing.Size(164, 36);
             this.btnUserRegistrar.TabIndex = 178;
             this.btnUserRegistrar.Text = "Registrar Usuario";
             this.btnUserRegistrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
