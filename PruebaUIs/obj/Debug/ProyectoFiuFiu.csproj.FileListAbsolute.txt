@@ -58,6 +58,11 @@ C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuF
 C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\bin\Debug\Interop.WMPLib.dll
 C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\ProyectoFiuFiu.csproj.CopyComplete
+<<<<<<< HEAD
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Fabricante.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Compra_Articulo.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Provedor.resources
+=======
 C:\Users\CRISTIAN\Desktop\proyectofiufiu\PruebaUIs\bin\Debug\PruebaUIs.exe.config
 C:\Users\CRISTIAN\Desktop\proyectofiufiu\PruebaUIs\bin\Debug\PruebaUIs.exe
 C:\Users\CRISTIAN\Desktop\proyectofiufiu\PruebaUIs\bin\Debug\PruebaUIs.pdb
@@ -79,3 +84,4 @@ C:\Users\CRISTIAN\Desktop\proyectofiufiu\PruebaUIs\obj\Debug\ProyectoFiuFiu.cspr
 C:\Users\CRISTIAN\Desktop\proyectofiufiu\PruebaUIs\obj\Debug\ProyectoFiuFiu.csproj.CopyComplete
 C:\Users\CRISTIAN\Desktop\proyectofiufiu\PruebaUIs\obj\Debug\PruebaUIs.exe
 C:\Users\CRISTIAN\Desktop\proyectofiufiu\PruebaUIs\obj\Debug\PruebaUIs.pdb
+>>>>>>> Cristian

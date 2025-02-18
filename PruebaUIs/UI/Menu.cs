@@ -27,12 +27,12 @@ namespace PruebaUIs
         int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
         int nWidthEllipse, int nHeightEllipse);
 
-
+        UsuarioRepository usuarioRepository = new UsuarioRepository();
 
         public Menu()
         {
             InitializeComponent();
-
+            CargarUsuarios();
 
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 25, 25));
@@ -72,6 +72,17 @@ namespace PruebaUIs
             this.Hide();
         }
 
+
+        //SECCION USUSARIO
+        private void btnUserRegistrar_Click(object sender, EventArgs e)
+        {
+            UsuarioRepository usuarioRepository = new UsuarioRepository();
+            DateTime fechaActual = DateTime.Now;
+            Usuario user = null;
+            //user = new Usuario(GenerarCodigoUsuario(), descripcionUserTxt.Text, correoUserTxt.Text, passwordUserTxt.Text, true, fechaActual);
+            usuarioRepository.InsertarUsuario(user);
+        }
+
         public string GenerarCodigoUsuario()
         {
             UsuarioRepository usuarioRepository = new UsuarioRepository();
@@ -84,9 +95,7 @@ namespace PruebaUIs
                 string numeroStr = ultimoCodigo.Substring(1);
                 if (int.TryParse(numeroStr, out int numero)) nuevoNumero = numero + 1;
             }
-
             int longDigito = nuevoNumero.ToString().Length + 1;
-
             string nuevoCodigo = $"U{nuevoNumero:D9}";
             while (usuarios.Any(u => u.COD_USER == nuevoCodigo))
             {
@@ -98,8 +107,7 @@ namespace PruebaUIs
 
         private void btnUserRegistrar_Click_1(object sender, EventArgs e)
         {
-
-            UsuarioRepository usuarioRepository = new UsuarioRepository();
+            
 
             if (string.IsNullOrWhiteSpace(correoUserTxt.Text) || string.IsNullOrWhiteSpace(descripcionUserTxt.Text) || string.IsNullOrWhiteSpace(passwordUserTxt.Text) || string.IsNullOrWhiteSpace(confirmarPasswordUserTxt.Text))
             {
@@ -132,6 +140,7 @@ namespace PruebaUIs
 
             MessageBox.Show("Usuario registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            CargarUsuarios();
             LimpiarCampos();
         }
 
@@ -149,6 +158,33 @@ namespace PruebaUIs
             confirmarPasswordUserTxt.Clear();
         }
 
+        private void CargarUsuarios()
+        {
+            if (materialListView1.Columns.Count == 0)
+            {
+                materialListView1.Columns.Add("Cod_User", 150);
+                materialListView1.Columns.Add("Descripcion", 300);
+                materialListView1.Columns.Add("Email", 300);
+                materialListView1.Columns.Add("Clave", 150);
+                materialListView1.Columns.Add("Estado", 100);
+                materialListView1.Columns.Add("Fecha Creacion", 300);
 
+            }
+
+            materialListView1.Items.Clear();
+
+            List<Usuario> Usuarios = usuarioRepository.BuscarTodosLosUsuarios();
+
+            foreach (Usuario usuario in Usuarios)
+            {
+                ListViewItem item = new ListViewItem(usuario.COD_USER);
+                item.SubItems.Add(usuario.DES_USER);
+                item.SubItems.Add(usuario.EMAIL_USER);
+                item.SubItems.Add(usuario.CLAVE_USER);
+                item.SubItems.Add(usuario.FLG_EST_USER.ToString());
+                item.SubItems.Add(usuario.FEC_ABM.ToString());
+                materialListView1.Items.Add(item);
+            }
+        }
     }
 }
