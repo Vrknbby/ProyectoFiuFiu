@@ -167,5 +167,24 @@ namespace PruebaUIs.Repository
 
             return credencialesValidas;
         }
+
+        public bool CorreoExiste(string correo)
+        {
+            bool existe = false;
+
+            using (SqlConnection con = conexion.ObtenerConexion())
+            {
+                using (SqlCommand cmd = new SqlCommand("spGestionarUsuario", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@CACCION", "BUSCARCORREO");
+                    cmd.Parameters.AddWithValue("@EMAIL_USER", correo);
+
+                    existe = Convert.ToBoolean(cmd.ExecuteScalar());
+                }
+                con.Close();
+            }
+            return existe;
+        }
     }
 }
