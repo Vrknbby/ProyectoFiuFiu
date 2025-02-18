@@ -1,5 +1,7 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
+using PruebaUIs.Model;
+using PruebaUIs.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,5 +70,49 @@ namespace PruebaUIs
             nuevoform.Show();
             this.Hide();
         }
+
+        private void btnUserRegistrar_Click(object sender, EventArgs e)
+        {
+            UsuarioRepository usuarioRepository = new UsuarioRepository();
+            DateTime fechaActual = DateTime.Now;
+            Usuario user = null;
+            //user = new Usuario(GenerarCodigoUsuario(), descripcionUserTxt.Text, correoUserTxt.Text, passwordUserTxt.Text, true, fechaActual);
+            usuarioRepository.InsertarUsuario(user);
+        }
+
+        public string GenerarCodigoUsuario()
+        {
+            UsuarioRepository usuarioRepository = new UsuarioRepository();
+            List<Usuario> usuarios = usuarioRepository.BuscarTodosLosUsuarios();
+            string ultimoCodigo = usuarios.OrderByDescending(u => u.COD_USER).Select(u => u.COD_USER).FirstOrDefault();
+            int nuevoNumero = 1; 
+
+            if (!string.IsNullOrEmpty(ultimoCodigo))
+            {
+                string numeroStr = ultimoCodigo.Substring(1);
+                if (int.TryParse(numeroStr, out int numero)) nuevoNumero = numero + 1;
+            }
+
+            int longDigito = nuevoNumero.ToString().Length + 1;
+
+            string nuevoCodigo = $"U{nuevoNumero:D9}";
+            while (usuarios.Any(u => u.COD_USER == nuevoCodigo))
+            {
+                nuevoNumero++;
+                nuevoCodigo = $"U{nuevoNumero:D9}";
+            }
+            return nuevoCodigo;
+        }
+
+        private void btnUserRegistrar_Click_1(object sender, EventArgs e)
+        {
+            UsuarioRepository usuarioRepository = new UsuarioRepository();
+            DateTime fechaActual = DateTime.Now;
+            Usuario user = null;
+            user = new Usuario(GenerarCodigoUsuario(), descripcionUserTxt.Text, correoUserTxt.Text, passwordUserTxt.Text, true, fechaActual);
+            usuarioRepository.InsertarUsuario(user);
+        }
+       
+
     }
 }
