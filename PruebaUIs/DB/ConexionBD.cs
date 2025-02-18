@@ -14,7 +14,7 @@ namespace PruebaUIs.DB
 
         public ConexionBD()
         {
-            cadenaConexion = "Server=DESKTOP-GPBU513\\MSSQLSERVER02;Database=Prueba02;Integrated Security=True;";
+            cadenaConexion = "Server=DESKTOP-TP8INE4;Database=Prueba02;Integrated Security=True;";
         }
 
 
