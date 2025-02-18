@@ -23,11 +23,11 @@ namespace PruebaUIs
         private static extern IntPtr CreateRoundRectRgn(
         int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
         int nWidthEllipse, int nHeightEllipse);
-
+        UsuarioRepository usuarioRepository = new UsuarioRepository();
         public Login()
         {
             InitializeComponent();
-
+       
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 25, 25));
 
@@ -58,27 +58,41 @@ namespace PruebaUIs
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtIngresarUsuario.Text) || string.IsNullOrWhiteSpace(PasswordTxt.Text))
+        
+            if (txtIngresarUsuario.Text == "ADMIN" && PasswordTxt.Text == "ADMIN" && usuarioRepository.BuscarTodosLosUsuarios().Count == 0)
             {
-                MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                Menu nuevoform = new Menu();
+                nuevoform.Show();
+                this.Hide();
+            }
+            else
+            {
+                if (string.IsNullOrWhiteSpace(txtIngresarUsuario.Text) || string.IsNullOrWhiteSpace(PasswordTxt.Text))
+                {
+                    MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!ValidarCredenciales(txtIngresarUsuario.Text, PasswordTxt.Text))
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                Menu nuevoform = new Menu();
+                nuevoform.Show();
+                this.Hide();
             }
 
-            if (!ValidarCredenciales(txtIngresarUsuario.Text, PasswordTxt.Text))
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            Menu nuevoform = new Menu();
-            nuevoform.Show();
-            this.Hide();
+            
         }
 
         private bool ValidarCredenciales(string usuario, string contraseña)
         {
-            UsuarioRepository usuarioRepo = new UsuarioRepository();
-            return usuarioRepo.ValidarCredenciales(usuario, contraseña);
+            
+            return usuarioRepository.ValidarCredenciales(usuario, contraseña);
         }
+
+
+        
     }
 }
