@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -107,11 +108,54 @@ namespace PruebaUIs
         private void btnUserRegistrar_Click_1(object sender, EventArgs e)
         {
             
+
+            if (string.IsNullOrWhiteSpace(correoUserTxt.Text) || string.IsNullOrWhiteSpace(descripcionUserTxt.Text) || string.IsNullOrWhiteSpace(passwordUserTxt.Text) || string.IsNullOrWhiteSpace(confirmarPasswordUserTxt.Text))
+            {
+                MessageBox.Show("Porfavor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!ValidarFormatoCorreo(correoUserTxt.Text))
+            {
+                MessageBox.Show("El correo no tiene un formato válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (usuarioRepository.CorreoExiste(correoUserTxt.Text))
+            {
+                MessageBox.Show("El correo ya está registrado. Utilice otro correo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (passwordUserTxt.Text != confirmarPasswordUserTxt.Text)
+            {
+                MessageBox.Show("Las contraseñas no coinciden. Porfavor, verifíquelas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             DateTime fechaActual = DateTime.Now;
             Usuario user = null;
             user = new Usuario(GenerarCodigoUsuario(), descripcionUserTxt.Text, correoUserTxt.Text, passwordUserTxt.Text, true, fechaActual);
             usuarioRepository.InsertarUsuario(user);
+
+            MessageBox.Show("Usuario registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             CargarUsuarios();
+            LimpiarCampos();
+        }
+
+        private bool ValidarFormatoCorreo(string correo)
+        {
+            string formato = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(correo, formato);
+        }
+
+        private void LimpiarCampos()
+        {
+            descripcionUserTxt.Clear();
+            correoUserTxt.Clear();
+            passwordUserTxt.Clear();
+            confirmarPasswordUserTxt.Clear();
         }
 
         private void CargarUsuarios()
