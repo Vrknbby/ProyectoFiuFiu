@@ -71,15 +71,6 @@ namespace PruebaUIs
             this.Hide();
         }
 
-        private void btnUserRegistrar_Click(object sender, EventArgs e)
-        {
-            UsuarioRepository usuarioRepository = new UsuarioRepository();
-            DateTime fechaActual = DateTime.Now;
-            Usuario user = null;
-            //user = new Usuario(GenerarCodigoUsuario(), descripcionUserTxt.Text, correoUserTxt.Text, passwordUserTxt.Text, true, fechaActual);
-            usuarioRepository.InsertarUsuario(user);
-        }
-
         public string GenerarCodigoUsuario()
         {
             UsuarioRepository usuarioRepository = new UsuarioRepository();

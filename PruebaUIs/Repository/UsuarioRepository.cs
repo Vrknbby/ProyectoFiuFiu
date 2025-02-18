@@ -140,6 +140,32 @@ namespace PruebaUIs.Repository
             return usuario; 
         }
 
+        public bool ValidarCredenciales(string email, string clave)
+        {
+            bool credencialesValidas = false;
 
+            using (SqlConnection con = conexion.ObtenerConexion())
+            {
+                using (SqlCommand cmd = new SqlCommand("spGestionarUsuario", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@CACCION", "VALIDAR");
+                    cmd.Parameters.AddWithValue("@EMAIL_USER", email);
+                    cmd.Parameters.AddWithValue("@CLAVE_USER", clave);
+
+                    try
+                    {
+                        int resultado = Convert.ToInt32(cmd.ExecuteScalar());
+                        credencialesValidas = (resultado == 1);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al validar credenciales: " + ex.Message);
+                    }
+                }
+            }
+
+            return credencialesValidas;
+        }
     }
 }
