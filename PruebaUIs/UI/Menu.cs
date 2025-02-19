@@ -20,13 +20,6 @@ namespace PruebaUIs
     {
 
 
-
-        //VARIABLES PARA EL BORDE
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn(
-        int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
-        int nWidthEllipse, int nHeightEllipse);
-
         UsuarioRepository usuarioRepository = new UsuarioRepository();
 
         public Menu()
@@ -34,9 +27,7 @@ namespace PruebaUIs
             InitializeComponent();
             CargarUsuarios();
 
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 25, 25));
-
+            
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
@@ -46,6 +37,9 @@ namespace PruebaUIs
                 Primary.BlueGrey500, 
                 Accent.Indigo700, 
                 TextShade.WHITE);
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -191,6 +185,13 @@ namespace PruebaUIs
         {
             Persona nuevoform = new Persona();
             nuevoform.Show();
+        }
+
+        private void btnDetalleCompra_Click(object sender, EventArgs e)
+        {
+            Detalle_Compra nuevoform = new Detalle_Compra();
+            nuevoform.Show();
+            this.Hide();
         }
     }
 }

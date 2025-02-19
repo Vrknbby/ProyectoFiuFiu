@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\Detalle_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Detalle_Compra.Designer.cs">
+      <DependentUpon>Detalle_Compra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Locacion.cs" />
     <Compile Include="Model\Proveedor.cs" />
     <Compile Include="UI\Persona.cs">
@@ -100,6 +106,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\Detalle_Compra.resx">
+      <DependentUpon>Detalle_Compra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Fabricante.resx">
       <DependentUpon>Fabricante.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,10 +155,13 @@
     <Content Include="Img\gestionVenta.png" />
     <Content Include="Img\iconoCandado.png" />
     <Content Include="Img\iconoFlecha.png" />
+    <Content Include="Img\iconoFlechaAtras100px.png" />
+    <Content Include="Img\iconoFlechaAtras50px.png" />
     <Content Include="Img\iconoInvente.png" />
     <Content Include="Img\iconoMenu.png" />
     <Content Include="Img\iconoOJo.png" />
     <Content Include="Img\iconoPersona.png" />
+    <Content Include="Img\iconoVerContraseña.png" />
     <Content Include="Img\registroIcono.png" />
   </ItemGroup>
   <ItemGroup>

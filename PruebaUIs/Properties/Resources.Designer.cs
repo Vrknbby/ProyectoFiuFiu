@@ -173,6 +173,16 @@ namespace PruebaUIs.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconoVerContraseña {
+            get {
+                object obj = ResourceManager.GetObject("iconoVerContraseña", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap registroIcono {
             get {
                 object obj = ResourceManager.GetObject("registroIcono", resourceCulture);
