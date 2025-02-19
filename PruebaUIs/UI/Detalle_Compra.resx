@@ -117,44 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="iconoGestionCompra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\iconoGestionCompra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoOJo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\iconoOJo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoCandado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\iconoCandado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoInvente1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\iconoInvente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondoRegistroUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\fondoRegistroUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoInvente3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\iconoInvente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="registroIcono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\registroIcono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoGestionCompra1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\iconoGestionCompra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoInvente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\iconoInvente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoInvente2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\iconoInvente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoPersona" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\iconoPersona.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoInvente4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\iconoInvente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoVerContraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\iconoVerContraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnRegresarDetalleCompra.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAktJREFUeF7t
+        3LtqFVEUh/FELURQBDFd8IoiKSxECysfwM4X8A18ALHVR7C0UATBQvACFqIoNlYKFoKksRAvoCKJF0Q+
+        GZzIOX/c8ZywZzLI96v3WsVa58xlzZ6ZmZEkSZIkSZIkSZIkSZIkSfovAAeBR/z2AbgC7M516gFwDPjc
+        NmPUO2BfrleHgEPAp+zEiBsZo44Au4DX2YGUceoAsBN4mcX/i6WMVWXANuBZVr7gWsarImAz8DCrXrAE
+        7MkcqgTYCNzMqhd8B05kDlUCzAJXs+oFP4GTmUMVARez6qs4nfGqCDibFV/FmYxXRc2vPSu+igsZr4qA
+        U+35YBKXMl4VNVdIwI+sesF1YEPmUCXAUWA5q15wF9iUOVQJsAB8zKoXPGluFDOHKgHmgbdZ9YLnwPbM
+        oUqAOWAxq17QrJvLHKoE2Nr+4ifR/IPmM4cqaYeFj7PqBc25ZSFzqCLgdlZd1b1p54AHsv5j2o0I6k95
+        j8GUw0LVcyd70TTjXK5Sb5rpx6wNGY5vY81Y4SFr3dzKXvwBXM7V6tR7YH/2YYyXvb2Y7LK34Y3hAK1h
+        dLI3c6iyKYeLrxwu9sDx+wCt4QHVlsyhyqZ8hHvfR7g9cJPDALkNaICm3Ch3PuPVAbeSDtCUw0g3W3fN
+        1xEGyBd2BqgdRq58IOBfmlfaDmcOVdYOI59m9QvuZbw6AOyYcBi5nLHqyIQfDviacerQBJ/W8JDVN+BI
+        4eMzX5pBZa5XD5rnxcCDkWa8AI7nOkmSJEmSJEmSJEmSJEmSJK2HXwI3vbGvQzVfAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>

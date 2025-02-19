@@ -13,15 +13,22 @@ using System.Windows.Forms;
 
 namespace PruebaUIs
 {
-    public partial class Compra_Articulo : MaterialForm
+    public partial class Persona : MaterialForm
     {
 
+        //VARIABLES PARA EL BORDE
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+        int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
+        int nWidthEllipse, int nHeightEllipse);
 
-        public Compra_Articulo()
+
+        public Persona()
         {
             InitializeComponent();
 
-            
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 25, 25));
 
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -32,25 +39,12 @@ namespace PruebaUIs
                 Primary.BlueGrey500,
                 Accent.Indigo700,
                 TextShade.WHITE);
-        }
-
-        private void Compra_Articulo_Load(object sender, EventArgs e)
-        {
 
         }
 
-        private void btnFabricante_Click(object sender, EventArgs e)
+        private void Persona_Load(object sender, EventArgs e)
         {
-            Fabricante nuevoform = new Fabricante();
-            nuevoform.Show();
-           
-        }
 
-        private void btnProvedores_Click(object sender, EventArgs e)
-        {
-            Provedor nuevoform = new Provedor();
-            nuevoform.Show();
-            
         }
     }
 }

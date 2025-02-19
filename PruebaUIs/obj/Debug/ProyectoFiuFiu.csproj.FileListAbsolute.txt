@@ -85,3 +85,7 @@ C:\Users\CRISTIAN\Desktop\proyectofiufiu\PruebaUIs\obj\Debug\ProyectoFiuFiu.cspr
 C:\Users\CRISTIAN\Desktop\proyectofiufiu\PruebaUIs\obj\Debug\PruebaUIs.exe
 C:\Users\CRISTIAN\Desktop\proyectofiufiu\PruebaUIs\obj\Debug\PruebaUIs.pdb
 >>>>>>> Cristian
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Persona.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Detalle_Compra.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Detalle_Compra.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Persona.resources

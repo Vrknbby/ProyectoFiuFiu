@@ -6,22 +6,17 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PruebaUIs
 {
-    public partial class Compra_Articulo : MaterialForm
+    public partial class Detalle_Compra : MaterialForm
     {
-
-
-        public Compra_Articulo()
+        public Detalle_Compra()
         {
             InitializeComponent();
-
-            
 
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -34,23 +29,16 @@ namespace PruebaUIs
                 TextShade.WHITE);
         }
 
-        private void Compra_Articulo_Load(object sender, EventArgs e)
+        private void Detalle_Compra_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnFabricante_Click(object sender, EventArgs e)
+        private void btnRegresarDetalleCompra_Click(object sender, EventArgs e)
         {
-            Fabricante nuevoform = new Fabricante();
-            nuevoform.Show();
-           
-        }
-
-        private void btnProvedores_Click(object sender, EventArgs e)
-        {
-            Provedor nuevoform = new Provedor();
-            nuevoform.Show();
-            
+            Menu form = new Menu();
+            form.Show(); // Abre el formulario anterior
+            this.Close(); // Cierra el formulario actual
         }
     }
 }
