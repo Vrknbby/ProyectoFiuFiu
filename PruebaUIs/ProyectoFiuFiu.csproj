@@ -50,14 +50,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Compra\CompraCabecera.cs" />
+    <Compile Include="Model\Compra\CompraDetalle.cs" />
+    <Compile Include="Model\Compra\OrdenCompraATC.cs" />
+    <Compile Include="Model\Compra\OrdenCompraCabecera.cs" />
+    <Compile Include="Model\Compra\OrdenCompraDetalle.cs" />
+    <Compile Include="Model\Parametros\Almacen.cs" />
+    <Compile Include="Model\Parametros\Articulo.cs" />
+    <Compile Include="Model\Parametros\Cliente.cs" />
+    <Compile Include="Model\Parametros\Fabricante.cs" />
+    <Compile Include="Model\Parametros\FamiliaArticulos.cs" />
+    <Compile Include="Model\Parametros\LoteArticulos.cs" />
+    <Compile Include="Model\Parametros\MarcasArticulos.cs" />
+    <Compile Include="Model\Parametros\Persona.cs" />
+    <Compile Include="Model\Parametros\RegionFisica.cs" />
+    <Compile Include="Model\Parametros\SegmentoComerciales.cs" />
+    <Compile Include="Model\Parametros\Ubigeo.cs" />
+    <Compile Include="Model\Parametros\Vendedor.cs" />
     <Compile Include="UI\Detalle_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Detalle_Compra.Designer.cs">
       <DependentUpon>Detalle_Compra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Locacion.cs" />
-    <Compile Include="Model\Proveedor.cs" />
+    <Compile Include="Model\Parametros\Locacion.cs" />
+    <Compile Include="Model\Parametros\Proveedor.cs" />
     <Compile Include="UI\Persona.cs">
       <SubType>Form</SubType>
     </Compile>
