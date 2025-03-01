@@ -89,3 +89,14 @@ C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de S
 C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Detalle_Compra.resources
 C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Detalle_Compra.resources
 C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Persona.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Region_Fisica.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Ubicacion_Geografica.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Familia_Articulos.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Marcas_Articulos.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Segmentos_Comerciales.resources
+>>>>>>> Rodrigo
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Ubicacion_Geografica.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Familia_Articulos.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Marcas_Articulos.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Segmentos_Comerciales.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Region_Fisica.resources
