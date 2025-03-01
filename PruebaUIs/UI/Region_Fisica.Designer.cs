@@ -76,7 +76,7 @@ namespace PruebaUIs
             // 
             this.materialListView1.AutoSizeTable = false;
             this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialListView1.Depth = 0;
             this.materialListView1.FullRowSelect = true;
             this.materialListView1.HideSelection = false;
@@ -287,6 +287,7 @@ namespace PruebaUIs
             this.ClientSize = new System.Drawing.Size(964, 552);
             this.Controls.Add(this.materialCard1);
             this.Name = "Region_Fisica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Region Fisica";
             this.Load += new System.EventHandler(this.Region_Fisica_Load);
             this.materialCard1.ResumeLayout(false);

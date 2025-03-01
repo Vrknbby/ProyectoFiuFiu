@@ -51,6 +51,15 @@ namespace PruebaUIs
             this.btnUbicacionGeografica = new MaterialSkin.Controls.MaterialButton();
             this.btnRegionFisica = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.labelGestiondeCompras = new MaterialSkin.Controls.MaterialLabel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.materialDivider4 = new MaterialSkin.Controls.MaterialDivider();
@@ -62,10 +71,6 @@ namespace PruebaUIs
             this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
-            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.labelGestiondeCompras = new MaterialSkin.Controls.MaterialLabel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
             this.materialDivider5 = new MaterialSkin.Controls.MaterialDivider();
@@ -83,6 +88,7 @@ namespace PruebaUIs
             this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
             this.materialDivider6 = new MaterialSkin.Controls.MaterialDivider();
             this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.confirmarPasswordUserTxt = new MaterialSkin.Controls.MaterialTextBox();
             this.correoUserTxt = new MaterialSkin.Controls.MaterialTextBox();
             this.descripcionUserTxt = new MaterialSkin.Controls.MaterialTextBox();
@@ -91,19 +97,13 @@ namespace PruebaUIs
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialTabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.materialCard5.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.materialCard2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.materialCard3.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.materialCard2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.materialCard4.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -403,6 +403,7 @@ namespace PruebaUIs
             this.btnFamiliaArticulos.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnFamiliaArticulos.UseAccentColor = false;
             this.btnFamiliaArticulos.UseVisualStyleBackColor = true;
+            this.btnFamiliaArticulos.Click += new System.EventHandler(this.btnFamiliaArticulos_Click);
             // 
             // btnMarcasArticulos
             // 
@@ -423,6 +424,7 @@ namespace PruebaUIs
             this.btnMarcasArticulos.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnMarcasArticulos.UseAccentColor = false;
             this.btnMarcasArticulos.UseVisualStyleBackColor = true;
+            this.btnMarcasArticulos.Click += new System.EventHandler(this.btnMarcasArticulos_Click);
             // 
             // btnSegmentoComerciales
             // 
@@ -443,6 +445,7 @@ namespace PruebaUIs
             this.btnSegmentoComerciales.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSegmentoComerciales.UseAccentColor = false;
             this.btnSegmentoComerciales.UseVisualStyleBackColor = true;
+            this.btnSegmentoComerciales.Click += new System.EventHandler(this.btnSegmentoComerciales_Click);
             // 
             // btnUbicacionGeografica
             // 
@@ -463,6 +466,7 @@ namespace PruebaUIs
             this.btnUbicacionGeografica.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnUbicacionGeografica.UseAccentColor = false;
             this.btnUbicacionGeografica.UseVisualStyleBackColor = true;
+            this.btnUbicacionGeografica.Click += new System.EventHandler(this.btnUbicacionGeografica_Click);
             // 
             // btnRegionFisica
             // 
@@ -483,6 +487,7 @@ namespace PruebaUIs
             this.btnRegionFisica.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnRegionFisica.UseAccentColor = false;
             this.btnRegionFisica.UseVisualStyleBackColor = true;
+            this.btnRegionFisica.Click += new System.EventHandler(this.btnRegionFisica_Click);
             // 
             // materialLabel5
             // 
@@ -499,6 +504,165 @@ namespace PruebaUIs
             this.materialLabel5.TabIndex = 0;
             this.materialLabel5.Text = "ACCESO A LAS SIGUIENTES VENTANAS";
             this.materialLabel5.UseAccent = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.materialCard3);
+            this.tabPage2.ImageKey = "gestionCompra.png";
+            this.tabPage2.Location = new System.Drawing.Point(4, 43);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(1459, 617);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Compras";
+            // 
+            // materialCard3
+            // 
+            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard3.Controls.Add(this.materialButton6);
+            this.materialCard3.Controls.Add(this.materialButton5);
+            this.materialCard3.Controls.Add(this.materialButton4);
+            this.materialCard3.Controls.Add(this.materialButton3);
+            this.materialCard3.Controls.Add(this.materialButton2);
+            this.materialCard3.Controls.Add(this.materialDivider1);
+            this.materialCard3.Controls.Add(this.labelGestiondeCompras);
+            this.materialCard3.Depth = 0;
+            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard3.Location = new System.Drawing.Point(0, 0);
+            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard3.Name = "materialCard3";
+            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard3.Size = new System.Drawing.Size(1544, 787);
+            this.materialCard3.TabIndex = 0;
+            // 
+            // materialButton6
+            // 
+            this.materialButton6.AutoSize = false;
+            this.materialButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton6.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton6.Depth = 0;
+            this.materialButton6.HighEmphasis = true;
+            this.materialButton6.Icon = null;
+            this.materialButton6.Location = new System.Drawing.Point(29, 380);
+            this.materialButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton6.Name = "materialButton6";
+            this.materialButton6.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton6.Size = new System.Drawing.Size(293, 36);
+            this.materialButton6.TabIndex = 196;
+            this.materialButton6.Text = "Notas de Debito";
+            this.materialButton6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton6.UseAccentColor = false;
+            this.materialButton6.UseVisualStyleBackColor = true;
+            // 
+            // materialButton5
+            // 
+            this.materialButton5.AutoSize = false;
+            this.materialButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton5.Depth = 0;
+            this.materialButton5.HighEmphasis = true;
+            this.materialButton5.Icon = null;
+            this.materialButton5.Location = new System.Drawing.Point(29, 306);
+            this.materialButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton5.Name = "materialButton5";
+            this.materialButton5.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton5.Size = new System.Drawing.Size(293, 36);
+            this.materialButton5.TabIndex = 195;
+            this.materialButton5.Text = "Notas de Credito";
+            this.materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton5.UseAccentColor = false;
+            this.materialButton5.UseVisualStyleBackColor = true;
+            // 
+            // materialButton4
+            // 
+            this.materialButton4.AutoSize = false;
+            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton4.Depth = 0;
+            this.materialButton4.HighEmphasis = true;
+            this.materialButton4.Icon = null;
+            this.materialButton4.Location = new System.Drawing.Point(29, 235);
+            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton4.Name = "materialButton4";
+            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton4.Size = new System.Drawing.Size(293, 36);
+            this.materialButton4.TabIndex = 194;
+            this.materialButton4.Text = "Compra de Mercancia";
+            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton4.UseAccentColor = false;
+            this.materialButton4.UseVisualStyleBackColor = true;
+            // 
+            // materialButton3
+            // 
+            this.materialButton3.AutoSize = false;
+            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton3.Depth = 0;
+            this.materialButton3.HighEmphasis = true;
+            this.materialButton3.Icon = null;
+            this.materialButton3.Location = new System.Drawing.Point(29, 168);
+            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton3.Name = "materialButton3";
+            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton3.Size = new System.Drawing.Size(293, 36);
+            this.materialButton3.TabIndex = 193;
+            this.materialButton3.Text = "Cierre de Orden de Compra";
+            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton3.UseAccentColor = false;
+            this.materialButton3.UseVisualStyleBackColor = true;
+            // 
+            // materialButton2
+            // 
+            this.materialButton2.AutoSize = false;
+            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton2.Depth = 0;
+            this.materialButton2.HighEmphasis = true;
+            this.materialButton2.Icon = null;
+            this.materialButton2.Location = new System.Drawing.Point(29, 101);
+            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton2.Name = "materialButton2";
+            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton2.Size = new System.Drawing.Size(293, 36);
+            this.materialButton2.TabIndex = 192;
+            this.materialButton2.Text = "Creacion de Orden de Compra";
+            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton2.UseAccentColor = false;
+            this.materialButton2.UseVisualStyleBackColor = true;
+            // 
+            // materialDivider1
+            // 
+            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(0, 50);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(1476, 25);
+            this.materialDivider1.TabIndex = 147;
+            this.materialDivider1.Text = "materialDivider1";
+            // 
+            // labelGestiondeCompras
+            // 
+            this.labelGestiondeCompras.BackColor = System.Drawing.Color.DimGray;
+            this.labelGestiondeCompras.Depth = 0;
+            this.labelGestiondeCompras.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.labelGestiondeCompras.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
+            this.labelGestiondeCompras.HighEmphasis = true;
+            this.labelGestiondeCompras.Location = new System.Drawing.Point(9, 6);
+            this.labelGestiondeCompras.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelGestiondeCompras.Name = "labelGestiondeCompras";
+            this.labelGestiondeCompras.Size = new System.Drawing.Size(406, 33);
+            this.labelGestiondeCompras.TabIndex = 121;
+            this.labelGestiondeCompras.Text = "GESTION DE COMPRAS";
+            this.labelGestiondeCompras.UseAccent = true;
             // 
             // tabPage1
             // 
@@ -645,65 +809,6 @@ namespace PruebaUIs
             this.materialLabel8.Size = new System.Drawing.Size(179, 19);
             this.materialLabel8.TabIndex = 1;
             this.materialLabel8.Text = "Salida por Transferencia:";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.White;
-            this.tabPage2.Controls.Add(this.materialCard3);
-            this.tabPage2.ImageKey = "gestionCompra.png";
-            this.tabPage2.Location = new System.Drawing.Point(4, 43);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1459, 617);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Compras";
-            // 
-            // materialCard3
-            // 
-            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard3.Controls.Add(this.materialButton6);
-            this.materialCard3.Controls.Add(this.materialButton5);
-            this.materialCard3.Controls.Add(this.materialButton4);
-            this.materialCard3.Controls.Add(this.materialButton3);
-            this.materialCard3.Controls.Add(this.materialButton2);
-            this.materialCard3.Controls.Add(this.materialDivider1);
-            this.materialCard3.Controls.Add(this.labelGestiondeCompras);
-            this.materialCard3.Depth = 0;
-            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard3.Location = new System.Drawing.Point(0, 0);
-            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard3.Name = "materialCard3";
-            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard3.Size = new System.Drawing.Size(1544, 787);
-            this.materialCard3.TabIndex = 0;
-            // 
-            // materialDivider1
-            // 
-            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(0, 50);
-            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(1476, 25);
-            this.materialDivider1.TabIndex = 147;
-            this.materialDivider1.Text = "materialDivider1";
-            // 
-            // labelGestiondeCompras
-            // 
-            this.labelGestiondeCompras.BackColor = System.Drawing.Color.DimGray;
-            this.labelGestiondeCompras.Depth = 0;
-            this.labelGestiondeCompras.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.labelGestiondeCompras.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.labelGestiondeCompras.HighEmphasis = true;
-            this.labelGestiondeCompras.Location = new System.Drawing.Point(9, 6);
-            this.labelGestiondeCompras.MouseState = MaterialSkin.MouseState.HOVER;
-            this.labelGestiondeCompras.Name = "labelGestiondeCompras";
-            this.labelGestiondeCompras.Size = new System.Drawing.Size(406, 33);
-            this.labelGestiondeCompras.TabIndex = 121;
-            this.labelGestiondeCompras.Text = "GESTION DE COMPRAS";
-            this.labelGestiondeCompras.UseAccent = true;
             // 
             // tabPage3
             // 
@@ -902,7 +1007,7 @@ namespace PruebaUIs
             this.passwordUserTxt.BackColor = System.Drawing.SystemColors.Window;
             this.passwordUserTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordUserTxt.Depth = 0;
-            this.passwordUserTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.passwordUserTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.passwordUserTxt.Hint = "Ingrese su contraseña";
             this.passwordUserTxt.LeadingIcon = null;
             this.passwordUserTxt.Location = new System.Drawing.Point(894, 129);
@@ -961,13 +1066,23 @@ namespace PruebaUIs
             this.materialLabel13.Text = "GESTION DE USUARIOS";
             this.materialLabel13.UseAccent = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(56, 83);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(235, 238);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // confirmarPasswordUserTxt
             // 
             this.confirmarPasswordUserTxt.AnimateReadOnly = false;
             this.confirmarPasswordUserTxt.BackColor = System.Drawing.SystemColors.Window;
             this.confirmarPasswordUserTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.confirmarPasswordUserTxt.Depth = 0;
-            this.confirmarPasswordUserTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.confirmarPasswordUserTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.confirmarPasswordUserTxt.Hint = "Confirme su Contraseña";
             this.confirmarPasswordUserTxt.LeadingIcon = null;
             this.confirmarPasswordUserTxt.Location = new System.Drawing.Point(894, 183);
@@ -987,7 +1102,7 @@ namespace PruebaUIs
             this.correoUserTxt.BackColor = System.Drawing.SystemColors.Window;
             this.correoUserTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.correoUserTxt.Depth = 0;
-            this.correoUserTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.correoUserTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.correoUserTxt.Hint = "Ingrese su Correo";
             this.correoUserTxt.LeadingIcon = null;
             this.correoUserTxt.Location = new System.Drawing.Point(429, 123);
@@ -1007,7 +1122,7 @@ namespace PruebaUIs
             this.descripcionUserTxt.BackColor = System.Drawing.SystemColors.Window;
             this.descripcionUserTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descripcionUserTxt.Depth = 0;
-            this.descripcionUserTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.descripcionUserTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.descripcionUserTxt.Hint = "Descripcion de Usuario";
             this.descripcionUserTxt.LeadingIcon = null;
             this.descripcionUserTxt.Location = new System.Drawing.Point(429, 183);
@@ -1092,116 +1207,6 @@ namespace PruebaUIs
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
             // 
-            // materialButton2
-            // 
-            this.materialButton2.AutoSize = false;
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(29, 101);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(293, 36);
-            this.materialButton2.TabIndex = 192;
-            this.materialButton2.Text = "Creacion de Orden de Compra";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = false;
-            this.materialButton2.UseVisualStyleBackColor = true;
-            // 
-            // materialButton3
-            // 
-            this.materialButton3.AutoSize = false;
-            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton3.Depth = 0;
-            this.materialButton3.HighEmphasis = true;
-            this.materialButton3.Icon = null;
-            this.materialButton3.Location = new System.Drawing.Point(29, 168);
-            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton3.Name = "materialButton3";
-            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton3.Size = new System.Drawing.Size(293, 36);
-            this.materialButton3.TabIndex = 193;
-            this.materialButton3.Text = "Cierre de Orden de Compra";
-            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton3.UseAccentColor = false;
-            this.materialButton3.UseVisualStyleBackColor = true;
-            // 
-            // materialButton4
-            // 
-            this.materialButton4.AutoSize = false;
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(29, 235);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(293, 36);
-            this.materialButton4.TabIndex = 194;
-            this.materialButton4.Text = "Compra de Mercancia";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseVisualStyleBackColor = true;
-            // 
-            // materialButton5
-            // 
-            this.materialButton5.AutoSize = false;
-            this.materialButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton5.Depth = 0;
-            this.materialButton5.HighEmphasis = true;
-            this.materialButton5.Icon = null;
-            this.materialButton5.Location = new System.Drawing.Point(29, 306);
-            this.materialButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton5.Name = "materialButton5";
-            this.materialButton5.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton5.Size = new System.Drawing.Size(293, 36);
-            this.materialButton5.TabIndex = 195;
-            this.materialButton5.Text = "Notas de Credito";
-            this.materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton5.UseAccentColor = false;
-            this.materialButton5.UseVisualStyleBackColor = true;
-            // 
-            // materialButton6
-            // 
-            this.materialButton6.AutoSize = false;
-            this.materialButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton6.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton6.Depth = 0;
-            this.materialButton6.HighEmphasis = true;
-            this.materialButton6.Icon = null;
-            this.materialButton6.Location = new System.Drawing.Point(29, 380);
-            this.materialButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton6.Name = "materialButton6";
-            this.materialButton6.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton6.Size = new System.Drawing.Size(293, 36);
-            this.materialButton6.TabIndex = 196;
-            this.materialButton6.Text = "Notas de Debito";
-            this.materialButton6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton6.UseAccentColor = false;
-            this.materialButton6.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(56, 83);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(235, 238);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1221,11 +1226,11 @@ namespace PruebaUIs
             this.tabPage5.ResumeLayout(false);
             this.materialCard5.ResumeLayout(false);
             this.materialCard5.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.materialCard3.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.materialCard3.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.materialCard4.ResumeLayout(false);
             this.materialCard4.PerformLayout();

@@ -193,5 +193,40 @@ namespace PruebaUIs
             nuevoform.Show();
             this.Hide();
         }
+
+        private void btnRegionFisica_Click(object sender, EventArgs e)
+        {
+            Region_Fisica nuevoform = new Region_Fisica();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnUbicacionGeografica_Click(object sender, EventArgs e)
+        {
+            Ubicacion_Geografica nuevoform = new Ubicacion_Geografica();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnSegmentoComerciales_Click(object sender, EventArgs e)
+        {
+            Segmentos_Comerciales nuevoform = new Segmentos_Comerciales();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnMarcasArticulos_Click(object sender, EventArgs e)
+        {
+            Marcas_Articulos nuevoform = new Marcas_Articulos();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnFamiliaArticulos_Click(object sender, EventArgs e)
+        {
+            Familia_Articulos nuevoform = new Familia_Articulos();
+            nuevoform.Show();
+            this.Hide();
+        }
     }
 }

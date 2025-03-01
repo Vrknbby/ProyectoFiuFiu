@@ -16,7 +16,7 @@ namespace PruebaUIs
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Ubicacion_Geografica());
+            Application.Run(new Menu());
         }
     }
 }

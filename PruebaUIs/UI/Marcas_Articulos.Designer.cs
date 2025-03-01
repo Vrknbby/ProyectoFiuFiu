@@ -156,7 +156,7 @@ namespace PruebaUIs
             // 
             this.materialListView1.AutoSizeTable = false;
             this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialListView1.Depth = 0;
             this.materialListView1.FullRowSelect = true;
             this.materialListView1.HideSelection = false;
@@ -287,6 +287,7 @@ namespace PruebaUIs
             this.ClientSize = new System.Drawing.Size(930, 532);
             this.Controls.Add(this.materialCard1);
             this.Name = "Marcas_Articulos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcas Articulos";
             this.Load += new System.EventHandler(this.Marcas_Articulos_Load);
             this.materialCard1.ResumeLayout(false);
