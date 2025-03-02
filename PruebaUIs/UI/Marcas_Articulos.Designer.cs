@@ -30,34 +30,36 @@ namespace PruebaUIs
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
+            this.btnBuscar = new MaterialSkin.Controls.MaterialButton();
+            this.btnModificar = new MaterialSkin.Controls.MaterialButton();
+            this.btnAgregar = new MaterialSkin.Controls.MaterialButton();
+            this.tblMarcasArticulos = new MaterialSkin.Controls.MaterialListView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.materialTextBox3 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtDesMarca = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtCodUsuario = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtCodMarca = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.materialButton4);
-            this.materialCard1.Controls.Add(this.materialButton3);
-            this.materialCard1.Controls.Add(this.materialButton2);
-            this.materialCard1.Controls.Add(this.materialButton1);
-            this.materialCard1.Controls.Add(this.materialListView1);
+            this.materialCard1.Controls.Add(this.btnCancelar);
+            this.materialCard1.Controls.Add(this.btnEliminar);
+            this.materialCard1.Controls.Add(this.btnBuscar);
+            this.materialCard1.Controls.Add(this.btnModificar);
+            this.materialCard1.Controls.Add(this.btnAgregar);
+            this.materialCard1.Controls.Add(this.tblMarcasArticulos);
             this.materialCard1.Controls.Add(this.dateTimePicker1);
-            this.materialCard1.Controls.Add(this.materialTextBox3);
-            this.materialCard1.Controls.Add(this.materialTextBox2);
-            this.materialCard1.Controls.Add(this.materialTextBox1);
+            this.materialCard1.Controls.Add(this.txtDesMarca);
+            this.materialCard1.Controls.Add(this.txtCodUsuario);
+            this.materialCard1.Controls.Add(this.txtCodMarca);
             this.materialCard1.Controls.Add(this.materialLabel4);
             this.materialCard1.Controls.Add(this.materialLabel3);
             this.materialCard1.Controls.Add(this.materialLabel2);
@@ -72,165 +74,172 @@ namespace PruebaUIs
             this.materialCard1.Size = new System.Drawing.Size(925, 464);
             this.materialCard1.TabIndex = 0;
             // 
-            // materialButton4
+            // btnEliminar
             // 
-            this.materialButton4.AutoSize = false;
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(749, 152);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(158, 36);
-            this.materialButton4.TabIndex = 21;
-            this.materialButton4.Text = "Eliminar";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseVisualStyleBackColor = true;
+            this.btnEliminar.AutoSize = false;
+            this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEliminar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnEliminar.Depth = 0;
+            this.btnEliminar.HighEmphasis = true;
+            this.btnEliminar.Icon = null;
+            this.btnEliminar.Location = new System.Drawing.Point(749, 152);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnEliminar.Size = new System.Drawing.Size(158, 36);
+            this.btnEliminar.TabIndex = 21;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnEliminar.UseAccentColor = false;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // materialButton3
+            // btnBuscar
             // 
-            this.materialButton3.AutoSize = false;
-            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton3.Depth = 0;
-            this.materialButton3.HighEmphasis = true;
-            this.materialButton3.Icon = null;
-            this.materialButton3.Location = new System.Drawing.Point(749, 104);
-            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton3.Name = "materialButton3";
-            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton3.Size = new System.Drawing.Size(158, 36);
-            this.materialButton3.TabIndex = 20;
-            this.materialButton3.Text = "Cancelar";
-            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton3.UseAccentColor = false;
-            this.materialButton3.UseVisualStyleBackColor = true;
+            this.btnBuscar.AutoSize = false;
+            this.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBuscar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnBuscar.Depth = 0;
+            this.btnBuscar.HighEmphasis = true;
+            this.btnBuscar.Icon = null;
+            this.btnBuscar.Location = new System.Drawing.Point(749, 104);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnBuscar.Size = new System.Drawing.Size(158, 36);
+            this.btnBuscar.TabIndex = 20;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnBuscar.UseAccentColor = false;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // materialButton2
+            // btnModificar
             // 
-            this.materialButton2.AutoSize = false;
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(749, 56);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(158, 36);
-            this.materialButton2.TabIndex = 19;
-            this.materialButton2.Text = "Modificar";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = false;
-            this.materialButton2.UseVisualStyleBackColor = true;
+            this.btnModificar.AutoSize = false;
+            this.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnModificar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnModificar.Depth = 0;
+            this.btnModificar.HighEmphasis = true;
+            this.btnModificar.Icon = null;
+            this.btnModificar.Location = new System.Drawing.Point(749, 56);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnModificar.Size = new System.Drawing.Size(158, 36);
+            this.btnModificar.TabIndex = 19;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnModificar.UseAccentColor = false;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // materialButton1
+            // btnAgregar
             // 
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(749, 11);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(158, 36);
-            this.materialButton1.TabIndex = 18;
-            this.materialButton1.Text = "Agregar";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
+            this.btnAgregar.AutoSize = false;
+            this.btnAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAgregar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAgregar.Depth = 0;
+            this.btnAgregar.HighEmphasis = true;
+            this.btnAgregar.Icon = null;
+            this.btnAgregar.Location = new System.Drawing.Point(749, 11);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAgregar.Size = new System.Drawing.Size(158, 36);
+            this.btnAgregar.TabIndex = 18;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAgregar.UseAccentColor = false;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // materialListView1
+            // tblMarcasArticulos
             // 
-            this.materialListView1.AutoSizeTable = false;
-            this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialListView1.Depth = 0;
-            this.materialListView1.FullRowSelect = true;
-            this.materialListView1.HideSelection = false;
-            this.materialListView1.Location = new System.Drawing.Point(17, 206);
-            this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
-            this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialListView1.Name = "materialListView1";
-            this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(890, 241);
-            this.materialListView1.TabIndex = 9;
-            this.materialListView1.UseCompatibleStateImageBehavior = false;
-            this.materialListView1.View = System.Windows.Forms.View.Details;
+            this.tblMarcasArticulos.AutoSizeTable = false;
+            this.tblMarcasArticulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tblMarcasArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tblMarcasArticulos.Depth = 0;
+            this.tblMarcasArticulos.FullRowSelect = true;
+            this.tblMarcasArticulos.HideSelection = false;
+            this.tblMarcasArticulos.Location = new System.Drawing.Point(17, 206);
+            this.tblMarcasArticulos.MinimumSize = new System.Drawing.Size(200, 100);
+            this.tblMarcasArticulos.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.tblMarcasArticulos.MouseState = MaterialSkin.MouseState.OUT;
+            this.tblMarcasArticulos.Name = "tblMarcasArticulos";
+            this.tblMarcasArticulos.OwnerDraw = true;
+            this.tblMarcasArticulos.Size = new System.Drawing.Size(890, 241);
+            this.tblMarcasArticulos.TabIndex = 9;
+            this.tblMarcasArticulos.UseCompatibleStateImageBehavior = false;
+            this.tblMarcasArticulos.View = System.Windows.Forms.View.Details;
+            this.tblMarcasArticulos.SelectedIndexChanged += new System.EventHandler(this.tblMarcasArticulos_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(467, 117);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 8;
             // 
-            // materialTextBox3
+            // txtDesMarca
             // 
-            this.materialTextBox3.AnimateReadOnly = false;
-            this.materialTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox3.Depth = 0;
-            this.materialTextBox3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox3.LeadingIcon = null;
-            this.materialTextBox3.Location = new System.Drawing.Point(167, 77);
-            this.materialTextBox3.MaxLength = 50;
-            this.materialTextBox3.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox3.Multiline = false;
-            this.materialTextBox3.Name = "materialTextBox3";
-            this.materialTextBox3.Size = new System.Drawing.Size(205, 36);
-            this.materialTextBox3.TabIndex = 7;
-            this.materialTextBox3.Text = "";
-            this.materialTextBox3.TrailingIcon = null;
-            this.materialTextBox3.UseTallSize = false;
+            this.txtDesMarca.AnimateReadOnly = false;
+            this.txtDesMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDesMarca.Depth = 0;
+            this.txtDesMarca.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDesMarca.LeadingIcon = null;
+            this.txtDesMarca.Location = new System.Drawing.Point(167, 77);
+            this.txtDesMarca.MaxLength = 50;
+            this.txtDesMarca.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtDesMarca.Multiline = false;
+            this.txtDesMarca.Name = "txtDesMarca";
+            this.txtDesMarca.Size = new System.Drawing.Size(205, 36);
+            this.txtDesMarca.TabIndex = 7;
+            this.txtDesMarca.Text = "";
+            this.txtDesMarca.TrailingIcon = null;
+            this.txtDesMarca.UseTallSize = false;
             // 
-            // materialTextBox2
+            // txtCodUsuario
             // 
-            this.materialTextBox2.AnimateReadOnly = false;
-            this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox2.Depth = 0;
-            this.materialTextBox2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox2.LeadingIcon = null;
-            this.materialTextBox2.Location = new System.Drawing.Point(453, 16);
-            this.materialTextBox2.MaxLength = 50;
-            this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox2.Multiline = false;
-            this.materialTextBox2.Name = "materialTextBox2";
-            this.materialTextBox2.Size = new System.Drawing.Size(246, 36);
-            this.materialTextBox2.TabIndex = 6;
-            this.materialTextBox2.Text = "";
-            this.materialTextBox2.TrailingIcon = null;
-            this.materialTextBox2.UseTallSize = false;
+            this.txtCodUsuario.AnimateReadOnly = false;
+            this.txtCodUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodUsuario.Depth = 0;
+            this.txtCodUsuario.Enabled = false;
+            this.txtCodUsuario.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCodUsuario.LeadingIcon = null;
+            this.txtCodUsuario.Location = new System.Drawing.Point(453, 16);
+            this.txtCodUsuario.MaxLength = 50;
+            this.txtCodUsuario.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtCodUsuario.Multiline = false;
+            this.txtCodUsuario.Name = "txtCodUsuario";
+            this.txtCodUsuario.Size = new System.Drawing.Size(246, 36);
+            this.txtCodUsuario.TabIndex = 6;
+            this.txtCodUsuario.Text = "";
+            this.txtCodUsuario.TrailingIcon = null;
+            this.txtCodUsuario.UseTallSize = false;
             // 
-            // materialTextBox1
+            // txtCodMarca
             // 
-            this.materialTextBox1.AnimateReadOnly = false;
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(110, 17);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(230, 36);
-            this.materialTextBox1.TabIndex = 5;
-            this.materialTextBox1.Text = "";
-            this.materialTextBox1.TrailingIcon = null;
-            this.materialTextBox1.UseTallSize = false;
+            this.txtCodMarca.AnimateReadOnly = false;
+            this.txtCodMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodMarca.Depth = 0;
+            this.txtCodMarca.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCodMarca.LeadingIcon = null;
+            this.txtCodMarca.Location = new System.Drawing.Point(110, 17);
+            this.txtCodMarca.MaxLength = 50;
+            this.txtCodMarca.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtCodMarca.Multiline = false;
+            this.txtCodMarca.Name = "txtCodMarca";
+            this.txtCodMarca.Size = new System.Drawing.Size(230, 36);
+            this.txtCodMarca.TabIndex = 5;
+            this.txtCodMarca.Text = "";
+            this.txtCodMarca.TrailingIcon = null;
+            this.txtCodMarca.UseTallSize = false;
             // 
             // materialLabel4
             // 
@@ -280,6 +289,27 @@ namespace PruebaUIs
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Cod Marca";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.AutoSize = false;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.HighEmphasis = true;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(29, 152);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnCancelar.Size = new System.Drawing.Size(158, 36);
+            this.btnCancelar.TabIndex = 22;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnCancelar.UseAccentColor = false;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // Marcas_Articulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,18 +329,19 @@ namespace PruebaUIs
         #endregion
 
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private MaterialSkin.Controls.MaterialListView materialListView1;
+        private MaterialSkin.Controls.MaterialListView tblMarcasArticulos;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox3;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private MaterialSkin.Controls.MaterialTextBox txtDesMarca;
+        private MaterialSkin.Controls.MaterialTextBox txtCodUsuario;
+        private MaterialSkin.Controls.MaterialTextBox txtCodMarca;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialButton materialButton4;
-        private MaterialSkin.Controls.MaterialButton materialButton3;
-        private MaterialSkin.Controls.MaterialButton materialButton2;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton btnEliminar;
+        private MaterialSkin.Controls.MaterialButton btnBuscar;
+        private MaterialSkin.Controls.MaterialButton btnModificar;
+        private MaterialSkin.Controls.MaterialButton btnAgregar;
+        private MaterialSkin.Controls.MaterialButton btnCancelar;
     }
 }
