@@ -6,29 +6,17 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PruebaUIs
 {
-    public partial class Fabricante : MaterialForm
+    public partial class Segmentos_Comerciales : MaterialForm
     {
-
-        //VARIABLES PARA EL BORDE
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn(
-        int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
-        int nWidthEllipse, int nHeightEllipse);
-
-        public Fabricante()
+        public Segmentos_Comerciales()
         {
             InitializeComponent();
-
-
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 25, 25));
 
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -41,7 +29,7 @@ namespace PruebaUIs
                 TextShade.WHITE);
         }
 
-        private void Fabricante_Load(object sender, EventArgs e)
+        private void Segmentos_Comerciales_Load(object sender, EventArgs e)
         {
 
         }

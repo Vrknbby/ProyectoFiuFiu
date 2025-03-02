@@ -1,7 +1,9 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using PruebaUIs.DB;
+using PruebaUIs.Model;
 using PruebaUIs.Repository;
+using PruebaUIs.Variables;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,22 +20,15 @@ namespace PruebaUIs
 {
     public partial class Login : MaterialForm
     {
-
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn(
-        int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
-        int nWidthEllipse, int nHeightEllipse);
         UsuarioRepository usuarioRepository = new UsuarioRepository();
         public Login()
         {
             InitializeComponent();
-       
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 25, 25));
 
+            
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.BlueGrey800,
                 Primary.BlueGrey900,
@@ -78,9 +73,12 @@ namespace PruebaUIs
                     MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+                Global.UsuarioSesion = cargarUsuarioGlobal();
                 Menu nuevoform = new Menu();
                 nuevoform.Show();
                 this.Hide();
+                
             }
 
             
@@ -92,7 +90,18 @@ namespace PruebaUIs
             return usuarioRepository.ValidarCredenciales(usuario, contraseña);
         }
 
-
+        private Usuario cargarUsuarioGlobal()
+        {
+            List<Usuario> usuarios = usuarioRepository.BuscarTodosLosUsuarios();
+            foreach (Usuario user in usuarios)
+            {
+                if (user.EMAIL_USER.Trim().Equals(txtIngresarUsuario.Text.Trim()))
+                {
+                    return user;
+                }
+            }
+            return null;
+        }
         
     }
 }

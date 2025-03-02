@@ -50,15 +50,117 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Locacion.cs" />
-    <Compile Include="Model\Proveedor.cs" />
-    <Compile Include="Repository\LocacionRepository.cs" />
-    <Compile Include="Repository\ProveedorRepository.cs" />
-    <Compile Include="UI\Fabricante.cs">
+    <Compile Include="Repository\Parametros\RegionFisicaRepository.cs" />
+    <Compile Include="UI\Alamacenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Fabricante.Designer.cs">
-      <DependentUpon>Fabricante.cs</DependentUpon>
+    <Compile Include="UI\Alamacenes.Designer.cs">
+      <DependentUpon>Alamacenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CuadroDialogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CuadroDialogo.Designer.cs">
+      <DependentUpon>CuadroDialogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Local.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Local.Designer.cs">
+      <DependentUpon>Local.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Lote_Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Lote_Articulos.Designer.cs">
+      <DependentUpon>Lote_Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Maestro_Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Maestro_Articulos.Designer.cs">
+      <DependentUpon>Maestro_Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Trabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Trabajador.Designer.cs">
+      <DependentUpon>Trabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Ubicacion_Geografica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Ubicacion_Geografica.Designer.cs">
+      <DependentUpon>Ubicacion_Geografica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Familia_Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Familia_Articulos.Designer.cs">
+      <DependentUpon>Familia_Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Marcas_Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Marcas_Articulos.Designer.cs">
+      <DependentUpon>Marcas_Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Segmentos_Comerciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Segmentos_Comerciales.Designer.cs">
+      <DependentUpon>Segmentos_Comerciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Region_Fisica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Region_Fisica.Designer.cs">
+      <DependentUpon>Region_Fisica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Compra\CompraCabecera.cs" />
+    <Compile Include="Model\Compra\CompraDetalle.cs" />
+    <Compile Include="Model\Compra\OrdenCompraATC.cs" />
+    <Compile Include="Model\Compra\OrdenCompraCabecera.cs" />
+    <Compile Include="Model\Compra\OrdenCompraDetalle.cs" />
+    <Compile Include="Model\Parametros\Almacen.cs" />
+    <Compile Include="Model\Parametros\Articulo.cs" />
+    <Compile Include="Model\Parametros\Cliente.cs" />
+    <Compile Include="Model\Parametros\Fabricante.cs" />
+    <Compile Include="Model\Parametros\FamiliaArticulos.cs" />
+    <Compile Include="Model\Parametros\LoteArticulos.cs" />
+    <Compile Include="Model\Parametros\MarcasArticulos.cs" />
+    <Compile Include="Model\Parametros\Persona.cs" />
+    <Compile Include="Model\Parametros\RegionFisica.cs" />
+    <Compile Include="Model\Parametros\SegmentoComerciales.cs" />
+    <Compile Include="Model\Parametros\Ubigeo.cs" />
+    <Compile Include="Model\Parametros\Vendedor.cs" />
+    <Compile Include="UI\Detalle_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Detalle_Compra.Designer.cs">
+      <DependentUpon>Detalle_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Parametros\Locacion.cs" />
+    <Compile Include="Model\Parametros\Proveedor.cs" />
+    <Compile Include="UI\Persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Persona.Designer.cs">
+      <DependentUpon>Persona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\LocacionRepository.cs" />
+    <Compile Include="Repository\ProveedorRepository.cs" />
+    <Compile Include="UI\Fabricantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Fabricantes.Designer.cs">
+      <DependentUpon>Fabricantes.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Provedor.cs">
       <SubType>Form</SubType>
@@ -94,8 +196,48 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="UI\Fabricante.resx">
-      <DependentUpon>Fabricante.cs</DependentUpon>
+    <Compile Include="UI\Vendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Vendedores.Designer.cs">
+      <DependentUpon>Vendedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Variables\Global.cs" />
+    <EmbeddedResource Include="UI\Alamacenes.resx">
+      <DependentUpon>Alamacenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Local.resx">
+      <DependentUpon>Local.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Lote_Articulos.resx">
+      <DependentUpon>Lote_Articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Maestro_Articulos.resx">
+      <DependentUpon>Maestro_Articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Trabajador.resx">
+      <DependentUpon>Trabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Ubicacion_Geografica.resx">
+      <DependentUpon>Ubicacion_Geografica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Familia_Articulos.resx">
+      <DependentUpon>Familia_Articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Marcas_Articulos.resx">
+      <DependentUpon>Marcas_Articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Segmentos_Comerciales.resx">
+      <DependentUpon>Segmentos_Comerciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Detalle_Compra.resx">
+      <DependentUpon>Detalle_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Fabricantes.resx">
+      <DependentUpon>Fabricantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Compra_Articulo.resx">
       <DependentUpon>Compra_Articulo.cs</DependentUpon>
@@ -112,8 +254,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Persona.resx">
+      <DependentUpon>Persona.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Provedor.resx">
       <DependentUpon>Provedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Region_Fisica.resx">
+      <DependentUpon>Region_Fisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Vendedores.resx">
+      <DependentUpon>Vendedores.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -137,10 +288,15 @@
     <Content Include="Img\gestionVenta.png" />
     <Content Include="Img\iconoCandado.png" />
     <Content Include="Img\iconoFlecha.png" />
+    <Content Include="Img\iconoFlechaAtras100px.png" />
+    <Content Include="Img\iconoFlechaAtras50px.png" />
     <Content Include="Img\iconoInvente.png" />
     <Content Include="Img\iconoMenu.png" />
     <Content Include="Img\iconoOJo.png" />
     <Content Include="Img\iconoPersona.png" />
+    <Content Include="Img\iconoVerContraseña.png" />
+    <Content Include="Img\parametro100px.png" />
+    <Content Include="Img\parametro50px.png" />
     <Content Include="Img\registroIcono.png" />
   </ItemGroup>
   <ItemGroup>
