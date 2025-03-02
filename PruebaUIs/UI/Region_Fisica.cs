@@ -27,7 +27,7 @@ namespace PruebaUIs
         {
             InitializeComponent();
 
-            TxtCodUsuario.Text = Global.UsuarioSesion.COD_USER ?? "ADMIN";
+            
             cargarRegiones();
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -49,19 +49,23 @@ namespace PruebaUIs
         {
             DateTime fechaActual = DateTime.Now;
             RegionFisica region = null;
+            if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
+            {
+                MessageBox.Show("Debe ingresar una descripción.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
             {
                 MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
-            {
-                region = new RegionFisica(GenerarNuevoCodigoRegion(), txtDescripcion.Text, Global.UsuarioSesion.COD_USER, fechaActual);
-                regionFisicaRepository.InsertarRegistroFiscal(region);
-                Limpiar();
-                MessageBox.Show("Region insertada Correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            region = new RegionFisica(GenerarNuevoCodigoRegion(), txtDescripcion.Text, Global.UsuarioSesion.COD_USER, fechaActual);
+            regionFisicaRepository.InsertarRegistroFiscal(region);
+            Limpiar();
+            MessageBox.Show("Región insertada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Modificar = false;
         }
+
 
         private void cargarRegiones()
         {

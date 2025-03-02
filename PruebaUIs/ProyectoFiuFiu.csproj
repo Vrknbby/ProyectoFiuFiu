@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Repository\Parametros\RegionFisicaRepository.cs" />
+    <Compile Include="Repository\Parametros\UbigeoRepository.cs" />
     <Compile Include="UI\Alamacenes.cs">
       <SubType>Form</SubType>
     </Compile>
