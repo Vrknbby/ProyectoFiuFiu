@@ -1,7 +1,9 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using PruebaUIs.DB;
+using PruebaUIs.Model;
 using PruebaUIs.Repository;
+using PruebaUIs.Variables;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,8 +20,6 @@ namespace PruebaUIs
 {
     public partial class Login : MaterialForm
     {
-
-
         UsuarioRepository usuarioRepository = new UsuarioRepository();
         public Login()
         {
@@ -73,9 +73,12 @@ namespace PruebaUIs
                     MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+                Global.UsuarioSesion = cargarUsuarioGlobal();
                 Menu nuevoform = new Menu();
                 nuevoform.Show();
                 this.Hide();
+                
             }
 
             
@@ -87,7 +90,18 @@ namespace PruebaUIs
             return usuarioRepository.ValidarCredenciales(usuario, contraseña);
         }
 
-
+        private Usuario cargarUsuarioGlobal()
+        {
+            List<Usuario> usuarios = usuarioRepository.BuscarTodosLosUsuarios();
+            foreach (Usuario user in usuarios)
+            {
+                if (user.EMAIL_USER.Trim().Equals(txtIngresarUsuario.Text.Trim()))
+                {
+                    return user;
+                }
+            }
+            return null;
+        }
         
     }
 }

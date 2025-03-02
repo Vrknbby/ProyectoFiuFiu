@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repository\Parametros\RegionFisicaRepository.cs" />
     <Compile Include="UI\Alamacenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +62,12 @@
     </Compile>
     <Compile Include="UI\Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CuadroDialogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CuadroDialogo.Designer.cs">
+      <DependentUpon>CuadroDialogo.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Local.cs">
       <SubType>Form</SubType>
@@ -195,6 +202,7 @@
     <Compile Include="UI\Vendedores.Designer.cs">
       <DependentUpon>Vendedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Variables\Global.cs" />
     <EmbeddedResource Include="UI\Alamacenes.resx">
       <DependentUpon>Alamacenes.cs</DependentUpon>
     </EmbeddedResource>
