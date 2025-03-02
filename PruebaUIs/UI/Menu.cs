@@ -181,22 +181,18 @@ namespace PruebaUIs
             }
         }
 
-        private void btnPersona_Click(object sender, EventArgs e)
-        {
-            Persona nuevoform = new Persona();
-            nuevoform.Show();
-        }
-
         private void btnDetalleCompra_Click(object sender, EventArgs e)
         {
             Detalle_Compra nuevoform = new Detalle_Compra();
             nuevoform.Show();
+            nuevoform.FormClosed += (s, args) => this.Show();
             this.Hide();
         }
 
         private void btnRegionFisica_Click(object sender, EventArgs e)
         {
             Region_Fisica nuevoform = new Region_Fisica();
+            nuevoform.FormClosed += (s, args) => this.Show();
             nuevoform.Show();
             this.Hide();
         }
@@ -204,6 +200,7 @@ namespace PruebaUIs
         private void btnUbicacionGeografica_Click(object sender, EventArgs e)
         {
             Ubicacion_Geografica nuevoform = new Ubicacion_Geografica();
+            nuevoform.FormClosed += (s, args) => this.Show();
             nuevoform.Show();
             this.Hide();
         }
@@ -211,6 +208,7 @@ namespace PruebaUIs
         private void btnSegmentoComerciales_Click(object sender, EventArgs e)
         {
             Segmentos_Comerciales nuevoform = new Segmentos_Comerciales();
+            nuevoform.FormClosed += (s, args) => this.Show();
             nuevoform.Show();
             this.Hide();
         }
@@ -218,6 +216,7 @@ namespace PruebaUIs
         private void btnMarcasArticulos_Click(object sender, EventArgs e)
         {
             Marcas_Articulos nuevoform = new Marcas_Articulos();
+            nuevoform.FormClosed += (s, args) => this.Show();
             nuevoform.Show();
             this.Hide();
         }
@@ -225,8 +224,90 @@ namespace PruebaUIs
         private void btnFamiliaArticulos_Click(object sender, EventArgs e)
         {
             Familia_Articulos nuevoform = new Familia_Articulos();
+            nuevoform.FormClosed += (s, args) => this.Show();
             nuevoform.Show();
             this.Hide();
         }
+
+        private void btnLocal_Click(object sender, EventArgs e)
+        {
+            Local nuevoform = new Local();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnAlmacenes_Click(object sender, EventArgs e)
+        {
+            Alamacenes nuevoform = new Alamacenes();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnPersona_Click(object sender, EventArgs e)
+        {
+            Persona nuevoform = new Persona();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnTrabajador_Click(object sender, EventArgs e)
+        {
+            Trabajador nuevoform = new Trabajador();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnVendedores_Click(object sender, EventArgs e)
+        {
+            Vendedores nuevoform = new Vendedores();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            Clientes nuevoform = new Clientes();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            Provedor nuevoform = new Provedor();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnFabricantes_Click(object sender, EventArgs e)
+        {
+            Fabricante nuevoform = new Fabricante();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnMaestroArticulos_Click(object sender, EventArgs e)
+        {
+            Maestro_Articulos nuevoform = new Maestro_Articulos();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnLoteArticulos_Click(object sender, EventArgs e)
+        {
+            Lote_Articulos nuevoform = new Lote_Articulos();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
+
     }
 }

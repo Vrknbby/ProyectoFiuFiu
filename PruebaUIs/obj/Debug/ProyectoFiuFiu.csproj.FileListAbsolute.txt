@@ -100,3 +100,11 @@ C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUI
 C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Marcas_Articulos.resources
 C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Segmentos_Comerciales.resources
 C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Region_Fisica.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Alamacenes.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Clientes.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Local.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Lote_Articulos.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Maestro_Articulos.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Proveedores.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Trabajador.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Vendedores.resources

@@ -33,12 +33,5 @@ namespace PruebaUIs
         {
 
         }
-
-        private void btnRegresarDetalleCompra_Click(object sender, EventArgs e)
-        {
-            Menu form = new Menu();
-            form.Show(); // Abre el formulario anterior
-            this.Close(); // Cierra el formulario actual
-        }
     }
 }
