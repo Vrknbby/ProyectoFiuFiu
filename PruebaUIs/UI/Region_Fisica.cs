@@ -27,7 +27,7 @@ namespace PruebaUIs
         {
             InitializeComponent();
 
-            TxtCodUsuario.Text = Global.UsuarioSesion.COD_USER ?? "ADMIN";
+            
             cargarRegiones();
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -42,24 +42,32 @@ namespace PruebaUIs
 
         private void Region_Fisica_Load(object sender, EventArgs e)
         {
-
+            if (Global.UsuarioSesion != null && !string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+            {
+                TxtCodUsuario.Text = Global.UsuarioSesion.COD_USER;
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            DateTime fechaActual = DateTime.Now;
-            RegionFisica region = null;
+
             if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
             {
                 MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
             {
-                region = new RegionFisica(GenerarNuevoCodigoRegion(), txtDescripcion.Text, Global.UsuarioSesion.COD_USER, fechaActual);
-                regionFisicaRepository.InsertarRegistroFiscal(region);
-                Limpiar();
-                MessageBox.Show("Region insertada Correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor, complete el campo de descripción.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+
+            DateTime fechaActual = DateTime.Now;
+            RegionFisica region = new RegionFisica(GenerarNuevoCodigoRegion(), txtDescripcion.Text, Global.UsuarioSesion.COD_USER, fechaActual);
+            regionFisicaRepository.InsertarRegistroFiscal(region);
+            Limpiar();
+            MessageBox.Show("Región insertada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Modificar = false;
         }
 
@@ -143,7 +151,14 @@ namespace PruebaUIs
         private void Limpiar()
         {
             txtDescripcion.Clear();
-            TxtCodUsuario.Text = Global.UsuarioSesion.COD_USER;
+            if (Global.UsuarioSesion != null && !string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+            {
+                TxtCodUsuario.Text = Global.UsuarioSesion.COD_USER.ToString();
+            }
+            else
+            {
+                TxtCodUsuario.Text = "";
+            }
             cargarRegiones();
             Modificar = false;
         }
@@ -155,34 +170,41 @@ namespace PruebaUIs
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            CuadroDialogo Input = new CuadroDialogo("Ingrese la Region que desea Buscar", "Buscar Region");
-            if (Input.ShowDialog() == DialogResult.OK)
+            if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
             {
-                string mensaje = Input.InputText;
-
-                if (!string.IsNullOrWhiteSpace(mensaje))
+                MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                CuadroDialogo Input = new CuadroDialogo("Ingrese la Region que desea Buscar", "Buscar Region");
+                if (Input.ShowDialog() == DialogResult.OK)
                 {
-                    List<RegionFisica> regiones = regionFisicaRepository.BuscarTodosLosRegistrosFiscales();
-                    tblRegionFisica.Clear();
-                    tblRegionFisica.Columns.Add("Codigo de Region", 225);
-                    tblRegionFisica.Columns.Add("Descripcion", 225);
-                    tblRegionFisica.Columns.Add("Codigo de Usuario", 225);
-                    tblRegionFisica.Columns.Add("Fecha de Creacion", 225);
-                    foreach (RegionFisica region in regiones)
+                    string mensaje = Input.InputText;
+
+                    if (!string.IsNullOrWhiteSpace(mensaje))
                     {
-                        if (region.DES_REG.ToLower().Contains(mensaje.ToLower()))
+                        List<RegionFisica> regiones = regionFisicaRepository.BuscarTodosLosRegistrosFiscales();
+                        tblRegionFisica.Clear();
+                        tblRegionFisica.Columns.Add("Codigo de Region", 225);
+                        tblRegionFisica.Columns.Add("Descripcion", 225);
+                        tblRegionFisica.Columns.Add("Codigo de Usuario", 225);
+                        tblRegionFisica.Columns.Add("Fecha de Creacion", 225);
+                        foreach (RegionFisica region in regiones)
                         {
-                            ListViewItem item = new ListViewItem(region.COD_REG.ToString());
-                            item.SubItems.Add(region.DES_REG);
-                            item.SubItems.Add(region.COD_USER);
-                            item.SubItems.Add(region.FEC_ABM.ToString());
-                            tblRegionFisica.Items.Add(item);
+                            if (region.DES_REG.ToLower().Contains(mensaje.ToLower()))
+                            {
+                                ListViewItem item = new ListViewItem(region.COD_REG.ToString());
+                                item.SubItems.Add(region.DES_REG);
+                                item.SubItems.Add(region.COD_USER);
+                                item.SubItems.Add(region.FEC_ABM.ToString());
+                                tblRegionFisica.Items.Add(item);
+                            }
                         }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Debe ingresar un mensaje válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        MessageBox.Show("Debe ingresar un mensaje válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
