@@ -71,7 +71,6 @@ namespace PruebaUIs
             Modificar = false;
         }
 
-
         private void cargarRegiones()
         {
             if (tblRegionFisica.Columns.Count == 0)

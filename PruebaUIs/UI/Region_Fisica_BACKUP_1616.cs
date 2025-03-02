@@ -50,12 +50,28 @@ namespace PruebaUIs
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            DateTime fechaActual = DateTime.Now;
+            RegionFisica region = null;
+            if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
+            {
+                MessageBox.Show("Debe ingresar una descripción.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+=======
 
+>>>>>>> Cristian
             if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
             {
                 MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+<<<<<<< HEAD
+            region = new RegionFisica(GenerarNuevoCodigoRegion(), txtDescripcion.Text, Global.UsuarioSesion.COD_USER, fechaActual);
+            regionFisicaRepository.InsertarRegistroFiscal(region);
+            Limpiar();
+            MessageBox.Show("Región insertada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+=======
 
             if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
             {
@@ -68,6 +84,7 @@ namespace PruebaUIs
             regionFisicaRepository.InsertarRegistroFiscal(region);
             Limpiar();
             MessageBox.Show("Región insertada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+>>>>>>> Cristian
             Modificar = false;
         }
 
