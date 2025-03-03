@@ -8,13 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace PruebaUIs.Repository.Parametros
 {
-    public class FmaArticuloRepository
+    public class FamiliaArticuloRepository
     {
         private readonly ConexionBD conexion;
 
-        public FmaArticuloRepository()
+        public FamiliaArticuloRepository()
         {
             conexion = new ConexionBD();
         }

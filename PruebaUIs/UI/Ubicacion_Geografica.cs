@@ -90,62 +90,118 @@ namespace PruebaUIs
 
         public string GenerarNuevoCodigoPais()
         {
-            string pais = cbxPais.SelectedValue.ToString();
-            if (string.IsNullOrWhiteSpace(pais))
-                return string.Empty;
+            try
+            {
+                if (cbxPais.SelectedValue == null)
+                    throw new Exception("Debe seleccionar un país.");
 
-            return pais.Substring(0, Math.Min(3, pais.Length)).ToUpper();
+                string pais = cbxPais.SelectedValue.ToString();
+                if (string.IsNullOrWhiteSpace(pais))
+                    return string.Empty;
+
+                return pais.Substring(0, Math.Min(3, pais.Length)).ToUpper();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al generar código de país: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return string.Empty;
+            }
 
         }
 
         public short GenerarNuevoCodigoDepartamento()
         {
-
-            List<Ubigeo> ubicaciones = ubigeoRepository.BuscarTodasLasUbicaciones();
-            short maxCodigo = ubicaciones.Any() ? ubicaciones.Max(r => r.COD_DPTO) : (short)0;
-            if (maxCodigo >= short.MaxValue)
+            try
             {
-                throw new Exception("Se ha alcanzado el límite de códigos disponibles.");
+                List<Ubigeo> ubicaciones = ubigeoRepository.BuscarTodasLasUbicaciones();
+                short maxCodigo = ubicaciones.Any() ? ubicaciones.Max(r => r.COD_DPTO) : (short)0;
+                if (maxCodigo >= short.MaxValue)
+                    throw new Exception("Se ha alcanzado el límite de códigos disponibles.");
+                return (short)(maxCodigo + 1);
             }
-            return (short)(maxCodigo + 1);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al generar código de departamento: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
         }
 
         public short GenerarNuevoCodigoCiudad()
         {
-
-            List<Ubigeo> ubicaciones = ubigeoRepository.BuscarTodasLasUbicaciones();
-            short maxCodigo = ubicaciones.Any() ? ubicaciones.Max(r => r.COD_CIU) : (short)0;
-            if (maxCodigo >= short.MaxValue)
+            try
             {
-                throw new Exception("Se ha alcanzado el límite de códigos disponibles.");
+                List<Ubigeo> ubicaciones = ubigeoRepository.BuscarTodasLasUbicaciones();
+                short maxCodigo = ubicaciones.Any() ? ubicaciones.Max(r => r.COD_CIU) : (short)0;
+                if (maxCodigo >= short.MaxValue)
+                    throw new Exception("Se ha alcanzado el límite de códigos disponibles.");
+                return (short)(maxCodigo + 1);
             }
-            return (short)(maxCodigo + 1);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al generar código de ciudad: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
         }
 
         public short GenerarNuevoCodigoBarrio()
         {
-
-            List<Ubigeo> ubicaciones = ubigeoRepository.BuscarTodasLasUbicaciones();
-            short maxCodigo = ubicaciones.Any() ? ubicaciones.Max(r => r.COD_BARR) : (short)0;
-            if (maxCodigo >= short.MaxValue)
+            try
             {
-                throw new Exception("Se ha alcanzado el límite de códigos disponibles.");
+                List<Ubigeo> ubicaciones = ubigeoRepository.BuscarTodasLasUbicaciones();
+                short maxCodigo = ubicaciones.Any() ? ubicaciones.Max(r => r.COD_BARR) : (short)0;
+                if (maxCodigo >= short.MaxValue)
+                    throw new Exception("Se ha alcanzado el límite de códigos disponibles.");
+                return (short)(maxCodigo + 1);
             }
-            return (short)(maxCodigo + 1);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al generar código de barrio: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             DateTime fechaActual = DateTime.Now;
-            Ubigeo ubigeo = null;
+            
             if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
             {
                 MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            ubigeo = new Ubigeo(GenerarNuevoCodigoPais(), cbxPais.SelectedValue.ToString(), GenerarNuevoCodigoDepartamento(), txtDepartamento.Text, GenerarNuevoCodigoCiudad(),
-                txtCiudad.Text, GenerarNuevoCodigoBarrio(), txtBarrio.Text, txtIdioma.Text, cbxContinente.SelectedValue.ToString(), short.Parse(cbxRegion.SelectedValue.ToString()), txtLatitud.Text, txtLogitud.Text, Global.UsuarioSesion.COD_USER, fechaActual);
+            if (cbxPais.SelectedIndex == 0 ||
+                cbxRegion.SelectedIndex == 0 ||
+            string.IsNullOrWhiteSpace(txtDepartamento.Text) ||
+            string.IsNullOrWhiteSpace(txtCiudad.Text) ||
+            string.IsNullOrWhiteSpace(txtBarrio.Text) ||
+            string.IsNullOrWhiteSpace(txtIdioma.Text) ||
+            cbxContinente.SelectedIndex == 0 ||
+            string.IsNullOrWhiteSpace(txtLatitud.Text) ||
+            string.IsNullOrWhiteSpace(txtLogitud.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.",
+                            "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Ubigeo ubigeo = new Ubigeo(
+                GenerarNuevoCodigoPais(),
+                cbxPais.SelectedValue.ToString(),
+                GenerarNuevoCodigoDepartamento(),
+                txtDepartamento.Text,
+                GenerarNuevoCodigoCiudad(),
+                txtCiudad.Text,
+                GenerarNuevoCodigoBarrio(),
+                txtBarrio.Text,
+                txtIdioma.Text,
+                cbxContinente.SelectedValue.ToString(),
+                short.Parse(cbxRegion.SelectedValue.ToString()),
+                txtLatitud.Text,
+                txtLogitud.Text,
+                Global.UsuarioSesion.COD_USER,
+                fechaActual
+            );
 
             ubigeoRepository.InsertarUbicacion(ubigeo);
             limpiar();
@@ -155,8 +211,13 @@ namespace PruebaUIs
 
         private void cargarComboBoxRegion()
         {
-            List<RegionFisica> regiones = regionFisicaRepository.BuscarTodosLosRegistrosFiscales(); 
-
+            List<RegionFisica> regiones = regionFisicaRepository.BuscarTodosLosRegistrosFiscales();
+            if (regiones == null || !regiones.Any())
+            {
+                MessageBox.Show("No hay regiones disponibles.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            regiones.Insert(0, new RegionFisica { COD_REG = 0, DES_REG = "-- Seleccionar --" });
             cbxRegion.DisplayMember = "DES_REG"; 
             cbxRegion.ValueMember = "COD_REG";   
             cbxRegion.DataSource = regiones;    
@@ -167,6 +228,7 @@ namespace PruebaUIs
         
             List<string> continentes = new List<string>
             {
+                "-- Seleccionar --",
                 "África",
                 "América",
                 "Antártida",
@@ -182,6 +244,7 @@ namespace PruebaUIs
         {
             List<string> paises = new List<string>
             {
+                "-- Seleccionar --",
                 "Afganistán", "Alemania", "Argentina", "Australia", "Bangladés", "Brasil", "Canadá", "Chile", "China",
                 "Colombia", "Corea del Sur", "Costa Rica", "Cuba", "Dinamarca", "Ecuador", "Egipto", "El Salvador", "España",
                 "Estados Unidos", "Filipinas", "Francia", "Grecia", "Guatemala", "Honduras", "India", "Indonesia", "Irán",
@@ -215,29 +278,55 @@ namespace PruebaUIs
             if (tblUbigeo.SelectedItems.Count > 0)
             {
                 ListViewItem item = tblUbigeo.SelectedItems[0];
-                string codigo = item.SubItems[0].Text;
-                cbxPais.SelectedItem = item.SubItems[1].Text;
-                txtDepartamento.Text = item.SubItems[3].Text;
-                txtCiudad.Text = item.SubItems[5].Text;
-                txtBarrio.Text = item.SubItems[7].Text;
-                txtIdioma.Text = item.SubItems[8].Text;
-                cbxContinente.SelectedItem = item.SubItems[9].Text;
-                cbxRegion.SelectedValue = short.Parse(item.SubItems[10].Text);
-                txtLatitud.Text = item.SubItems[11].Text;
-                txtLogitud.Text = item.SubItems[12].Text;
-
-
-
-                List<Ubigeo> listaUbigeos = ubigeoRepository.BuscarTodasLasUbicaciones();
-                foreach(Ubigeo ubicacion in listaUbigeos)
+                string codigoPais = item.SubItems[0].Text;
+                string pais = item.SubItems[1].Text;
+                string codigoDepto = item.SubItems[2].Text;
+                string depto = item.SubItems[3].Text;
+                string codigoCiudad = item.SubItems[4].Text;
+                string ciudad = item.SubItems[5].Text;
+                string codigoBarrio = item.SubItems[6].Text;
+                string barrio = item.SubItems[7].Text;
+                string idioma = item.SubItems[8].Text;
+                string continente = item.SubItems[9].Text;
+                string codigoRegion = item.SubItems[10].Text;
+                string latitud = item.SubItems[11].Text;
+                string longitud = item.SubItems[12].Text;
+                // Asignamos los valores a los controles del formulario
+                cbxPais.SelectedItem = pais;
+                txtDepartamento.Text = depto;
+                txtCiudad.Text = ciudad;
+                txtBarrio.Text = barrio;
+                txtIdioma.Text = idioma;
+                cbxContinente.SelectedItem = continente;
+                try
                 {
-                    if (ubicacion.COD_PAIS.Equals(codigo))
+                    cbxRegion.SelectedValue = short.Parse(codigoRegion);
+                }
+                catch
+                {
+                    MessageBox.Show("Error al asignar el código de región.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                txtLatitud.Text = latitud;
+                txtLogitud.Text = longitud;
+
+                cbxPais.Refresh();
+                cbxContinente.Refresh();
+                cbxRegion.Refresh();
+                Application.DoEvents();
+
+                // Validación: usar la clave compuesta para encontrar la ubicación correcta
+                List<Ubigeo> listaUbigeos = ubigeoRepository.BuscarTodasLasUbicaciones();
+                foreach (Ubigeo ubicacion in listaUbigeos)
+                {
+                    if (ubicacion.COD_PAIS.Equals(codigoPais) &&
+                        ubicacion.COD_DPTO.ToString().Equals(codigoDepto) &&
+                        ubicacion.COD_CIU.ToString().Equals(codigoCiudad) &&
+                        ubicacion.COD_BARR.ToString().Equals(codigoBarrio))
                     {
                         ubigeoSelect = ubicacion;
                         break;
                     }
                 }
-
                 Modificar = true;
             }
         }
@@ -250,7 +339,7 @@ namespace PruebaUIs
             }
             else
             {
-                if (Modificar)
+                if (Modificar && ubigeoSelect != null)
                 {
                     DateTime fechaActual = DateTime.Now;
                     Ubigeo ubi = ubigeoSelect;
@@ -280,15 +369,27 @@ namespace PruebaUIs
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (Modificar)
+            try
             {
-                ubigeoRepository.EliminarUbicacion(ubigeoSelect.COD_PAIS, ubigeoSelect.COD_DPTO, ubigeoSelect.COD_CIU, ubigeoSelect.COD_BARR);
-                limpiar();
-                MessageBox.Show("Ubicacion eliminada con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (tblUbigeo.SelectedItems.Count == 0)
+                {
+                    MessageBox.Show("Seleccione una ubicación para eliminar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                DialogResult result = MessageBox.Show("¿Está seguro de eliminar la ubicación seleccionada?",
+                                                        "Confirmar eliminación",
+                                                        MessageBoxButtons.YesNo,
+                                                        MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    ubigeoRepository.EliminarUbicacion(ubigeoSelect.COD_PAIS, ubigeoSelect.COD_DPTO, ubigeoSelect.COD_CIU, ubigeoSelect.COD_BARR);
+                    limpiar();
+                    MessageBox.Show("Ubicación eliminada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Seleccione una ubicacion para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al eliminar la ubicación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
