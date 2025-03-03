@@ -232,6 +232,11 @@ namespace PruebaUIs
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+            {
+                MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (tblSegmentosComerciales.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Seleccione un segmento para eliminar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);

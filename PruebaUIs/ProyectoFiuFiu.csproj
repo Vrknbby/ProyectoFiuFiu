@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Repository\Parametros\FamiliaArticuloRepository.cs" />
     <Compile Include="Repository\Parametros\MarcasArtRepository.cs" />
+    <Compile Include="Repository\Parametros\PersonaRepository.cs" />
     <Compile Include="Repository\Parametros\SegmentosComercialesRepository.cs" />
     <Compile Include="Repository\Parametros\RegionFisicaRepository.cs" />
     <Compile Include="Repository\Parametros\UbigeoRepository.cs" />
@@ -139,7 +140,7 @@
     <Compile Include="Model\Parametros\FamiliaArticulos.cs" />
     <Compile Include="Model\Parametros\LoteArticulos.cs" />
     <Compile Include="Model\Parametros\MarcasArticulos.cs" />
-    <Compile Include="Model\Parametros\Persona.cs" />
+    <Compile Include="Model\Parametros\Personas.cs" />
     <Compile Include="Model\Parametros\RegionFisica.cs" />
     <Compile Include="Model\Parametros\SegmentoComerciales.cs" />
     <Compile Include="Model\Parametros\Ubigeo.cs" />
