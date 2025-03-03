@@ -365,7 +365,7 @@ namespace PruebaUIs
                 txtSuperficie.Text = item.SubItems[12].Text;
                 txtCobertura.Text = item.SubItems[13].Text;
 
-
+                cbxPais.Refresh();
 
                 List<Locacion> listaLocaciones = locacionRepository.BuscarTodasLasLocaciones();
                 foreach (Locacion locacion in listaLocaciones)
