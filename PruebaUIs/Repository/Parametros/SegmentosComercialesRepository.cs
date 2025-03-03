@@ -137,5 +137,43 @@ namespace PruebaUIs.Repository.Parametros
             }
             return segmentos;
         }
+
+        public List<SegmentoComerciales> BuscarSubsegmentosPorSegmento(string codSeg)
+        {
+            List<SegmentoComerciales> subsegmentos = new List<SegmentoComerciales>();
+            using (SqlConnection con = conexion.ObtenerConexion())
+            {
+                string query = @"
+                    SELECT COD_SEG, DES_SEG, COD_SSEG, DES_SSEG, COD_USER, FEC_ABM
+                    FROM DB_SEG_COM
+                    WHERE COD_SEG = @codSeg
+                    ORDER BY DES_SSEG
+                ";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@codSeg", codSeg);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            SegmentoComerciales seg = new SegmentoComerciales
+                            (
+                                reader["COD_SEG"].ToString(),
+                                reader["DES_SEG"].ToString(),
+                                reader["COD_SSEG"].ToString(),
+                                reader["DES_SSEG"].ToString(),
+                                reader["COD_USER"].ToString(),
+                                Convert.ToDateTime(reader["FEC_ABM"])
+                            );
+                            subsegmentos.Add(seg);
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return subsegmentos;
+        }
     }
 }

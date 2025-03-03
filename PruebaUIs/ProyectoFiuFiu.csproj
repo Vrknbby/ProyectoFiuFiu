@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repository\Parametros\ClienteRepository.cs" />
     <Compile Include="Repository\Parametros\AlmacenRepository.cs" />
     <Compile Include="Repository\Parametros\FamiliaArticuloRepository.cs" />
     <Compile Include="Repository\Parametros\MarcasArtRepository.cs" />

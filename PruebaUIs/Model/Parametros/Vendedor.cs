@@ -22,5 +22,10 @@ namespace PruebaUIs.Model.Parametros
             COD_USER = cOD_USER;
             FEC_ABM = fEC_ABM;
         }
+
+        public Vendedor()
+        {
+
+        }
     }
 }

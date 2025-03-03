@@ -283,10 +283,9 @@ namespace PruebaUIs
                 personaSelect.WWW_URL = txtPaginaWeb.Text;
                 personaSelect.COD_USER = Global.UsuarioSesion.COD_USER;
                 personaSelect.FEC_ABM = fechaActual;
-
-                Limpiar();
-
+             
                 personaRepository.ActualizarPersona(personaSelect);
+                Limpiar();
                 MessageBox.Show("Persona actualizada correctamente.",
                                 "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
