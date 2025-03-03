@@ -33,5 +33,7 @@ namespace PruebaUIs.Model.Parametros
             FEC_ABM = fEC_ABM;
         }
 
+        public SegmentoComerciales() { }
+
     }
 }
