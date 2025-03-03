@@ -31,6 +31,7 @@ namespace PruebaUIs.Repository.Parametros
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@CACCION", "INSERTAR");
                     cmd.Parameters.AddWithValue("@COD_VEN", vendedor.COD_VEN);
+                    cmd.Parameters.AddWithValue("@COD_PER", vendedor.COD_PER);
                     cmd.Parameters.AddWithValue("@FLG_INH_MOV", vendedor.FLG_INH_MOV);
                     cmd.Parameters.AddWithValue("@COD_USER", vendedor.COD_USER);
                     cmd.Parameters.AddWithValue("@FEC_ABM", vendedor.FEC_ABM);
@@ -50,8 +51,9 @@ namespace PruebaUIs.Repository.Parametros
                 using (SqlCommand cmd = new SqlCommand("spGestionarVendedor", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@CACCION", "INSERTAR");
+                    cmd.Parameters.AddWithValue("@CACCION", "EDITAR");
                     cmd.Parameters.AddWithValue("@COD_VEN", vendedor.COD_VEN);
+                    cmd.Parameters.AddWithValue("@COD_PER", vendedor.COD_PER);
                     cmd.Parameters.AddWithValue("@FLG_INH_MOV", vendedor.FLG_INH_MOV);
                     cmd.Parameters.AddWithValue("@COD_USER", vendedor.COD_USER);
                     cmd.Parameters.AddWithValue("@FEC_ABM", vendedor.FEC_ABM);
@@ -122,6 +124,21 @@ namespace PruebaUIs.Repository.Parametros
                 con.Close();
             }
             return vendedor;
+        }
+
+        public void EliminarVendedor(string codVen)
+        {
+            using (SqlConnection con = conexion.ObtenerConexion())
+            {
+                using (SqlCommand cmd = new SqlCommand("spGestionarVendedor", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@CACCION", "ELIMINAR");
+                    cmd.Parameters.AddWithValue("@COD_VEN", codVen);
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
         }
 
     }

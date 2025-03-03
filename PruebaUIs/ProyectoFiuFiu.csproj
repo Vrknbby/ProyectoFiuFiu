@@ -57,12 +57,6 @@
     <Compile Include="Repository\Parametros\RegionFisicaRepository.cs" />
     <Compile Include="Repository\Parametros\UbigeoRepository.cs" />
     <Compile Include="Repository\Parametros\VendedorRepository.cs" />
-    <Compile Include="UI\Alamacenes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Alamacenes.Designer.cs">
-      <DependentUpon>Alamacenes.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,9 +203,6 @@
       <DependentUpon>Vendedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Variables\Global.cs" />
-    <EmbeddedResource Include="UI\Alamacenes.resx">
-      <DependentUpon>Alamacenes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>

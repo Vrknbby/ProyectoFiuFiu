@@ -239,10 +239,10 @@ namespace PruebaUIs
 
         private void btnAlmacenes_Click(object sender, EventArgs e)
         {
-            Alamacenes nuevoform = new Alamacenes();
-            nuevoform.FormClosed += (s, args) => this.Show();
-            nuevoform.Show();
-            this.Hide();
+        //    Alamacenes nuevoform = new Alamacenes();
+        //    nuevoform.FormClosed += (s, args) => this.Show();
+        //    nuevoform.Show();
+        //    this.Hide();
         }
 
         private void btnPersona_Click(object sender, EventArgs e)

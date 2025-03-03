@@ -158,6 +158,7 @@ namespace PruebaUIs
                 codUserTxt.Text,
                 fechaActual);
             proveedorRepository.InsertarProveedor(proveedor);
+            Limpiar();
         }
 
         public string GenerarCodigoProveedor()
