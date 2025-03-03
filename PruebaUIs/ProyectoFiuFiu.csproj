@@ -64,6 +64,12 @@
     <Compile Include="UI\Almacenes.Designer.cs">
       <DependentUpon>Almacenes.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\AlmacenUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AlmacenUI.Designer.cs">
+      <DependentUpon>AlmacenUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     <Compile Include="Variables\Global.cs" />
     <EmbeddedResource Include="UI\Almacenes.resx">
       <DependentUpon>Almacenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AlmacenUI.resx">
+      <DependentUpon>AlmacenUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>

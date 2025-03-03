@@ -2,6 +2,7 @@
 using MaterialSkin.Controls;
 using PruebaUIs.Model;
 using PruebaUIs.Repository;
+using PruebaUIs.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -239,7 +240,7 @@ namespace PruebaUIs
 
         private void btnAlmacenes_Click(object sender, EventArgs e)
         {
-            Almacenes nuevoform = new Almacenes();
+            AlmacenUI nuevoform = new AlmacenUI();
             nuevoform.FormClosed += (s, args) => this.Show();
             nuevoform.Show();
             this.Hide();

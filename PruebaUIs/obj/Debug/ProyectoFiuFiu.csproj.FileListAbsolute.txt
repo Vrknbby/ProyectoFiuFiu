@@ -151,3 +151,4 @@ C:\Users\CRISTIAN\Desktop\ProyectoMartes\ProyectoFiuFiu\PruebaUIs\obj\Debug\Proy
 C:\Users\CRISTIAN\Desktop\ProyectoMartes\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.exe
 C:\Users\CRISTIAN\Desktop\ProyectoMartes\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.pdb
 C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Almacenes.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.UI.AlmacenUI.resources

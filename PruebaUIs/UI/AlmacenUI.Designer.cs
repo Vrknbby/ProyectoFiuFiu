@@ -1,7 +1,7 @@
 ﻿
-namespace PruebaUIs
+namespace PruebaUIs.UI
 {
-    partial class Almacenes
+    partial class AlmacenUI
     {
         /// <summary>
         /// Required designer variable.
@@ -88,13 +88,13 @@ namespace PruebaUIs
             this.materialCard1.Controls.Add(this.materialLabel2);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(1, 64);
+            this.materialCard1.Location = new System.Drawing.Point(0, 64);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(1412, 576);
-            this.materialCard1.TabIndex = 0;
+            this.materialCard1.TabIndex = 1;
             // 
             // gbCanje
             // 
@@ -362,7 +362,7 @@ namespace PruebaUIs
             this.txtSuperficieAlmacen.AnimateReadOnly = false;
             this.txtSuperficieAlmacen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuperficieAlmacen.Depth = 0;
-            this.txtSuperficieAlmacen.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtSuperficieAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtSuperficieAlmacen.LeadingIcon = null;
             this.txtSuperficieAlmacen.Location = new System.Drawing.Point(169, 201);
             this.txtSuperficieAlmacen.MaxLength = 50;
@@ -380,7 +380,7 @@ namespace PruebaUIs
             this.txtDescripcion.AnimateReadOnly = false;
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Depth = 0;
-            this.txtDescripcion.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtDescripcion.LeadingIcon = null;
             this.txtDescripcion.Location = new System.Drawing.Point(399, 17);
             this.txtDescripcion.MaxLength = 50;
@@ -398,7 +398,7 @@ namespace PruebaUIs
             this.txtAlturaAlmacen.AnimateReadOnly = false;
             this.txtAlturaAlmacen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAlturaAlmacen.Depth = 0;
-            this.txtAlturaAlmacen.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAlturaAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtAlturaAlmacen.LeadingIcon = null;
             this.txtAlturaAlmacen.Location = new System.Drawing.Point(599, 118);
             this.txtAlturaAlmacen.MaxLength = 50;
@@ -416,7 +416,7 @@ namespace PruebaUIs
             this.txtEncargado.AnimateReadOnly = false;
             this.txtEncargado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEncargado.Depth = 0;
-            this.txtEncargado.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEncargado.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEncargado.LeadingIcon = null;
             this.txtEncargado.Location = new System.Drawing.Point(169, 118);
             this.txtEncargado.MaxLength = 50;
@@ -501,16 +501,14 @@ namespace PruebaUIs
             this.materialLabel2.TabIndex = 1;
             this.materialLabel2.Text = "Fecha de Creacion de la Locacion";
             // 
-            // Almacenes
+            // AlmacenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1413, 648);
             this.Controls.Add(this.materialCard1);
-            this.Name = "Almacenes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Almacenes";
-            this.Load += new System.EventHandler(this.Alamacenes_Load);
+            this.Name = "AlmacenUI";
+            this.Text = "Almacen";
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
             this.gbCanje.ResumeLayout(false);
@@ -524,13 +522,22 @@ namespace PruebaUIs
         #endregion
 
         private MaterialSkin.Controls.MaterialCard materialCard1;
+        private System.Windows.Forms.GroupBox gbCanje;
+        private MaterialSkin.Controls.MaterialRadioButton rbCanjeSI;
+        private MaterialSkin.Controls.MaterialRadioButton rbCanjeNO;
+        private System.Windows.Forms.GroupBox gbAmbienteControlado;
+        private MaterialSkin.Controls.MaterialRadioButton rbClimaSI;
+        private MaterialSkin.Controls.MaterialRadioButton rbClimaNO;
+        private MaterialSkin.Controls.MaterialComboBox cbxLocacion;
+        private MaterialSkin.Controls.MaterialListView tblAlmacenes;
+        private MaterialSkin.Controls.MaterialButton btnEliminar;
+        private MaterialSkin.Controls.MaterialButton btnCancelar;
+        private MaterialSkin.Controls.MaterialButton btnModificar;
+        private MaterialSkin.Controls.MaterialButton btnGuardar;
+        private MaterialSkin.Controls.MaterialButton btnBuscar;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.DateTimePicker dateCreacion;
         private System.Windows.Forms.DateTimePicker dateModificacion;
-        private MaterialSkin.Controls.MaterialRadioButton rbClimaNO;
-        private MaterialSkin.Controls.MaterialRadioButton rbClimaSI;
-        private MaterialSkin.Controls.MaterialRadioButton rbCanjeNO;
-        private MaterialSkin.Controls.MaterialRadioButton rbCanjeSI;
         private MaterialSkin.Controls.MaterialTextBox txtSuperficieAlmacen;
         private MaterialSkin.Controls.MaterialTextBox txtDescripcion;
         private MaterialSkin.Controls.MaterialTextBox txtAlturaAlmacen;
@@ -541,14 +548,5 @@ namespace PruebaUIs
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialListView tblAlmacenes;
-        private MaterialSkin.Controls.MaterialButton btnEliminar;
-        private MaterialSkin.Controls.MaterialButton btnCancelar;
-        private MaterialSkin.Controls.MaterialButton btnModificar;
-        private MaterialSkin.Controls.MaterialButton btnGuardar;
-        private MaterialSkin.Controls.MaterialButton btnBuscar;
-        private MaterialSkin.Controls.MaterialComboBox cbxLocacion;
-        private System.Windows.Forms.GroupBox gbAmbienteControlado;
-        private System.Windows.Forms.GroupBox gbCanje;
     }
 }
