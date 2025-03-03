@@ -94,6 +94,7 @@ namespace PruebaUIs.Repository
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@CACCION", "BUSCARTODOS");
+
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -102,20 +103,24 @@ namespace PruebaUIs.Repository
                                 Convert.ToBoolean(reader["FLG_DEP_CEN"]),
                                 reader["COD_LOC"].ToString(),
                                 reader["DES_LOC"].ToString(),
-                                Convert.ToDateTime(reader["FEC_CREA"].ToString()),
+                                reader.IsDBNull(reader.GetOrdinal("FEC_CREA")) ? DateTime.MinValue : Convert.ToDateTime(reader["FEC_CREA"]),
                                 reader["DES_NOM_ENC"].ToString(),
-                                Convert.ToBoolean(reader["FLG_LOC_VIR"].ToString()),
+                                Convert.ToBoolean(reader["FLG_LOC_VIR"]),
                                 reader["COD_PAIS"].ToString(),
-                                Convert.ToInt32(reader["COD_DPTO"].ToString()),
-                                Convert.ToInt32(reader["COD_CIU"].ToString()),
-                                Convert.ToInt32(reader["COD_BARR"].ToString()),
+                                Convert.ToInt32(reader["COD_DPTO"]),
+                                Convert.ToInt32(reader["COD_CIU"]),
+                                Convert.ToInt32(reader["COD_BARR"]),
                                 reader["DES_DIR_LOC"].ToString(),
-                                Convert.ToInt32(reader["VAL_ZLOC_ALT"].ToString()),
-                                Convert.ToInt32(reader["VAL_ZLOC_SUP"].ToString()),
-                                Convert.ToInt32(reader["VAL_COB_ESP"].ToString()),
+
+                                // Verificar NULL antes de convertir a decimal
+                                reader.IsDBNull(reader.GetOrdinal("VAL_ZLOC_ALT")) ? 0m : Convert.ToDecimal(reader["VAL_ZLOC_ALT"]),
+                                reader.IsDBNull(reader.GetOrdinal("VAL_ZLOC_SUP")) ? 0m : Convert.ToDecimal(reader["VAL_ZLOC_SUP"]),
+
+                                reader.IsDBNull(reader.GetOrdinal("VAL_COB_ESP")) ? 0 : Convert.ToInt32(reader["VAL_COB_ESP"]),
                                 reader["COD_USER"].ToString(),
-                                Convert.ToDateTime(reader["FEC_ABM"])
+                                reader.IsDBNull(reader.GetOrdinal("FEC_ABM")) ? DateTime.MinValue : Convert.ToDateTime(reader["FEC_ABM"])
                             );
+
                             locaciones.Add(locacion);
                         }
                     }
@@ -123,6 +128,20 @@ namespace PruebaUIs.Repository
                 con.Close();
             }
             return locaciones;
+        }
+        public void EliminarLocacion(string codLoc)
+        {
+            using (SqlConnection con = conexion.ObtenerConexion())
+            {
+                using (SqlCommand cmd = new SqlCommand("spGestionarLocacion", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@CACCION", "ELIMINAR");
+                    cmd.Parameters.AddWithValue("@COD_LOC", codLoc);
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
         }
 
     }

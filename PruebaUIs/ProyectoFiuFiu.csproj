@@ -157,7 +157,7 @@
     <Compile Include="UI\Persona.Designer.cs">
       <DependentUpon>Persona.cs</DependentUpon>
     </Compile>
-    <Compile Include="Repository\LocacionRepository.cs" />
+    <Compile Include="Repository\Parametros\LocacionRepository.cs" />
     <Compile Include="Repository\ProveedorRepository.cs" />
     <Compile Include="UI\Fabricantes.cs">
       <SubType>Form</SubType>
