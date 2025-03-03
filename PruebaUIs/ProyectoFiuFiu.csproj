@@ -50,17 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repository\Parametros\AlmacenRepository.cs" />
     <Compile Include="Repository\Parametros\FamiliaArticuloRepository.cs" />
     <Compile Include="Repository\Parametros\MarcasArtRepository.cs" />
     <Compile Include="Repository\Parametros\PersonaRepository.cs" />
     <Compile Include="Repository\Parametros\SegmentosComercialesRepository.cs" />
     <Compile Include="Repository\Parametros\RegionFisicaRepository.cs" />
     <Compile Include="Repository\Parametros\UbigeoRepository.cs" />
-    <Compile Include="UI\Alamacenes.cs">
+    <Compile Include="UI\Almacenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Alamacenes.Designer.cs">
-      <DependentUpon>Alamacenes.cs</DependentUpon>
+    <Compile Include="UI\Almacenes.Designer.cs">
+      <DependentUpon>Almacenes.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Clientes.cs">
       <SubType>Form</SubType>
@@ -208,8 +209,8 @@
       <DependentUpon>Vendedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Variables\Global.cs" />
-    <EmbeddedResource Include="UI\Alamacenes.resx">
-      <DependentUpon>Alamacenes.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Almacenes.resx">
+      <DependentUpon>Almacenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
