@@ -42,7 +42,7 @@ namespace PruebaUIs.Repository
 
         }
 
-        public void ActualizarProveedor(Locacion locacion)
+        public void ActualizarProveedor(Proveedor proveedor)
         {
             using (SqlConnection con = conexion.ObtenerConexion())
             {
@@ -50,13 +50,13 @@ namespace PruebaUIs.Repository
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@CACCION", "EDITAR");
-                    cmd.Parameters.AddWithValue("@COD_PRV", locacion.COD_USER);
-                    cmd.Parameters.AddWithValue("@COD_PER", locacion.COD_USER);
-                    cmd.Parameters.AddWithValue("@FLG_INH_MOV", locacion.COD_USER);
-                    cmd.Parameters.AddWithValue("@VAL_TIE_ATC", locacion.COD_USER);
-                    cmd.Parameters.AddWithValue("@VAL_CMN_UMO", locacion.COD_USER);
-                    cmd.Parameters.AddWithValue("@COD_USER", locacion.COD_USER);
-                    cmd.Parameters.AddWithValue("@FEC_ABM", locacion.COD_USER);
+                    cmd.Parameters.AddWithValue("@COD_PRV", proveedor.COD_PRV);
+                    cmd.Parameters.AddWithValue("@COD_PER", proveedor.COD_PER);
+                    cmd.Parameters.AddWithValue("@FLG_INH_MOV", proveedor.FLG_INH_MOV);
+                    cmd.Parameters.AddWithValue("@VAL_TIE_ATC", proveedor.VAL_TIE_ATC);
+                    cmd.Parameters.AddWithValue("@VAL_CMN_UMO", proveedor.VAL_CMN_UMO);
+                    cmd.Parameters.AddWithValue("@COD_USER", proveedor.COD_USER);
+                    cmd.Parameters.AddWithValue("@FEC_ABM", proveedor.FEC_ABM);
 
                     cmd.ExecuteNonQuery();
 
@@ -132,7 +132,20 @@ namespace PruebaUIs.Repository
             }
             return proveedor;
         }
-
+        public void EliminarProveedor(string codPrv)
+        {
+            using (SqlConnection con = conexion.ObtenerConexion())
+            {
+                using (SqlCommand cmd = new SqlCommand("spGestionarProveedor", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@CACCION", "ELIMINAR");
+                    cmd.Parameters.AddWithValue("@COD_PRV", codPrv);
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
+        }
 
     }
 }

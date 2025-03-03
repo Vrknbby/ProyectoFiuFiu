@@ -150,3 +150,17 @@ C:\Users\CRISTIAN\Desktop\ProyectoMartes\ProyectoFiuFiu\PruebaUIs\obj\Debug\Proy
 C:\Users\CRISTIAN\Desktop\ProyectoMartes\ProyectoFiuFiu\PruebaUIs\obj\Debug\ProyectoFiuFiu.csproj.CopyComplete
 C:\Users\CRISTIAN\Desktop\ProyectoMartes\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.exe
 C:\Users\CRISTIAN\Desktop\ProyectoMartes\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.pdb
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Alamacenes.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Clientes.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Local.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Lote_Articulos.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Maestro_Articulos.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Trabajador.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Ubicacion_Geografica.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Familia_Articulos.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Marcas_Articulos.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Segmentos_Comerciales.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Detalle_Compra.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Persona.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Region_Fisica.resources
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Vendedores.resources

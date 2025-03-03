@@ -56,6 +56,7 @@
     <Compile Include="Repository\Parametros\SegmentosComercialesRepository.cs" />
     <Compile Include="Repository\Parametros\RegionFisicaRepository.cs" />
     <Compile Include="Repository\Parametros\UbigeoRepository.cs" />
+    <Compile Include="Repository\Parametros\VendedorRepository.cs" />
     <Compile Include="UI\Alamacenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,7 +161,7 @@
       <DependentUpon>Persona.cs</DependentUpon>
     </Compile>
     <Compile Include="Repository\Parametros\LocacionRepository.cs" />
-    <Compile Include="Repository\ProveedorRepository.cs" />
+    <Compile Include="Repository\Parametros\ProveedorRepository.cs" />
     <Compile Include="UI\Fabricantes.cs">
       <SubType>Form</SubType>
     </Compile>

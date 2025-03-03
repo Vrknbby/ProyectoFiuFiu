@@ -30,13 +30,13 @@ namespace PruebaUIs
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            this.cancelarProveedorBtn = new MaterialSkin.Controls.MaterialButton();
+            this.tblProveedor = new MaterialSkin.Controls.MaterialListView();
             this.codPersonaTxt = new MaterialSkin.Controls.MaterialTextBox();
             this.codUserTxt = new MaterialSkin.Controls.MaterialTextBox();
             this.buscarProveedorBtn = new MaterialSkin.Controls.MaterialButton();
             this.GuardarProveedorBtn = new MaterialSkin.Controls.MaterialButton();
-            this.cancelarProveedorBtn = new MaterialSkin.Controls.MaterialButton();
+            this.eliminarProveedorBtn = new MaterialSkin.Controls.MaterialButton();
             this.modificarProveedorBtn = new MaterialSkin.Controls.MaterialButton();
             this.fechaCreaModAnuTxt = new System.Windows.Forms.DateTimePicker();
             this.compraMinimaProveedorTxt = new MaterialSkin.Controls.MaterialTextBox();
@@ -58,13 +58,13 @@ namespace PruebaUIs
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.materialButton1);
-            this.materialCard1.Controls.Add(this.materialListView1);
+            this.materialCard1.Controls.Add(this.cancelarProveedorBtn);
+            this.materialCard1.Controls.Add(this.tblProveedor);
             this.materialCard1.Controls.Add(this.codPersonaTxt);
             this.materialCard1.Controls.Add(this.codUserTxt);
             this.materialCard1.Controls.Add(this.buscarProveedorBtn);
             this.materialCard1.Controls.Add(this.GuardarProveedorBtn);
-            this.materialCard1.Controls.Add(this.cancelarProveedorBtn);
+            this.materialCard1.Controls.Add(this.eliminarProveedorBtn);
             this.materialCard1.Controls.Add(this.modificarProveedorBtn);
             this.materialCard1.Controls.Add(this.fechaCreaModAnuTxt);
             this.materialCard1.Controls.Add(this.compraMinimaProveedorTxt);
@@ -90,44 +90,46 @@ namespace PruebaUIs
             this.materialCard1.Size = new System.Drawing.Size(1233, 573);
             this.materialCard1.TabIndex = 0;
             // 
-            // materialButton1
+            // cancelarProveedorBtn
             // 
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(1088, 183);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(131, 36);
-            this.materialButton1.TabIndex = 25;
-            this.materialButton1.Text = "Cancelar";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
+            this.cancelarProveedorBtn.AutoSize = false;
+            this.cancelarProveedorBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cancelarProveedorBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.cancelarProveedorBtn.Depth = 0;
+            this.cancelarProveedorBtn.HighEmphasis = true;
+            this.cancelarProveedorBtn.Icon = null;
+            this.cancelarProveedorBtn.Location = new System.Drawing.Point(1088, 183);
+            this.cancelarProveedorBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.cancelarProveedorBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cancelarProveedorBtn.Name = "cancelarProveedorBtn";
+            this.cancelarProveedorBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.cancelarProveedorBtn.Size = new System.Drawing.Size(131, 36);
+            this.cancelarProveedorBtn.TabIndex = 25;
+            this.cancelarProveedorBtn.Text = "Cancelar";
+            this.cancelarProveedorBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.cancelarProveedorBtn.UseAccentColor = false;
+            this.cancelarProveedorBtn.UseVisualStyleBackColor = true;
+            this.cancelarProveedorBtn.Click += new System.EventHandler(this.cancelarProveedorBtn_Click);
             // 
-            // materialListView1
+            // tblProveedor
             // 
-            this.materialListView1.AutoSizeTable = false;
-            this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialListView1.Depth = 0;
-            this.materialListView1.FullRowSelect = true;
-            this.materialListView1.HideSelection = false;
-            this.materialListView1.Location = new System.Drawing.Point(34, 287);
-            this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
-            this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialListView1.Name = "materialListView1";
-            this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(1168, 260);
-            this.materialListView1.TabIndex = 24;
-            this.materialListView1.UseCompatibleStateImageBehavior = false;
-            this.materialListView1.View = System.Windows.Forms.View.Details;
+            this.tblProveedor.AutoSizeTable = false;
+            this.tblProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tblProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tblProveedor.Depth = 0;
+            this.tblProveedor.FullRowSelect = true;
+            this.tblProveedor.HideSelection = false;
+            this.tblProveedor.Location = new System.Drawing.Point(34, 287);
+            this.tblProveedor.MinimumSize = new System.Drawing.Size(200, 100);
+            this.tblProveedor.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.tblProveedor.MouseState = MaterialSkin.MouseState.OUT;
+            this.tblProveedor.Name = "tblProveedor";
+            this.tblProveedor.OwnerDraw = true;
+            this.tblProveedor.Size = new System.Drawing.Size(1168, 260);
+            this.tblProveedor.TabIndex = 24;
+            this.tblProveedor.UseCompatibleStateImageBehavior = false;
+            this.tblProveedor.View = System.Windows.Forms.View.Details;
+            this.tblProveedor.SelectedIndexChanged += new System.EventHandler(this.tblProveedor_SelectedIndexChanged);
             // 
             // codPersonaTxt
             // 
@@ -153,6 +155,7 @@ namespace PruebaUIs
             this.codUserTxt.AnimateReadOnly = false;
             this.codUserTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.codUserTxt.Depth = 0;
+            this.codUserTxt.Enabled = false;
             this.codUserTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.codUserTxt.LeadingIcon = null;
             this.codUserTxt.Location = new System.Drawing.Point(468, 13);
@@ -209,25 +212,26 @@ namespace PruebaUIs
             this.GuardarProveedorBtn.UseVisualStyleBackColor = true;
             this.GuardarProveedorBtn.Click += new System.EventHandler(this.GuardarProveedorBtn_Click);
             // 
-            // cancelarProveedorBtn
+            // eliminarProveedorBtn
             // 
-            this.cancelarProveedorBtn.AutoSize = false;
-            this.cancelarProveedorBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cancelarProveedorBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.cancelarProveedorBtn.Depth = 0;
-            this.cancelarProveedorBtn.HighEmphasis = true;
-            this.cancelarProveedorBtn.Icon = null;
-            this.cancelarProveedorBtn.Location = new System.Drawing.Point(1088, 231);
-            this.cancelarProveedorBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.cancelarProveedorBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cancelarProveedorBtn.Name = "cancelarProveedorBtn";
-            this.cancelarProveedorBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.cancelarProveedorBtn.Size = new System.Drawing.Size(131, 36);
-            this.cancelarProveedorBtn.TabIndex = 19;
-            this.cancelarProveedorBtn.Text = "Eliminar";
-            this.cancelarProveedorBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.cancelarProveedorBtn.UseAccentColor = false;
-            this.cancelarProveedorBtn.UseVisualStyleBackColor = true;
+            this.eliminarProveedorBtn.AutoSize = false;
+            this.eliminarProveedorBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.eliminarProveedorBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.eliminarProveedorBtn.Depth = 0;
+            this.eliminarProveedorBtn.HighEmphasis = true;
+            this.eliminarProveedorBtn.Icon = null;
+            this.eliminarProveedorBtn.Location = new System.Drawing.Point(1088, 231);
+            this.eliminarProveedorBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.eliminarProveedorBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.eliminarProveedorBtn.Name = "eliminarProveedorBtn";
+            this.eliminarProveedorBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.eliminarProveedorBtn.Size = new System.Drawing.Size(131, 36);
+            this.eliminarProveedorBtn.TabIndex = 19;
+            this.eliminarProveedorBtn.Text = "Eliminar";
+            this.eliminarProveedorBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.eliminarProveedorBtn.UseAccentColor = false;
+            this.eliminarProveedorBtn.UseVisualStyleBackColor = true;
+            this.eliminarProveedorBtn.Click += new System.EventHandler(this.eliminarProveedorBtn_Click);
             // 
             // modificarProveedorBtn
             // 
@@ -235,6 +239,7 @@ namespace PruebaUIs
             this.modificarProveedorBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.modificarProveedorBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.modificarProveedorBtn.Depth = 0;
+            this.modificarProveedorBtn.Enabled = false;
             this.modificarProveedorBtn.HighEmphasis = true;
             this.modificarProveedorBtn.Icon = null;
             this.modificarProveedorBtn.Location = new System.Drawing.Point(1088, 135);
@@ -248,9 +253,11 @@ namespace PruebaUIs
             this.modificarProveedorBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.modificarProveedorBtn.UseAccentColor = false;
             this.modificarProveedorBtn.UseVisualStyleBackColor = true;
+            this.modificarProveedorBtn.Click += new System.EventHandler(this.modificarProveedorBtn_Click);
             // 
             // fechaCreaModAnuTxt
             // 
+            this.fechaCreaModAnuTxt.Enabled = false;
             this.fechaCreaModAnuTxt.Location = new System.Drawing.Point(905, 180);
             this.fechaCreaModAnuTxt.Margin = new System.Windows.Forms.Padding(2);
             this.fechaCreaModAnuTxt.Name = "fechaCreaModAnuTxt";
@@ -344,6 +351,7 @@ namespace PruebaUIs
             this.codProveedorTxt.AnimateReadOnly = false;
             this.codProveedorTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.codProveedorTxt.Depth = 0;
+            this.codProveedorTxt.Enabled = false;
             this.codProveedorTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.codProveedorTxt.LeadingIcon = null;
             this.codProveedorTxt.Location = new System.Drawing.Point(130, 13);
@@ -484,13 +492,13 @@ namespace PruebaUIs
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialButton cancelarProveedorBtn;
+        private MaterialSkin.Controls.MaterialButton eliminarProveedorBtn;
         private MaterialSkin.Controls.MaterialButton modificarProveedorBtn;
         private MaterialSkin.Controls.MaterialButton GuardarProveedorBtn;
         private MaterialSkin.Controls.MaterialButton buscarProveedorBtn;
         private MaterialSkin.Controls.MaterialTextBox codPersonaTxt;
         private MaterialSkin.Controls.MaterialTextBox codUserTxt;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialListView materialListView1;
+        private MaterialSkin.Controls.MaterialButton cancelarProveedorBtn;
+        private MaterialSkin.Controls.MaterialListView tblProveedor;
     }
 }
