@@ -1,4 +1,5 @@
-﻿using MaterialSkin.Controls;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
 using PruebaUIs.Model.Parametros;
 using PruebaUIs.Repository.Parametros;
 using PruebaUIs.Variables;
@@ -11,6 +12,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+using PruebaUIs.UI;
 
 namespace PruebaUIs
 {
@@ -270,6 +273,11 @@ namespace PruebaUIs
             cbxRegion.SelectedIndex = 0;
             Modificar = false;
             ubigeoSelect = null;
+
+            cbxPais.Refresh();
+            cbxContinente.Refresh();
+            cbxRegion.Refresh();
+            Application.DoEvents();
             cargarUbigeos();
         }
 
@@ -371,6 +379,11 @@ namespace PruebaUIs
         {
             try
             {
+                if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+                {
+                    MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 if (tblUbigeo.SelectedItems.Count == 0)
                 {
                     MessageBox.Show("Seleccione una ubicación para eliminar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -396,6 +409,80 @@ namespace PruebaUIs
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiar();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+            {
+                MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.",
+                                  "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            CuadroDialogo input = new CuadroDialogo("Ingrese el código de país a buscar", "Buscar Ubicación");
+            if (input.ShowDialog() == DialogResult.OK)
+            {
+                string codBuscado = input.InputText;
+                if (string.IsNullOrWhiteSpace(codBuscado))
+                {
+                    limpiar();
+                    MessageBox.Show("Debe ingresar un código de país válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Se obtienen todas las ubicaciones
+                List<Ubigeo> todasUbigeos = ubigeoRepository.BuscarTodasLasUbicaciones();
+
+                // Filtrar las ubicaciones cuyo código de país coincide (ignorando mayúsculas/minúsculas)
+                List<Ubigeo> filtradas = todasUbigeos.FindAll(u => u.COD_PAIS.Equals(codBuscado, StringComparison.OrdinalIgnoreCase));
+
+                // Limpiar y configurar las columnas del ListView
+                tblUbigeo.Clear();
+                tblUbigeo.Columns.Add("Código de País", 150);
+                tblUbigeo.Columns.Add("País", 100);
+                tblUbigeo.Columns.Add("Código de Departamento", 150);
+                tblUbigeo.Columns.Add("Departamento", 100);
+                tblUbigeo.Columns.Add("Código de Ciudad", 150);
+                tblUbigeo.Columns.Add("Ciudad", 100);
+                tblUbigeo.Columns.Add("Código de Barrio", 150);
+                tblUbigeo.Columns.Add("Barrio", 100);
+                tblUbigeo.Columns.Add("Idioma Oficial", 100);
+                tblUbigeo.Columns.Add("Continente", 100);
+                tblUbigeo.Columns.Add("Código de Región", 150);
+                tblUbigeo.Columns.Add("Latitud", 100);
+                tblUbigeo.Columns.Add("Longitud", 100);
+                tblUbigeo.Columns.Add("Usuario", 100);
+                tblUbigeo.Columns.Add("Fecha de Creación/Modificación/Anulación", 100);
+
+                if (filtradas.Count > 0)
+                {
+                    foreach (Ubigeo ubi in filtradas)
+                    {
+                        ListViewItem item = new ListViewItem(ubi.COD_PAIS);
+                        item.SubItems.Add(ubi.DES_PAIS);
+                        item.SubItems.Add(ubi.COD_DPTO.ToString());
+                        item.SubItems.Add(ubi.DES_DPTO);
+                        item.SubItems.Add(ubi.COD_CIU.ToString());
+                        item.SubItems.Add(ubi.DES_CIU);
+                        item.SubItems.Add(ubi.COD_BARR.ToString());
+                        item.SubItems.Add(ubi.DES_BARR);
+                        item.SubItems.Add(ubi.CAR_IDIOMA);
+                        item.SubItems.Add(ubi.DES_CON);
+                        item.SubItems.Add(ubi.COD_REG.ToString());
+                        item.SubItems.Add(ubi.UBI_LATITUD);
+                        item.SubItems.Add(ubi.UBI_LONGITUD);
+                        item.SubItems.Add(ubi.COD_USER);
+                        item.SubItems.Add(ubi.FEC_ABM.ToString());
+                        tblUbigeo.Items.Add(item);
+                    }
+                }
+                else
+                {
+                    limpiar();
+                    MessageBox.Show("No se encontraron ubicaciones para el código de país ingresado.",
+                                    "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

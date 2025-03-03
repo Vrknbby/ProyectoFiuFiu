@@ -144,6 +144,11 @@ namespace PruebaUIs
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+            {
+                MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (tblFamiliaArticulo.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Seleccione un registro para eliminar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -211,6 +216,7 @@ namespace PruebaUIs
                 }
                 else
                 {
+                    Limpiar();
                     MessageBox.Show("No se encontró un registro con esos valores.", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }

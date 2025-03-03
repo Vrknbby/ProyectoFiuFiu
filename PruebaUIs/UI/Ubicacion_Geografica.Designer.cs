@@ -54,6 +54,7 @@ namespace PruebaUIs
             this.cbxPais = new MaterialSkin.Controls.MaterialComboBox();
             this.cbxContinente = new MaterialSkin.Controls.MaterialComboBox();
             this.cbxRegion = new MaterialSkin.Controls.MaterialComboBox();
+            this.btnBuscar = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -388,6 +389,7 @@ namespace PruebaUIs
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.btnBuscar);
             this.materialCard1.Controls.Add(this.cbxPais);
             this.materialCard1.Controls.Add(this.cbxContinente);
             this.materialCard1.Controls.Add(this.cbxRegion);
@@ -419,7 +421,7 @@ namespace PruebaUIs
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(1426, 620);
+            this.materialCard1.Size = new System.Drawing.Size(1429, 620);
             this.materialCard1.TabIndex = 0;
             // 
             // cbxPais
@@ -488,6 +490,27 @@ namespace PruebaUIs
             this.cbxRegion.StartIndex = 0;
             this.cbxRegion.TabIndex = 36;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AutoSize = false;
+            this.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBuscar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnBuscar.Depth = 0;
+            this.btnBuscar.HighEmphasis = true;
+            this.btnBuscar.Icon = null;
+            this.btnBuscar.Location = new System.Drawing.Point(1205, 186);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnBuscar.Size = new System.Drawing.Size(125, 36);
+            this.btnBuscar.TabIndex = 39;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnBuscar.UseAccentColor = false;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // Ubicacion_Geografica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,5 +554,6 @@ namespace PruebaUIs
         private MaterialSkin.Controls.MaterialComboBox cbxRegion;
         private MaterialSkin.Controls.MaterialComboBox cbxContinente;
         private MaterialSkin.Controls.MaterialComboBox cbxPais;
+        private MaterialSkin.Controls.MaterialButton btnBuscar;
     }
 }
