@@ -289,7 +289,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitignore" />
     <Content Include="Img\fondoRegistroUsuario.png" />
     <Content Include="Img\gestionCompra.png" />
     <Content Include="Img\gestionInventario.png" />
