@@ -114,3 +114,4 @@ C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de S
 C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Creacion_Orden_Compra.resources
 C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Cierre_Orden_Compra.resources
 C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Compra_Mercaderia.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Orden_Compra.resources

@@ -50,23 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Compra_Mercaderia.cs">
+    <Compile Include="UI\Compra_Mercaderia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Compra_Mercaderia.Designer.cs">
+    <Compile Include="UI\Compra_Mercaderia.Designer.cs">
       <DependentUpon>Compra_Mercaderia.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Cierre_Orden_Compra.cs">
+    <Compile Include="UI\Orden_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Cierre_Orden_Compra.Designer.cs">
-      <DependentUpon>Cierre_Orden_Compra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Creacion_Orden_Compra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Creacion_Orden_Compra.Designer.cs">
-      <DependentUpon>Creacion_Orden_Compra.cs</DependentUpon>
+    <Compile Include="UI\Orden_Compra.Designer.cs">
+      <DependentUpon>Orden_Compra.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Detalle_Canje.cs">
       <SubType>Form</SubType>
@@ -213,14 +207,11 @@
     <Compile Include="UI\Vendedores.Designer.cs">
       <DependentUpon>Vendedores.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Compra_Mercaderia.resx">
+    <EmbeddedResource Include="UI\Compra_Mercaderia.resx">
       <DependentUpon>Compra_Mercaderia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Cierre_Orden_Compra.resx">
-      <DependentUpon>Cierre_Orden_Compra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Creacion_Orden_Compra.resx">
-      <DependentUpon>Creacion_Orden_Compra.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Orden_Compra.resx">
+      <DependentUpon>Orden_Compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Detalle_Canje.resx">
       <DependentUpon>Detalle_Canje.cs</DependentUpon>

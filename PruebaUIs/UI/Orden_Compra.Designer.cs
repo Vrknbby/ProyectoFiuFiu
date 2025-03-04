@@ -794,7 +794,9 @@ namespace PruebaUIs
             this.ClientSize = new System.Drawing.Size(1524, 814);
             this.Controls.Add(this.materialCard1);
             this.Name = "Orden_Compra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ORDEN DE COMPRA";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Orden_Compra_Load);
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();

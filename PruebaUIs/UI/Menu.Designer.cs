@@ -55,9 +55,7 @@ namespace PruebaUIs
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            this.btnCierreOrdenCompra = new MaterialSkin.Controls.MaterialButton();
-            this.btnCreacionOrdenCompra = new MaterialSkin.Controls.MaterialButton();
+            this.btnCompraMercaderia = new MaterialSkin.Controls.MaterialButton();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.labelGestiondeCompras = new MaterialSkin.Controls.MaterialLabel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -88,6 +86,7 @@ namespace PruebaUIs
             this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
             this.materialDivider6 = new MaterialSkin.Controls.MaterialDivider();
             this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.confirmarPasswordUserTxt = new MaterialSkin.Controls.MaterialTextBox();
             this.correoUserTxt = new MaterialSkin.Controls.MaterialTextBox();
             this.descripcionUserTxt = new MaterialSkin.Controls.MaterialTextBox();
@@ -96,7 +95,7 @@ namespace PruebaUIs
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnOrdenCompra = new MaterialSkin.Controls.MaterialButton();
             this.materialTabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.materialCard5.SuspendLayout();
@@ -532,11 +531,10 @@ namespace PruebaUIs
             // materialCard3
             // 
             this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard3.Controls.Add(this.btnOrdenCompra);
             this.materialCard3.Controls.Add(this.materialButton6);
             this.materialCard3.Controls.Add(this.materialButton5);
-            this.materialCard3.Controls.Add(this.materialButton4);
-            this.materialCard3.Controls.Add(this.btnCierreOrdenCompra);
-            this.materialCard3.Controls.Add(this.btnCreacionOrdenCompra);
+            this.materialCard3.Controls.Add(this.btnCompraMercaderia);
             this.materialCard3.Controls.Add(this.materialDivider1);
             this.materialCard3.Controls.Add(this.labelGestiondeCompras);
             this.materialCard3.Depth = 0;
@@ -557,7 +555,7 @@ namespace PruebaUIs
             this.materialButton6.Depth = 0;
             this.materialButton6.HighEmphasis = true;
             this.materialButton6.Icon = null;
-            this.materialButton6.Location = new System.Drawing.Point(28, 379);
+            this.materialButton6.Location = new System.Drawing.Point(28, 315);
             this.materialButton6.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton6.Name = "materialButton6";
@@ -577,7 +575,7 @@ namespace PruebaUIs
             this.materialButton5.Depth = 0;
             this.materialButton5.HighEmphasis = true;
             this.materialButton5.Icon = null;
-            this.materialButton5.Location = new System.Drawing.Point(28, 306);
+            this.materialButton5.Location = new System.Drawing.Point(28, 242);
             this.materialButton5.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton5.Name = "materialButton5";
@@ -589,67 +587,26 @@ namespace PruebaUIs
             this.materialButton5.UseAccentColor = false;
             this.materialButton5.UseVisualStyleBackColor = true;
             // 
-            // materialButton4
+            // btnCompraMercaderia
             // 
-            this.materialButton4.AutoSize = false;
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(28, 235);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(292, 36);
-            this.materialButton4.TabIndex = 194;
-            this.materialButton4.Text = "Compra de Mercancia";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseVisualStyleBackColor = true;
-            // 
-            // btnCierreOrdenCompra
-            // 
-            this.btnCierreOrdenCompra.AutoSize = false;
-            this.btnCierreOrdenCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCierreOrdenCompra.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnCierreOrdenCompra.Depth = 0;
-            this.btnCierreOrdenCompra.HighEmphasis = true;
-            this.btnCierreOrdenCompra.Icon = null;
-            this.btnCierreOrdenCompra.Location = new System.Drawing.Point(28, 167);
-            this.btnCierreOrdenCompra.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.btnCierreOrdenCompra.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCierreOrdenCompra.Name = "btnCierreOrdenCompra";
-            this.btnCierreOrdenCompra.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnCierreOrdenCompra.Size = new System.Drawing.Size(292, 36);
-            this.btnCierreOrdenCompra.TabIndex = 193;
-            this.btnCierreOrdenCompra.Text = "Cierre de Orden de Compra";
-            this.btnCierreOrdenCompra.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnCierreOrdenCompra.UseAccentColor = false;
-            this.btnCierreOrdenCompra.UseVisualStyleBackColor = true;
-            this.btnCierreOrdenCompra.Click += new System.EventHandler(this.btnCierreOrdenCompra_Click);
-            // 
-            // btnCreacionOrdenCompra
-            // 
-            this.btnCreacionOrdenCompra.AutoSize = false;
-            this.btnCreacionOrdenCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCreacionOrdenCompra.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnCreacionOrdenCompra.Depth = 0;
-            this.btnCreacionOrdenCompra.HighEmphasis = true;
-            this.btnCreacionOrdenCompra.Icon = null;
-            this.btnCreacionOrdenCompra.Location = new System.Drawing.Point(28, 101);
-            this.btnCreacionOrdenCompra.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.btnCreacionOrdenCompra.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCreacionOrdenCompra.Name = "btnCreacionOrdenCompra";
-            this.btnCreacionOrdenCompra.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnCreacionOrdenCompra.Size = new System.Drawing.Size(292, 36);
-            this.btnCreacionOrdenCompra.TabIndex = 192;
-            this.btnCreacionOrdenCompra.Text = "Creacion de Orden de Compra";
-            this.btnCreacionOrdenCompra.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnCreacionOrdenCompra.UseAccentColor = false;
-            this.btnCreacionOrdenCompra.UseVisualStyleBackColor = true;
-            this.btnCreacionOrdenCompra.Click += new System.EventHandler(this.btnCreacionOrdenCompra_Click);
+            this.btnCompraMercaderia.AutoSize = false;
+            this.btnCompraMercaderia.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCompraMercaderia.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnCompraMercaderia.Depth = 0;
+            this.btnCompraMercaderia.HighEmphasis = true;
+            this.btnCompraMercaderia.Icon = null;
+            this.btnCompraMercaderia.Location = new System.Drawing.Point(28, 171);
+            this.btnCompraMercaderia.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.btnCompraMercaderia.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCompraMercaderia.Name = "btnCompraMercaderia";
+            this.btnCompraMercaderia.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnCompraMercaderia.Size = new System.Drawing.Size(292, 36);
+            this.btnCompraMercaderia.TabIndex = 194;
+            this.btnCompraMercaderia.Text = "Compra de Mercaderia";
+            this.btnCompraMercaderia.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnCompraMercaderia.UseAccentColor = false;
+            this.btnCompraMercaderia.UseVisualStyleBackColor = true;
+            this.btnCompraMercaderia.Click += new System.EventHandler(this.btnCompraMercancia_Click);
             // 
             // materialDivider1
             // 
@@ -893,7 +850,7 @@ namespace PruebaUIs
             this.materialLabel18.Location = new System.Drawing.Point(31, 384);
             this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel18.Name = "materialLabel18";
-            this.materialLabel18.Size = new System.Drawing.Size(194, 19);
+            this.materialLabel18.Size = new System.Drawing.Size(201, 19);
             this.materialLabel18.TabIndex = 11;
             this.materialLabel18.Text = "Notas de Credito por Venta\r\n";
             // 
@@ -1023,7 +980,7 @@ namespace PruebaUIs
             this.passwordUserTxt.BackColor = System.Drawing.SystemColors.Window;
             this.passwordUserTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordUserTxt.Depth = 0;
-            this.passwordUserTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.passwordUserTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.passwordUserTxt.Hint = "Ingrese su contraseña";
             this.passwordUserTxt.LeadingIcon = null;
             this.passwordUserTxt.Location = new System.Drawing.Point(893, 128);
@@ -1085,13 +1042,24 @@ namespace PruebaUIs
             this.materialLabel13.Text = "GESTION DE USUARIOS";
             this.materialLabel13.UseAccent = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(56, 83);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(235, 237);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // confirmarPasswordUserTxt
             // 
             this.confirmarPasswordUserTxt.AnimateReadOnly = false;
             this.confirmarPasswordUserTxt.BackColor = System.Drawing.SystemColors.Window;
             this.confirmarPasswordUserTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.confirmarPasswordUserTxt.Depth = 0;
-            this.confirmarPasswordUserTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.confirmarPasswordUserTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.confirmarPasswordUserTxt.Hint = "Confirme su Contraseña";
             this.confirmarPasswordUserTxt.LeadingIcon = null;
             this.confirmarPasswordUserTxt.Location = new System.Drawing.Point(893, 183);
@@ -1112,7 +1080,7 @@ namespace PruebaUIs
             this.correoUserTxt.BackColor = System.Drawing.SystemColors.Window;
             this.correoUserTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.correoUserTxt.Depth = 0;
-            this.correoUserTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.correoUserTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.correoUserTxt.Hint = "Ingrese su Correo";
             this.correoUserTxt.LeadingIcon = null;
             this.correoUserTxt.Location = new System.Drawing.Point(429, 123);
@@ -1133,7 +1101,7 @@ namespace PruebaUIs
             this.descripcionUserTxt.BackColor = System.Drawing.SystemColors.Window;
             this.descripcionUserTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descripcionUserTxt.Depth = 0;
-            this.descripcionUserTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.descripcionUserTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.descripcionUserTxt.Hint = "Descripcion de Usuario";
             this.descripcionUserTxt.LeadingIcon = null;
             this.descripcionUserTxt.Location = new System.Drawing.Point(429, 183);
@@ -1219,16 +1187,26 @@ namespace PruebaUIs
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // btnOrdenCompra
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(56, 83);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(235, 237);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.btnOrdenCompra.AutoSize = false;
+            this.btnOrdenCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOrdenCompra.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnOrdenCompra.Depth = 0;
+            this.btnOrdenCompra.HighEmphasis = true;
+            this.btnOrdenCompra.Icon = null;
+            this.btnOrdenCompra.Location = new System.Drawing.Point(28, 109);
+            this.btnOrdenCompra.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOrdenCompra.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOrdenCompra.Name = "btnOrdenCompra";
+            this.btnOrdenCompra.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnOrdenCompra.Size = new System.Drawing.Size(292, 36);
+            this.btnOrdenCompra.TabIndex = 197;
+            this.btnOrdenCompra.Text = "Orden de Compra";
+            this.btnOrdenCompra.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnOrdenCompra.UseAccentColor = false;
+            this.btnOrdenCompra.UseVisualStyleBackColor = true;
+            this.btnOrdenCompra.Click += new System.EventHandler(this.btnOrdenCompra_Click);
             // 
             // Menu
             // 
@@ -1329,9 +1307,8 @@ namespace PruebaUIs
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private MaterialSkin.Controls.MaterialButton materialButton6;
         private MaterialSkin.Controls.MaterialButton materialButton5;
-        private MaterialSkin.Controls.MaterialButton materialButton4;
-        private MaterialSkin.Controls.MaterialButton btnCierreOrdenCompra;
-        private MaterialSkin.Controls.MaterialButton btnCreacionOrdenCompra;
+        private MaterialSkin.Controls.MaterialButton btnCompraMercaderia;
+        private MaterialSkin.Controls.MaterialButton btnOrdenCompra;
     }
 }
 
