@@ -30,11 +30,20 @@ namespace PruebaUIs
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
+            this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
+            this.btnModificar = new MaterialSkin.Controls.MaterialButton();
+            this.btnAgregar = new MaterialSkin.Controls.MaterialButton();
+            this.cboSubSegmento = new MaterialSkin.Controls.MaterialComboBox();
+            this.cboSegmento = new MaterialSkin.Controls.MaterialComboBox();
+            this.cboPersona = new MaterialSkin.Controls.MaterialComboBox();
+            this.cboVendedor = new MaterialSkin.Controls.MaterialComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rboInhabilitadoYes = new MaterialSkin.Controls.MaterialRadioButton();
+            this.rboInhabilitadoNo = new MaterialSkin.Controls.MaterialRadioButton();
             this.tblClientes = new MaterialSkin.Controls.MaterialListView();
             this.btnBuscar = new MaterialSkin.Controls.MaterialButton();
             this.dtpFecAbm = new System.Windows.Forms.DateTimePicker();
-            this.rboInhabilitadoNo = new MaterialSkin.Controls.MaterialRadioButton();
-            this.rboInhabilitadoYes = new MaterialSkin.Controls.MaterialRadioButton();
             this.txtGrupo = new MaterialSkin.Controls.MaterialTextBox();
             this.txtCodCliente = new MaterialSkin.Controls.MaterialTextBox();
             this.txtCodUsuario = new MaterialSkin.Controls.MaterialTextBox();
@@ -46,15 +55,6 @@ namespace PruebaUIs
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cboVendedor = new MaterialSkin.Controls.MaterialComboBox();
-            this.cboPersona = new MaterialSkin.Controls.MaterialComboBox();
-            this.cboSegmento = new MaterialSkin.Controls.MaterialComboBox();
-            this.cboSubSegmento = new MaterialSkin.Controls.MaterialComboBox();
-            this.btnAgregar = new MaterialSkin.Controls.MaterialButton();
-            this.btnModificar = new MaterialSkin.Controls.MaterialButton();
-            this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
-            this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +94,222 @@ namespace PruebaUIs
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(1436, 689);
             this.materialCard1.TabIndex = 0;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.AutoSize = false;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.HighEmphasis = true;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(20, 193);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnCancelar.Size = new System.Drawing.Size(120, 36);
+            this.btnCancelar.TabIndex = 36;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnCancelar.UseAccentColor = false;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.AutoSize = false;
+            this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEliminar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnEliminar.Depth = 0;
+            this.btnEliminar.HighEmphasis = true;
+            this.btnEliminar.Icon = null;
+            this.btnEliminar.Location = new System.Drawing.Point(1269, 158);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnEliminar.Size = new System.Drawing.Size(120, 36);
+            this.btnEliminar.TabIndex = 35;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnEliminar.UseAccentColor = false;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.AutoSize = false;
+            this.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnModificar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnModificar.Depth = 0;
+            this.btnModificar.HighEmphasis = true;
+            this.btnModificar.Icon = null;
+            this.btnModificar.Location = new System.Drawing.Point(1269, 108);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnModificar.Size = new System.Drawing.Size(120, 36);
+            this.btnModificar.TabIndex = 34;
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnModificar.UseAccentColor = false;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.AutoSize = false;
+            this.btnAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAgregar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAgregar.Depth = 0;
+            this.btnAgregar.HighEmphasis = true;
+            this.btnAgregar.Icon = null;
+            this.btnAgregar.Location = new System.Drawing.Point(1126, 110);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAgregar.Size = new System.Drawing.Size(120, 36);
+            this.btnAgregar.TabIndex = 33;
+            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAgregar.UseAccentColor = false;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // cboSubSegmento
+            // 
+            this.cboSubSegmento.AutoResize = false;
+            this.cboSubSegmento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cboSubSegmento.Depth = 0;
+            this.cboSubSegmento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboSubSegmento.DropDownHeight = 174;
+            this.cboSubSegmento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSubSegmento.DropDownWidth = 121;
+            this.cboSubSegmento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cboSubSegmento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cboSubSegmento.FormattingEnabled = true;
+            this.cboSubSegmento.IntegralHeight = false;
+            this.cboSubSegmento.ItemHeight = 43;
+            this.cboSubSegmento.Location = new System.Drawing.Point(1109, 15);
+            this.cboSubSegmento.MaxDropDownItems = 4;
+            this.cboSubSegmento.MouseState = MaterialSkin.MouseState.OUT;
+            this.cboSubSegmento.Name = "cboSubSegmento";
+            this.cboSubSegmento.Size = new System.Drawing.Size(224, 49);
+            this.cboSubSegmento.StartIndex = 0;
+            this.cboSubSegmento.TabIndex = 32;
+            // 
+            // cboSegmento
+            // 
+            this.cboSegmento.AutoResize = false;
+            this.cboSegmento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cboSegmento.Depth = 0;
+            this.cboSegmento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboSegmento.DropDownHeight = 174;
+            this.cboSegmento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSegmento.DropDownWidth = 121;
+            this.cboSegmento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cboSegmento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cboSegmento.FormattingEnabled = true;
+            this.cboSegmento.IntegralHeight = false;
+            this.cboSegmento.ItemHeight = 43;
+            this.cboSegmento.Location = new System.Drawing.Point(626, 16);
+            this.cboSegmento.MaxDropDownItems = 4;
+            this.cboSegmento.MouseState = MaterialSkin.MouseState.OUT;
+            this.cboSegmento.Name = "cboSegmento";
+            this.cboSegmento.Size = new System.Drawing.Size(199, 49);
+            this.cboSegmento.StartIndex = 0;
+            this.cboSegmento.TabIndex = 31;
+            this.cboSegmento.SelectedIndexChanged += new System.EventHandler(this.cboSegmento_SelectedIndexChanged);
+            // 
+            // cboPersona
+            // 
+            this.cboPersona.AutoResize = false;
+            this.cboPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cboPersona.Depth = 0;
+            this.cboPersona.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboPersona.DropDownHeight = 174;
+            this.cboPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPersona.DropDownWidth = 121;
+            this.cboPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cboPersona.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cboPersona.FormattingEnabled = true;
+            this.cboPersona.IntegralHeight = false;
+            this.cboPersona.ItemHeight = 43;
+            this.cboPersona.Location = new System.Drawing.Point(492, 86);
+            this.cboPersona.MaxDropDownItems = 4;
+            this.cboPersona.MouseState = MaterialSkin.MouseState.OUT;
+            this.cboPersona.Name = "cboPersona";
+            this.cboPersona.Size = new System.Drawing.Size(276, 49);
+            this.cboPersona.StartIndex = 0;
+            this.cboPersona.TabIndex = 30;
+            // 
+            // cboVendedor
+            // 
+            this.cboVendedor.AutoResize = false;
+            this.cboVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cboVendedor.Depth = 0;
+            this.cboVendedor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboVendedor.DropDownHeight = 174;
+            this.cboVendedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboVendedor.DropDownWidth = 121;
+            this.cboVendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cboVendedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cboVendedor.FormattingEnabled = true;
+            this.cboVendedor.IntegralHeight = false;
+            this.cboVendedor.ItemHeight = 43;
+            this.cboVendedor.Location = new System.Drawing.Point(492, 141);
+            this.cboVendedor.MaxDropDownItems = 4;
+            this.cboVendedor.MouseState = MaterialSkin.MouseState.OUT;
+            this.cboVendedor.Name = "cboVendedor";
+            this.cboVendedor.Size = new System.Drawing.Size(276, 49);
+            this.cboVendedor.StartIndex = 0;
+            this.cboVendedor.TabIndex = 29;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rboInhabilitadoYes);
+            this.groupBox1.Controls.Add(this.rboInhabilitadoNo);
+            this.groupBox1.Location = new System.Drawing.Point(792, 141);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(239, 61);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Inhabilitado para Realizar Operaciones";
+            // 
+            // rboInhabilitadoYes
+            // 
+            this.rboInhabilitadoYes.AutoSize = true;
+            this.rboInhabilitadoYes.Depth = 0;
+            this.rboInhabilitadoYes.Location = new System.Drawing.Point(49, 17);
+            this.rboInhabilitadoYes.Margin = new System.Windows.Forms.Padding(0);
+            this.rboInhabilitadoYes.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rboInhabilitadoYes.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rboInhabilitadoYes.Name = "rboInhabilitadoYes";
+            this.rboInhabilitadoYes.Ripple = true;
+            this.rboInhabilitadoYes.Size = new System.Drawing.Size(49, 37);
+            this.rboInhabilitadoYes.TabIndex = 23;
+            this.rboInhabilitadoYes.TabStop = true;
+            this.rboInhabilitadoYes.Text = "Si";
+            this.rboInhabilitadoYes.UseVisualStyleBackColor = true;
+            // 
+            // rboInhabilitadoNo
+            // 
+            this.rboInhabilitadoNo.AutoSize = true;
+            this.rboInhabilitadoNo.Depth = 0;
+            this.rboInhabilitadoNo.Location = new System.Drawing.Point(124, 17);
+            this.rboInhabilitadoNo.Margin = new System.Windows.Forms.Padding(0);
+            this.rboInhabilitadoNo.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rboInhabilitadoNo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rboInhabilitadoNo.Name = "rboInhabilitadoNo";
+            this.rboInhabilitadoNo.Ripple = true;
+            this.rboInhabilitadoNo.Size = new System.Drawing.Size(55, 37);
+            this.rboInhabilitadoNo.TabIndex = 24;
+            this.rboInhabilitadoNo.TabStop = true;
+            this.rboInhabilitadoNo.Text = "No";
+            this.rboInhabilitadoNo.UseVisualStyleBackColor = true;
             // 
             // tblClientes
             // 
@@ -143,38 +359,6 @@ namespace PruebaUIs
             this.dtpFecAbm.Name = "dtpFecAbm";
             this.dtpFecAbm.Size = new System.Drawing.Size(200, 20);
             this.dtpFecAbm.TabIndex = 25;
-            // 
-            // rboInhabilitadoNo
-            // 
-            this.rboInhabilitadoNo.AutoSize = true;
-            this.rboInhabilitadoNo.Depth = 0;
-            this.rboInhabilitadoNo.Location = new System.Drawing.Point(124, 17);
-            this.rboInhabilitadoNo.Margin = new System.Windows.Forms.Padding(0);
-            this.rboInhabilitadoNo.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.rboInhabilitadoNo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.rboInhabilitadoNo.Name = "rboInhabilitadoNo";
-            this.rboInhabilitadoNo.Ripple = true;
-            this.rboInhabilitadoNo.Size = new System.Drawing.Size(55, 37);
-            this.rboInhabilitadoNo.TabIndex = 24;
-            this.rboInhabilitadoNo.TabStop = true;
-            this.rboInhabilitadoNo.Text = "No";
-            this.rboInhabilitadoNo.UseVisualStyleBackColor = true;
-            // 
-            // rboInhabilitadoYes
-            // 
-            this.rboInhabilitadoYes.AutoSize = true;
-            this.rboInhabilitadoYes.Depth = 0;
-            this.rboInhabilitadoYes.Location = new System.Drawing.Point(49, 17);
-            this.rboInhabilitadoYes.Margin = new System.Windows.Forms.Padding(0);
-            this.rboInhabilitadoYes.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.rboInhabilitadoYes.MouseState = MaterialSkin.MouseState.HOVER;
-            this.rboInhabilitadoYes.Name = "rboInhabilitadoYes";
-            this.rboInhabilitadoYes.Ripple = true;
-            this.rboInhabilitadoYes.Size = new System.Drawing.Size(49, 37);
-            this.rboInhabilitadoYes.TabIndex = 23;
-            this.rboInhabilitadoYes.TabStop = true;
-            this.rboInhabilitadoYes.Text = "Si";
-            this.rboInhabilitadoYes.UseVisualStyleBackColor = true;
             // 
             // txtGrupo
             // 
@@ -284,12 +468,12 @@ namespace PruebaUIs
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(335, 153);
+            this.materialLabel4.Location = new System.Drawing.Point(364, 153);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(122, 19);
+            this.materialLabel4.Size = new System.Drawing.Size(68, 19);
             this.materialLabel4.TabIndex = 3;
-            this.materialLabel4.Text = "Codigo Vendedor";
+            this.materialLabel4.Text = "Vendedor";
             // 
             // materialLabel3
             // 
@@ -308,12 +492,12 @@ namespace PruebaUIs
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(344, 101);
+            this.materialLabel2.Location = new System.Drawing.Point(312, 101);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(113, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(174, 19);
             this.materialLabel2.TabIndex = 1;
-            this.materialLabel2.Text = "Codigo Persona";
+            this.materialLabel2.Text = "Nombre Persona/Cliente";
             // 
             // materialLabel1
             // 
@@ -326,190 +510,6 @@ namespace PruebaUIs
             this.materialLabel1.Size = new System.Drawing.Size(103, 19);
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Codigo Cliente";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rboInhabilitadoYes);
-            this.groupBox1.Controls.Add(this.rboInhabilitadoNo);
-            this.groupBox1.Location = new System.Drawing.Point(792, 141);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(239, 61);
-            this.groupBox1.TabIndex = 28;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Inhabilitado para Realizar Operaciones";
-            // 
-            // cboVendedor
-            // 
-            this.cboVendedor.AutoResize = false;
-            this.cboVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboVendedor.Depth = 0;
-            this.cboVendedor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboVendedor.DropDownHeight = 174;
-            this.cboVendedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboVendedor.DropDownWidth = 121;
-            this.cboVendedor.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cboVendedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cboVendedor.FormattingEnabled = true;
-            this.cboVendedor.IntegralHeight = false;
-            this.cboVendedor.ItemHeight = 43;
-            this.cboVendedor.Location = new System.Drawing.Point(463, 141);
-            this.cboVendedor.MaxDropDownItems = 4;
-            this.cboVendedor.MouseState = MaterialSkin.MouseState.OUT;
-            this.cboVendedor.Name = "cboVendedor";
-            this.cboVendedor.Size = new System.Drawing.Size(276, 49);
-            this.cboVendedor.StartIndex = 0;
-            this.cboVendedor.TabIndex = 29;
-            // 
-            // cboPersona
-            // 
-            this.cboPersona.AutoResize = false;
-            this.cboPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboPersona.Depth = 0;
-            this.cboPersona.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboPersona.DropDownHeight = 174;
-            this.cboPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPersona.DropDownWidth = 121;
-            this.cboPersona.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cboPersona.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cboPersona.FormattingEnabled = true;
-            this.cboPersona.IntegralHeight = false;
-            this.cboPersona.ItemHeight = 43;
-            this.cboPersona.Location = new System.Drawing.Point(463, 86);
-            this.cboPersona.MaxDropDownItems = 4;
-            this.cboPersona.MouseState = MaterialSkin.MouseState.OUT;
-            this.cboPersona.Name = "cboPersona";
-            this.cboPersona.Size = new System.Drawing.Size(276, 49);
-            this.cboPersona.StartIndex = 0;
-            this.cboPersona.TabIndex = 30;
-            // 
-            // cboSegmento
-            // 
-            this.cboSegmento.AutoResize = false;
-            this.cboSegmento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboSegmento.Depth = 0;
-            this.cboSegmento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboSegmento.DropDownHeight = 174;
-            this.cboSegmento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSegmento.DropDownWidth = 121;
-            this.cboSegmento.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cboSegmento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cboSegmento.FormattingEnabled = true;
-            this.cboSegmento.IntegralHeight = false;
-            this.cboSegmento.ItemHeight = 43;
-            this.cboSegmento.Location = new System.Drawing.Point(626, 16);
-            this.cboSegmento.MaxDropDownItems = 4;
-            this.cboSegmento.MouseState = MaterialSkin.MouseState.OUT;
-            this.cboSegmento.Name = "cboSegmento";
-            this.cboSegmento.Size = new System.Drawing.Size(199, 49);
-            this.cboSegmento.StartIndex = 0;
-            this.cboSegmento.TabIndex = 31;
-            this.cboSegmento.SelectedIndexChanged += new System.EventHandler(this.cboSegmento_SelectedIndexChanged);
-            // 
-            // cboSubSegmento
-            // 
-            this.cboSubSegmento.AutoResize = false;
-            this.cboSubSegmento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboSubSegmento.Depth = 0;
-            this.cboSubSegmento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboSubSegmento.DropDownHeight = 174;
-            this.cboSubSegmento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSubSegmento.DropDownWidth = 121;
-            this.cboSubSegmento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cboSubSegmento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cboSubSegmento.FormattingEnabled = true;
-            this.cboSubSegmento.IntegralHeight = false;
-            this.cboSubSegmento.ItemHeight = 43;
-            this.cboSubSegmento.Location = new System.Drawing.Point(1109, 15);
-            this.cboSubSegmento.MaxDropDownItems = 4;
-            this.cboSubSegmento.MouseState = MaterialSkin.MouseState.OUT;
-            this.cboSubSegmento.Name = "cboSubSegmento";
-            this.cboSubSegmento.Size = new System.Drawing.Size(224, 49);
-            this.cboSubSegmento.StartIndex = 0;
-            this.cboSubSegmento.TabIndex = 32;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.AutoSize = false;
-            this.btnAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAgregar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnAgregar.Depth = 0;
-            this.btnAgregar.HighEmphasis = true;
-            this.btnAgregar.Icon = null;
-            this.btnAgregar.Location = new System.Drawing.Point(1126, 110);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnAgregar.Size = new System.Drawing.Size(120, 36);
-            this.btnAgregar.TabIndex = 33;
-            this.btnAgregar.Text = "AGREGAR";
-            this.btnAgregar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnAgregar.UseAccentColor = false;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.AutoSize = false;
-            this.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnModificar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnModificar.Depth = 0;
-            this.btnModificar.HighEmphasis = true;
-            this.btnModificar.Icon = null;
-            this.btnModificar.Location = new System.Drawing.Point(1269, 108);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnModificar.Size = new System.Drawing.Size(120, 36);
-            this.btnModificar.TabIndex = 34;
-            this.btnModificar.Text = "MODIFICAR";
-            this.btnModificar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnModificar.UseAccentColor = false;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.AutoSize = false;
-            this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnEliminar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnEliminar.Depth = 0;
-            this.btnEliminar.HighEmphasis = true;
-            this.btnEliminar.Icon = null;
-            this.btnEliminar.Location = new System.Drawing.Point(1269, 158);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnEliminar.Size = new System.Drawing.Size(120, 36);
-            this.btnEliminar.TabIndex = 35;
-            this.btnEliminar.Text = "ELIMINAR";
-            this.btnEliminar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnEliminar.UseAccentColor = false;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.AutoSize = false;
-            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCancelar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnCancelar.Depth = 0;
-            this.btnCancelar.HighEmphasis = true;
-            this.btnCancelar.Icon = null;
-            this.btnCancelar.Location = new System.Drawing.Point(20, 193);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnCancelar.Size = new System.Drawing.Size(120, 36);
-            this.btnCancelar.TabIndex = 36;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnCancelar.UseAccentColor = false;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Clientes
             // 

@@ -21,7 +21,7 @@ namespace PruebaUIs
     {
         private ClienteRepository clienteRepository = new ClienteRepository();
         private PersonaRepository personaRepository = new PersonaRepository();
-        //private VendedorRepository vendedorRepository = new VendedorRepository();
+        private VendedorRepository vendedorRepository = new VendedorRepository();
         private SegmentosComercialesRepository segmentosComercialesRepository = new SegmentosComercialesRepository();
         private bool Modificar = false;
         private Cliente clienteSelect = null;
@@ -29,7 +29,7 @@ namespace PruebaUIs
         {
             InitializeComponent();
             CargarPersonas();
-            //CargarVendedores();
+            CargarVendedores();
             CargarSegmentos();
             cboSubSegmento.DataSource = null;
 
@@ -54,11 +54,34 @@ namespace PruebaUIs
             cboPersona.ValueMember = "COD_PER";
         }
 
+        private void CargarVendedores()
+        {
+            var vendedores = vendedorRepository.BuscarTodosLosVendedores();
+            var personas = personaRepository.BuscarTodasLasPersonas();
+
+            var listaVendedores = vendedores
+                .Select(v => new
+                {
+                    v.COD_VEN,
+                    Nombre = personas.FirstOrDefault(p => p.COD_PER == v.COD_PER)?.DES_PER ?? "Sin Nombre"
+                })
+                .ToList();
+
+            listaVendedores.Insert(0, new { COD_VEN = "", Nombre = "-- Seleccionar --" });
+
+            cboVendedor.DataSource = listaVendedores;
+            cboVendedor.DisplayMember = "Nombre";
+            cboVendedor.ValueMember = "COD_VEN";
+        }
+
         //private void CargarVendedores()
         //{
         //    var vendedores = vendedorRepository.BuscarTodosLosVendedores();
-        //    vendedores.Insert(0, new Vendedor { COD_VEN = "", DES_VEN = "-- Seleccionar --" });
-        //
+        //    var personas = personaRepository.BuscarTodasLasPersonas();
+
+
+        //    vendedores.Insert(0, new Vendedor { COD_VEN = "", No = "-- Seleccionar --" });
+
         //    cboVendedor.DataSource = vendedores;
         //    cboVendedor.DisplayMember = "DES_VEN";
         //    cboVendedor.ValueMember = "COD_VEN";
@@ -154,7 +177,6 @@ namespace PruebaUIs
                 return;
             }
 
-            //Falta VALIDAR VENDEDOR cboVendedor.SelectedIndex <= 0
             if (string.IsNullOrWhiteSpace(txtCodCliente.Text) ||
                     string.IsNullOrWhiteSpace(txtGrupo.Text) ||
                     cboPersona.SelectedIndex <= 0 ||
@@ -165,7 +187,7 @@ namespace PruebaUIs
                                 "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-         
+
             string codCli = txtCodCliente.Text;
             string codPer = cboPersona.SelectedValue.ToString();
             string codGrpEmp = txtGrupo.Text;
@@ -175,6 +197,15 @@ namespace PruebaUIs
             bool flgInhMov = rboInhabilitadoYes.Checked;
             string codUser = txtCodUsuario.Text;
             DateTime fecAbm = dtpFecAbm.Value;
+
+
+            var vendedor = vendedorRepository.BuscarVendedorPorCodigo(codVen);
+            if (vendedor != null && vendedor.COD_PER == codPer)
+            {
+                MessageBox.Show("El cliente no puede ser su propio vendedor.",
+                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             Cliente cli = new Cliente(
                 codCli, codPer, codGrpEmp, codVen, codSeg, codSseg,
@@ -202,10 +233,19 @@ namespace PruebaUIs
                                 "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            
-            clienteSelect.COD_PER = cboPersona.SelectedValue.ToString();
+
+            string codPer = cboPersona.SelectedValue.ToString();
+            string codVen = cboVendedor.SelectedValue.ToString();
+            var vendedor = vendedorRepository.BuscarVendedorPorCodigo(codVen);
+            if (vendedor != null && vendedor.COD_PER == codPer)
+            {
+                MessageBox.Show("El cliente no puede ser su propio vendedor.",
+                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            clienteSelect.COD_PER = codPer;
             clienteSelect.COD_GRP_EMP = txtGrupo.Text;
-            clienteSelect.COD_VEN = cboVendedor.SelectedValue.ToString();
+            clienteSelect.COD_VEN = codVen;
             clienteSelect.COD_SEG = cboSegmento.SelectedValue.ToString();
             clienteSelect.COD_SSEG = cboSubSegmento.SelectedValue.ToString();
             clienteSelect.FLG_INH_MOV = rboInhabilitadoYes.Checked;
@@ -218,6 +258,7 @@ namespace PruebaUIs
                             "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Limpiar();
         }
+
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
