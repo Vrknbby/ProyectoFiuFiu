@@ -148,8 +148,7 @@ namespace PruebaUIs
                                 "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (string.IsNullOrWhiteSpace(cboPersona.Text) ||
-                string.IsNullOrWhiteSpace(compraMinimaProveedorTxt.Text) ||
+            if (string.IsNullOrWhiteSpace(compraMinimaProveedorTxt.Text) ||
                 string.IsNullOrWhiteSpace(tiempoAtencionProveedorTxt.Text) ||
                 (!siProveedorRbtn.Checked && !noProveedorRbtn.Checked) ||
                 cboPersona.SelectedIndex <= 0)
@@ -253,7 +252,8 @@ namespace PruebaUIs
             if (Global.UsuarioSesion != null && !string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
                 codUserTxt.Text = Global.UsuarioSesion.COD_USER;
             else
-                codUserTxt.Text = ""; cboPersona.SelectedIndex = 0; cboPersona.SelectedIndex = 0;
+                codUserTxt.Text = ""; 
+            cboPersona.SelectedIndex = 0;
 
             cboPersona.Refresh();
             tiempoAtencionProveedorTxt.Text = "";

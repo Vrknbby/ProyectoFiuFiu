@@ -39,6 +39,12 @@ namespace PruebaUIs.Model.Parametros
         public string COD_USER { get; set; }
         public DateTime FEC_ABM { get; set; }
 
+        public Articulo()
+        {
+        }
+
+
+
         public Articulo(string cOD_ART, string cOD_UNICO, string cOD_PADRE, string dES_ART, string cOD_FABRICANTE, string cAR_UND_VTAP, string cAR_UND_VTAS, short vAL_NCOMP_VTAS, decimal cAR_UND_COMPACK, string cOD_CAT, string cOD_LIN, string cOD_MAR, string cOD_PRV, decimal vAL_TAS_IVA, decimal vAL_PUM_UMO, decimal vAL_CUN_UMO, decimal? vAL_SSG_ESP, decimal? vAL_STK_EXP, decimal? vAL_VTA_MIN, bool? fLG_ORIGEN, bool fLG_VTA_LIBRE, bool fLG_ART_CTR, bool fLG_ART_FRA, bool fLG_CAD_FRIO, bool fLG_ART_INA, bool fLG_INH_VTA, bool fLG_INH_COM, string cAR_ADICIONAL, string cOD_USER, DateTime fEC_ABM)
         {
             COD_ART = cOD_ART;
