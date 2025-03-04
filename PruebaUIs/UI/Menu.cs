@@ -181,13 +181,6 @@ namespace PruebaUIs
             }
         }
 
-        private void btnDetalleCompra_Click(object sender, EventArgs e)
-        {
-            Detalle_Compra nuevoform = new Detalle_Compra();
-            nuevoform.Show();
-            nuevoform.FormClosed += (s, args) => this.Show();
-            this.Hide();
-        }
 
         private void btnRegionFisica_Click(object sender, EventArgs e)
         {
@@ -239,10 +232,7 @@ namespace PruebaUIs
 
         private void btnAlmacenes_Click(object sender, EventArgs e)
         {
-            Alamacenes nuevoform = new Alamacenes();
-            nuevoform.FormClosed += (s, args) => this.Show();
-            nuevoform.Show();
-            this.Hide();
+            
         }
 
         private void btnPersona_Click(object sender, EventArgs e)
@@ -309,5 +299,20 @@ namespace PruebaUIs
             this.Hide();
         }
 
+        private void btnCreacionOrdenCompra_Click(object sender, EventArgs e)
+        {
+            Creacion_Orden_Compra nuevoform = new Creacion_Orden_Compra();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnCierreOrdenCompra_Click(object sender, EventArgs e)
+        {
+            Cierre_Orden_Compra nuevoform = new Cierre_Orden_Compra();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
     }
 }

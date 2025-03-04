@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace PruebaUIs
 {
-    public partial class Cabecera_Compra : MaterialForm
+    public partial class Orden_Compra : MaterialForm
     {
-        public Cabecera_Compra()
+        public Orden_Compra()
         {
             InitializeComponent();
         }
 
-        private void Cabecera_Compra_Load(object sender, EventArgs e)
+        private void Orden_Compra_Load(object sender, EventArgs e)
         {
 
         }

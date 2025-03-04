@@ -50,11 +50,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UI\Alamacenes.cs">
+    <Compile Include="Compra_Mercaderia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Alamacenes.Designer.cs">
-      <DependentUpon>Alamacenes.cs</DependentUpon>
+    <Compile Include="Compra_Mercaderia.Designer.cs">
+      <DependentUpon>Compra_Mercaderia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cierre_Orden_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cierre_Orden_Compra.Designer.cs">
+      <DependentUpon>Cierre_Orden_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Creacion_Orden_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Creacion_Orden_Compra.Designer.cs">
+      <DependentUpon>Creacion_Orden_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Detalle_Canje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Detalle_Canje.Designer.cs">
+      <DependentUpon>Detalle_Canje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cabecera_Canje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cabecera_Canje.Designer.cs">
+      <DependentUpon>Cabecera_Canje.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Clientes.cs">
       <SubType>Form</SubType>
@@ -133,12 +157,6 @@
     <Compile Include="Model\Parametros\SegmentoComerciales.cs" />
     <Compile Include="Model\Parametros\Ubigeo.cs" />
     <Compile Include="Model\Parametros\Vendedor.cs" />
-    <Compile Include="UI\Detalle_Compra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Detalle_Compra.Designer.cs">
-      <DependentUpon>Detalle_Compra.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\Parametros\Locacion.cs" />
     <Compile Include="Model\Parametros\Proveedor.cs" />
     <Compile Include="UI\Persona.cs">
@@ -195,8 +213,20 @@
     <Compile Include="UI\Vendedores.Designer.cs">
       <DependentUpon>Vendedores.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\Alamacenes.resx">
-      <DependentUpon>Alamacenes.cs</DependentUpon>
+    <EmbeddedResource Include="Compra_Mercaderia.resx">
+      <DependentUpon>Compra_Mercaderia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cierre_Orden_Compra.resx">
+      <DependentUpon>Cierre_Orden_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Creacion_Orden_Compra.resx">
+      <DependentUpon>Creacion_Orden_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Detalle_Canje.resx">
+      <DependentUpon>Detalle_Canje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cabecera_Canje.resx">
+      <DependentUpon>Cabecera_Canje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
@@ -224,9 +254,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Segmentos_Comerciales.resx">
       <DependentUpon>Segmentos_Comerciales.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Detalle_Compra.resx">
-      <DependentUpon>Detalle_Compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Fabricantes.resx">
       <DependentUpon>Fabricantes.cs</DependentUpon>

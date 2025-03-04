@@ -16,7 +16,7 @@ namespace PruebaUIs
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Detalle_Compra());
+            Application.Run(new Menu());
         }
     }
 }

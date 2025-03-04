@@ -30,6 +30,29 @@ namespace PruebaUIs
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            this.materialRadioButton13 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.materialRadioButton14 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.materialRadioButton17 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.materialRadioButton18 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.materialTextBox21 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox20 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox19 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox18 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox17 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox16 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox15 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox14 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox13 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox12 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox11 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox10 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.materialRadioButton11 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton12 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton9 = new MaterialSkin.Controls.MaterialRadioButton();
@@ -83,35 +106,15 @@ namespace PruebaUIs
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
-            this.materialTextBox10 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox11 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox12 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox13 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox14 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox15 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox16 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox17 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox18 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox19 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox20 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox21 = new MaterialSkin.Controls.MaterialTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
-            this.materialRadioButton17 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton18 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton13 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton14 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.materialCard1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.groupBox1);
             this.materialCard1.Controls.Add(this.materialButton5);
             this.materialCard1.Controls.Add(this.materialButton4);
             this.materialCard1.Controls.Add(this.materialButton3);
@@ -145,8 +148,6 @@ namespace PruebaUIs
             this.materialCard1.Controls.Add(this.materialRadioButton6);
             this.materialCard1.Controls.Add(this.materialRadioButton3);
             this.materialCard1.Controls.Add(this.materialRadioButton4);
-            this.materialCard1.Controls.Add(this.materialRadioButton2);
-            this.materialCard1.Controls.Add(this.materialRadioButton1);
             this.materialCard1.Controls.Add(this.materialDivider1);
             this.materialCard1.Controls.Add(this.materialButton1);
             this.materialCard1.Controls.Add(this.materialTextBox7);
@@ -167,7 +168,6 @@ namespace PruebaUIs
             this.materialCard1.Controls.Add(this.materialLabel22);
             this.materialCard1.Controls.Add(this.materialLabel23);
             this.materialCard1.Controls.Add(this.materialLabel24);
-            this.materialCard1.Controls.Add(this.materialLabel25);
             this.materialCard1.Controls.Add(this.materialLabel26);
             this.materialCard1.Controls.Add(this.materialLabel27);
             this.materialCard1.Controls.Add(this.materialLabel28);
@@ -197,6 +197,403 @@ namespace PruebaUIs
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(1559, 817);
             this.materialCard1.TabIndex = 0;
+            // 
+            // materialButton5
+            // 
+            this.materialButton5.AutoSize = false;
+            this.materialButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton5.Depth = 0;
+            this.materialButton5.HighEmphasis = true;
+            this.materialButton5.Icon = null;
+            this.materialButton5.Location = new System.Drawing.Point(1354, 92);
+            this.materialButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton5.Name = "materialButton5";
+            this.materialButton5.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton5.Size = new System.Drawing.Size(158, 36);
+            this.materialButton5.TabIndex = 81;
+            this.materialButton5.Text = "Eliminar";
+            this.materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton5.UseAccentColor = false;
+            this.materialButton5.UseVisualStyleBackColor = true;
+            // 
+            // materialButton4
+            // 
+            this.materialButton4.AutoSize = false;
+            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton4.Depth = 0;
+            this.materialButton4.HighEmphasis = true;
+            this.materialButton4.Icon = null;
+            this.materialButton4.Location = new System.Drawing.Point(1354, 241);
+            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton4.Name = "materialButton4";
+            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton4.Size = new System.Drawing.Size(158, 36);
+            this.materialButton4.TabIndex = 80;
+            this.materialButton4.Text = "Modificar";
+            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton4.UseAccentColor = false;
+            this.materialButton4.UseVisualStyleBackColor = true;
+            // 
+            // materialButton3
+            // 
+            this.materialButton3.AutoSize = false;
+            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton3.Depth = 0;
+            this.materialButton3.HighEmphasis = true;
+            this.materialButton3.Icon = null;
+            this.materialButton3.Location = new System.Drawing.Point(1354, 283);
+            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton3.Name = "materialButton3";
+            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton3.Size = new System.Drawing.Size(158, 36);
+            this.materialButton3.TabIndex = 79;
+            this.materialButton3.Text = "Cancelar";
+            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton3.UseAccentColor = false;
+            this.materialButton3.UseVisualStyleBackColor = true;
+            // 
+            // materialButton2
+            // 
+            this.materialButton2.AutoSize = false;
+            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton2.Depth = 0;
+            this.materialButton2.HighEmphasis = true;
+            this.materialButton2.Icon = null;
+            this.materialButton2.Location = new System.Drawing.Point(1354, 197);
+            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton2.Name = "materialButton2";
+            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton2.Size = new System.Drawing.Size(158, 36);
+            this.materialButton2.TabIndex = 78;
+            this.materialButton2.Text = "Guardar";
+            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton2.UseAccentColor = false;
+            this.materialButton2.UseVisualStyleBackColor = true;
+            // 
+            // materialRadioButton13
+            // 
+            this.materialRadioButton13.AutoSize = true;
+            this.materialRadioButton13.Depth = 0;
+            this.materialRadioButton13.Location = new System.Drawing.Point(993, 271);
+            this.materialRadioButton13.Margin = new System.Windows.Forms.Padding(0);
+            this.materialRadioButton13.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialRadioButton13.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRadioButton13.Name = "materialRadioButton13";
+            this.materialRadioButton13.Ripple = true;
+            this.materialRadioButton13.Size = new System.Drawing.Size(55, 37);
+            this.materialRadioButton13.TabIndex = 77;
+            this.materialRadioButton13.TabStop = true;
+            this.materialRadioButton13.Text = "No";
+            this.materialRadioButton13.UseVisualStyleBackColor = true;
+            // 
+            // materialRadioButton14
+            // 
+            this.materialRadioButton14.AutoSize = true;
+            this.materialRadioButton14.Depth = 0;
+            this.materialRadioButton14.Location = new System.Drawing.Point(946, 271);
+            this.materialRadioButton14.Margin = new System.Windows.Forms.Padding(0);
+            this.materialRadioButton14.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialRadioButton14.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRadioButton14.Name = "materialRadioButton14";
+            this.materialRadioButton14.Ripple = true;
+            this.materialRadioButton14.Size = new System.Drawing.Size(49, 37);
+            this.materialRadioButton14.TabIndex = 76;
+            this.materialRadioButton14.TabStop = true;
+            this.materialRadioButton14.Text = "Si";
+            this.materialRadioButton14.UseVisualStyleBackColor = true;
+            // 
+            // materialRadioButton17
+            // 
+            this.materialRadioButton17.AutoSize = true;
+            this.materialRadioButton17.Depth = 0;
+            this.materialRadioButton17.Location = new System.Drawing.Point(969, 196);
+            this.materialRadioButton17.Margin = new System.Windows.Forms.Padding(0);
+            this.materialRadioButton17.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialRadioButton17.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRadioButton17.Name = "materialRadioButton17";
+            this.materialRadioButton17.Ripple = true;
+            this.materialRadioButton17.Size = new System.Drawing.Size(55, 37);
+            this.materialRadioButton17.TabIndex = 75;
+            this.materialRadioButton17.TabStop = true;
+            this.materialRadioButton17.Text = "No";
+            this.materialRadioButton17.UseVisualStyleBackColor = true;
+            // 
+            // materialRadioButton18
+            // 
+            this.materialRadioButton18.AutoSize = true;
+            this.materialRadioButton18.Depth = 0;
+            this.materialRadioButton18.Location = new System.Drawing.Point(922, 196);
+            this.materialRadioButton18.Margin = new System.Windows.Forms.Padding(0);
+            this.materialRadioButton18.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialRadioButton18.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRadioButton18.Name = "materialRadioButton18";
+            this.materialRadioButton18.Ripple = true;
+            this.materialRadioButton18.Size = new System.Drawing.Size(49, 37);
+            this.materialRadioButton18.TabIndex = 74;
+            this.materialRadioButton18.TabStop = true;
+            this.materialRadioButton18.Text = "Si";
+            this.materialRadioButton18.UseVisualStyleBackColor = true;
+            // 
+            // materialListView1
+            // 
+            this.materialListView1.AutoSizeTable = false;
+            this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialListView1.Depth = 0;
+            this.materialListView1.FullRowSelect = true;
+            this.materialListView1.HideSelection = false;
+            this.materialListView1.Location = new System.Drawing.Point(17, 592);
+            this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
+            this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialListView1.Name = "materialListView1";
+            this.materialListView1.OwnerDraw = true;
+            this.materialListView1.Size = new System.Drawing.Size(1502, 143);
+            this.materialListView1.TabIndex = 73;
+            this.materialListView1.UseCompatibleStateImageBehavior = false;
+            this.materialListView1.View = System.Windows.Forms.View.Details;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(1079, 257);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 72;
+            // 
+            // materialTextBox21
+            // 
+            this.materialTextBox21.AnimateReadOnly = false;
+            this.materialTextBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox21.Depth = 0;
+            this.materialTextBox21.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox21.LeadingIcon = null;
+            this.materialTextBox21.Location = new System.Drawing.Point(1337, 547);
+            this.materialTextBox21.MaxLength = 50;
+            this.materialTextBox21.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox21.Multiline = false;
+            this.materialTextBox21.Name = "materialTextBox21";
+            this.materialTextBox21.Size = new System.Drawing.Size(182, 36);
+            this.materialTextBox21.TabIndex = 71;
+            this.materialTextBox21.Text = "";
+            this.materialTextBox21.TrailingIcon = null;
+            this.materialTextBox21.UseTallSize = false;
+            // 
+            // materialTextBox20
+            // 
+            this.materialTextBox20.AnimateReadOnly = false;
+            this.materialTextBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox20.Depth = 0;
+            this.materialTextBox20.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox20.LeadingIcon = null;
+            this.materialTextBox20.Location = new System.Drawing.Point(1386, 493);
+            this.materialTextBox20.MaxLength = 50;
+            this.materialTextBox20.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox20.Multiline = false;
+            this.materialTextBox20.Name = "materialTextBox20";
+            this.materialTextBox20.Size = new System.Drawing.Size(133, 36);
+            this.materialTextBox20.TabIndex = 70;
+            this.materialTextBox20.Text = "";
+            this.materialTextBox20.TrailingIcon = null;
+            this.materialTextBox20.UseTallSize = false;
+            // 
+            // materialTextBox19
+            // 
+            this.materialTextBox19.AnimateReadOnly = false;
+            this.materialTextBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox19.Depth = 0;
+            this.materialTextBox19.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox19.LeadingIcon = null;
+            this.materialTextBox19.Location = new System.Drawing.Point(1325, 439);
+            this.materialTextBox19.MaxLength = 50;
+            this.materialTextBox19.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox19.Multiline = false;
+            this.materialTextBox19.Name = "materialTextBox19";
+            this.materialTextBox19.Size = new System.Drawing.Size(194, 36);
+            this.materialTextBox19.TabIndex = 69;
+            this.materialTextBox19.Text = "";
+            this.materialTextBox19.TrailingIcon = null;
+            this.materialTextBox19.UseTallSize = false;
+            // 
+            // materialTextBox18
+            // 
+            this.materialTextBox18.AnimateReadOnly = false;
+            this.materialTextBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox18.Depth = 0;
+            this.materialTextBox18.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox18.LeadingIcon = null;
+            this.materialTextBox18.Location = new System.Drawing.Point(809, 547);
+            this.materialTextBox18.MaxLength = 50;
+            this.materialTextBox18.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox18.Multiline = false;
+            this.materialTextBox18.Name = "materialTextBox18";
+            this.materialTextBox18.Size = new System.Drawing.Size(305, 36);
+            this.materialTextBox18.TabIndex = 68;
+            this.materialTextBox18.Text = "";
+            this.materialTextBox18.TrailingIcon = null;
+            this.materialTextBox18.UseTallSize = false;
+            // 
+            // materialTextBox17
+            // 
+            this.materialTextBox17.AnimateReadOnly = false;
+            this.materialTextBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox17.Depth = 0;
+            this.materialTextBox17.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox17.LeadingIcon = null;
+            this.materialTextBox17.Location = new System.Drawing.Point(931, 493);
+            this.materialTextBox17.MaxLength = 50;
+            this.materialTextBox17.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox17.Multiline = false;
+            this.materialTextBox17.Name = "materialTextBox17";
+            this.materialTextBox17.Size = new System.Drawing.Size(183, 36);
+            this.materialTextBox17.TabIndex = 67;
+            this.materialTextBox17.Text = "";
+            this.materialTextBox17.TrailingIcon = null;
+            this.materialTextBox17.UseTallSize = false;
+            // 
+            // materialTextBox16
+            // 
+            this.materialTextBox16.AnimateReadOnly = false;
+            this.materialTextBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox16.Depth = 0;
+            this.materialTextBox16.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox16.LeadingIcon = null;
+            this.materialTextBox16.Location = new System.Drawing.Point(909, 439);
+            this.materialTextBox16.MaxLength = 50;
+            this.materialTextBox16.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox16.Multiline = false;
+            this.materialTextBox16.Name = "materialTextBox16";
+            this.materialTextBox16.Size = new System.Drawing.Size(205, 36);
+            this.materialTextBox16.TabIndex = 66;
+            this.materialTextBox16.Text = "";
+            this.materialTextBox16.TrailingIcon = null;
+            this.materialTextBox16.UseTallSize = false;
+            // 
+            // materialTextBox15
+            // 
+            this.materialTextBox15.AnimateReadOnly = false;
+            this.materialTextBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox15.Depth = 0;
+            this.materialTextBox15.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox15.LeadingIcon = null;
+            this.materialTextBox15.Location = new System.Drawing.Point(1290, 377);
+            this.materialTextBox15.MaxLength = 50;
+            this.materialTextBox15.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox15.Multiline = false;
+            this.materialTextBox15.Name = "materialTextBox15";
+            this.materialTextBox15.Size = new System.Drawing.Size(229, 36);
+            this.materialTextBox15.TabIndex = 65;
+            this.materialTextBox15.Text = "";
+            this.materialTextBox15.TrailingIcon = null;
+            this.materialTextBox15.UseTallSize = false;
+            // 
+            // materialTextBox14
+            // 
+            this.materialTextBox14.AnimateReadOnly = false;
+            this.materialTextBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox14.Depth = 0;
+            this.materialTextBox14.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox14.LeadingIcon = null;
+            this.materialTextBox14.Location = new System.Drawing.Point(888, 377);
+            this.materialTextBox14.MaxLength = 50;
+            this.materialTextBox14.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox14.Multiline = false;
+            this.materialTextBox14.Name = "materialTextBox14";
+            this.materialTextBox14.Size = new System.Drawing.Size(226, 36);
+            this.materialTextBox14.TabIndex = 64;
+            this.materialTextBox14.Text = "";
+            this.materialTextBox14.TrailingIcon = null;
+            this.materialTextBox14.UseTallSize = false;
+            // 
+            // materialTextBox13
+            // 
+            this.materialTextBox13.AnimateReadOnly = false;
+            this.materialTextBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox13.Depth = 0;
+            this.materialTextBox13.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox13.LeadingIcon = null;
+            this.materialTextBox13.Location = new System.Drawing.Point(395, 534);
+            this.materialTextBox13.MaxLength = 50;
+            this.materialTextBox13.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox13.Multiline = false;
+            this.materialTextBox13.Name = "materialTextBox13";
+            this.materialTextBox13.Size = new System.Drawing.Size(167, 36);
+            this.materialTextBox13.TabIndex = 63;
+            this.materialTextBox13.Text = "";
+            this.materialTextBox13.TrailingIcon = null;
+            this.materialTextBox13.UseTallSize = false;
+            // 
+            // materialTextBox12
+            // 
+            this.materialTextBox12.AnimateReadOnly = false;
+            this.materialTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox12.Depth = 0;
+            this.materialTextBox12.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox12.LeadingIcon = null;
+            this.materialTextBox12.Location = new System.Drawing.Point(402, 480);
+            this.materialTextBox12.MaxLength = 50;
+            this.materialTextBox12.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox12.Multiline = false;
+            this.materialTextBox12.Name = "materialTextBox12";
+            this.materialTextBox12.Size = new System.Drawing.Size(160, 36);
+            this.materialTextBox12.TabIndex = 62;
+            this.materialTextBox12.Text = "";
+            this.materialTextBox12.TrailingIcon = null;
+            this.materialTextBox12.UseTallSize = false;
+            // 
+            // materialTextBox11
+            // 
+            this.materialTextBox11.AnimateReadOnly = false;
+            this.materialTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox11.Depth = 0;
+            this.materialTextBox11.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox11.LeadingIcon = null;
+            this.materialTextBox11.Location = new System.Drawing.Point(298, 428);
+            this.materialTextBox11.MaxLength = 50;
+            this.materialTextBox11.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox11.Multiline = false;
+            this.materialTextBox11.Name = "materialTextBox11";
+            this.materialTextBox11.Size = new System.Drawing.Size(264, 36);
+            this.materialTextBox11.TabIndex = 61;
+            this.materialTextBox11.Text = "";
+            this.materialTextBox11.TrailingIcon = null;
+            this.materialTextBox11.UseTallSize = false;
+            // 
+            // materialTextBox10
+            // 
+            this.materialTextBox10.AnimateReadOnly = false;
+            this.materialTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox10.Depth = 0;
+            this.materialTextBox10.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox10.LeadingIcon = null;
+            this.materialTextBox10.Location = new System.Drawing.Point(194, 377);
+            this.materialTextBox10.MaxLength = 50;
+            this.materialTextBox10.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox10.Multiline = false;
+            this.materialTextBox10.Name = "materialTextBox10";
+            this.materialTextBox10.Size = new System.Drawing.Size(368, 36);
+            this.materialTextBox10.TabIndex = 60;
+            this.materialTextBox10.Text = "";
+            this.materialTextBox10.TrailingIcon = null;
+            this.materialTextBox10.UseTallSize = false;
+            // 
+            // materialDivider2
+            // 
+            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(-5, 330);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(1564, 23);
+            this.materialDivider2.TabIndex = 57;
+            this.materialDivider2.Text = "materialDivider2";
             // 
             // materialRadioButton11
             // 
@@ -362,7 +759,7 @@ namespace PruebaUIs
             // 
             this.materialRadioButton2.AutoSize = true;
             this.materialRadioButton2.Depth = 0;
-            this.materialRadioButton2.Location = new System.Drawing.Point(181, 196);
+            this.materialRadioButton2.Location = new System.Drawing.Point(170, 11);
             this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -378,7 +775,7 @@ namespace PruebaUIs
             // 
             this.materialRadioButton1.AutoSize = true;
             this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Location = new System.Drawing.Point(134, 196);
+            this.materialRadioButton1.Location = new System.Drawing.Point(123, 11);
             this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -710,10 +1107,10 @@ namespace PruebaUIs
             this.materialLabel25.Depth = 0;
             this.materialLabel25.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel25.HighEmphasis = true;
-            this.materialLabel25.Location = new System.Drawing.Point(21, 196);
+            this.materialLabel25.Location = new System.Drawing.Point(10, 10);
             this.materialLabel25.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel25.Name = "materialLabel25";
-            this.materialLabel25.Size = new System.Drawing.Size(110, 44);
+            this.materialLabel25.Size = new System.Drawing.Size(110, 41);
             this.materialLabel25.TabIndex = 20;
             this.materialLabel25.Text = "0 = Nacional \r\n1= Importado";
             this.materialLabel25.UseAccent = true;
@@ -959,402 +1356,16 @@ namespace PruebaUIs
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Codigo Articulo/Servicio";
             // 
-            // materialDivider2
+            // groupBox1
             // 
-            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider2.Depth = 0;
-            this.materialDivider2.Location = new System.Drawing.Point(-5, 330);
-            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider2.Name = "materialDivider2";
-            this.materialDivider2.Size = new System.Drawing.Size(1564, 23);
-            this.materialDivider2.TabIndex = 57;
-            this.materialDivider2.Text = "materialDivider2";
-            // 
-            // materialTextBox10
-            // 
-            this.materialTextBox10.AnimateReadOnly = false;
-            this.materialTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox10.Depth = 0;
-            this.materialTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox10.LeadingIcon = null;
-            this.materialTextBox10.Location = new System.Drawing.Point(194, 377);
-            this.materialTextBox10.MaxLength = 50;
-            this.materialTextBox10.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox10.Multiline = false;
-            this.materialTextBox10.Name = "materialTextBox10";
-            this.materialTextBox10.Size = new System.Drawing.Size(368, 36);
-            this.materialTextBox10.TabIndex = 60;
-            this.materialTextBox10.Text = "";
-            this.materialTextBox10.TrailingIcon = null;
-            this.materialTextBox10.UseTallSize = false;
-            // 
-            // materialTextBox11
-            // 
-            this.materialTextBox11.AnimateReadOnly = false;
-            this.materialTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox11.Depth = 0;
-            this.materialTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox11.LeadingIcon = null;
-            this.materialTextBox11.Location = new System.Drawing.Point(298, 428);
-            this.materialTextBox11.MaxLength = 50;
-            this.materialTextBox11.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox11.Multiline = false;
-            this.materialTextBox11.Name = "materialTextBox11";
-            this.materialTextBox11.Size = new System.Drawing.Size(264, 36);
-            this.materialTextBox11.TabIndex = 61;
-            this.materialTextBox11.Text = "";
-            this.materialTextBox11.TrailingIcon = null;
-            this.materialTextBox11.UseTallSize = false;
-            // 
-            // materialTextBox12
-            // 
-            this.materialTextBox12.AnimateReadOnly = false;
-            this.materialTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox12.Depth = 0;
-            this.materialTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox12.LeadingIcon = null;
-            this.materialTextBox12.Location = new System.Drawing.Point(402, 480);
-            this.materialTextBox12.MaxLength = 50;
-            this.materialTextBox12.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox12.Multiline = false;
-            this.materialTextBox12.Name = "materialTextBox12";
-            this.materialTextBox12.Size = new System.Drawing.Size(160, 36);
-            this.materialTextBox12.TabIndex = 62;
-            this.materialTextBox12.Text = "";
-            this.materialTextBox12.TrailingIcon = null;
-            this.materialTextBox12.UseTallSize = false;
-            // 
-            // materialTextBox13
-            // 
-            this.materialTextBox13.AnimateReadOnly = false;
-            this.materialTextBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox13.Depth = 0;
-            this.materialTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox13.LeadingIcon = null;
-            this.materialTextBox13.Location = new System.Drawing.Point(395, 534);
-            this.materialTextBox13.MaxLength = 50;
-            this.materialTextBox13.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox13.Multiline = false;
-            this.materialTextBox13.Name = "materialTextBox13";
-            this.materialTextBox13.Size = new System.Drawing.Size(167, 36);
-            this.materialTextBox13.TabIndex = 63;
-            this.materialTextBox13.Text = "";
-            this.materialTextBox13.TrailingIcon = null;
-            this.materialTextBox13.UseTallSize = false;
-            // 
-            // materialTextBox14
-            // 
-            this.materialTextBox14.AnimateReadOnly = false;
-            this.materialTextBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox14.Depth = 0;
-            this.materialTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox14.LeadingIcon = null;
-            this.materialTextBox14.Location = new System.Drawing.Point(888, 377);
-            this.materialTextBox14.MaxLength = 50;
-            this.materialTextBox14.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox14.Multiline = false;
-            this.materialTextBox14.Name = "materialTextBox14";
-            this.materialTextBox14.Size = new System.Drawing.Size(226, 36);
-            this.materialTextBox14.TabIndex = 64;
-            this.materialTextBox14.Text = "";
-            this.materialTextBox14.TrailingIcon = null;
-            this.materialTextBox14.UseTallSize = false;
-            // 
-            // materialTextBox15
-            // 
-            this.materialTextBox15.AnimateReadOnly = false;
-            this.materialTextBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox15.Depth = 0;
-            this.materialTextBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox15.LeadingIcon = null;
-            this.materialTextBox15.Location = new System.Drawing.Point(1290, 377);
-            this.materialTextBox15.MaxLength = 50;
-            this.materialTextBox15.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox15.Multiline = false;
-            this.materialTextBox15.Name = "materialTextBox15";
-            this.materialTextBox15.Size = new System.Drawing.Size(229, 36);
-            this.materialTextBox15.TabIndex = 65;
-            this.materialTextBox15.Text = "";
-            this.materialTextBox15.TrailingIcon = null;
-            this.materialTextBox15.UseTallSize = false;
-            // 
-            // materialTextBox16
-            // 
-            this.materialTextBox16.AnimateReadOnly = false;
-            this.materialTextBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox16.Depth = 0;
-            this.materialTextBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox16.LeadingIcon = null;
-            this.materialTextBox16.Location = new System.Drawing.Point(909, 439);
-            this.materialTextBox16.MaxLength = 50;
-            this.materialTextBox16.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox16.Multiline = false;
-            this.materialTextBox16.Name = "materialTextBox16";
-            this.materialTextBox16.Size = new System.Drawing.Size(205, 36);
-            this.materialTextBox16.TabIndex = 66;
-            this.materialTextBox16.Text = "";
-            this.materialTextBox16.TrailingIcon = null;
-            this.materialTextBox16.UseTallSize = false;
-            // 
-            // materialTextBox17
-            // 
-            this.materialTextBox17.AnimateReadOnly = false;
-            this.materialTextBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox17.Depth = 0;
-            this.materialTextBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox17.LeadingIcon = null;
-            this.materialTextBox17.Location = new System.Drawing.Point(931, 493);
-            this.materialTextBox17.MaxLength = 50;
-            this.materialTextBox17.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox17.Multiline = false;
-            this.materialTextBox17.Name = "materialTextBox17";
-            this.materialTextBox17.Size = new System.Drawing.Size(183, 36);
-            this.materialTextBox17.TabIndex = 67;
-            this.materialTextBox17.Text = "";
-            this.materialTextBox17.TrailingIcon = null;
-            this.materialTextBox17.UseTallSize = false;
-            // 
-            // materialTextBox18
-            // 
-            this.materialTextBox18.AnimateReadOnly = false;
-            this.materialTextBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox18.Depth = 0;
-            this.materialTextBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox18.LeadingIcon = null;
-            this.materialTextBox18.Location = new System.Drawing.Point(809, 547);
-            this.materialTextBox18.MaxLength = 50;
-            this.materialTextBox18.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox18.Multiline = false;
-            this.materialTextBox18.Name = "materialTextBox18";
-            this.materialTextBox18.Size = new System.Drawing.Size(305, 36);
-            this.materialTextBox18.TabIndex = 68;
-            this.materialTextBox18.Text = "";
-            this.materialTextBox18.TrailingIcon = null;
-            this.materialTextBox18.UseTallSize = false;
-            // 
-            // materialTextBox19
-            // 
-            this.materialTextBox19.AnimateReadOnly = false;
-            this.materialTextBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox19.Depth = 0;
-            this.materialTextBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox19.LeadingIcon = null;
-            this.materialTextBox19.Location = new System.Drawing.Point(1325, 439);
-            this.materialTextBox19.MaxLength = 50;
-            this.materialTextBox19.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox19.Multiline = false;
-            this.materialTextBox19.Name = "materialTextBox19";
-            this.materialTextBox19.Size = new System.Drawing.Size(194, 36);
-            this.materialTextBox19.TabIndex = 69;
-            this.materialTextBox19.Text = "";
-            this.materialTextBox19.TrailingIcon = null;
-            this.materialTextBox19.UseTallSize = false;
-            // 
-            // materialTextBox20
-            // 
-            this.materialTextBox20.AnimateReadOnly = false;
-            this.materialTextBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox20.Depth = 0;
-            this.materialTextBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox20.LeadingIcon = null;
-            this.materialTextBox20.Location = new System.Drawing.Point(1386, 493);
-            this.materialTextBox20.MaxLength = 50;
-            this.materialTextBox20.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox20.Multiline = false;
-            this.materialTextBox20.Name = "materialTextBox20";
-            this.materialTextBox20.Size = new System.Drawing.Size(133, 36);
-            this.materialTextBox20.TabIndex = 70;
-            this.materialTextBox20.Text = "";
-            this.materialTextBox20.TrailingIcon = null;
-            this.materialTextBox20.UseTallSize = false;
-            // 
-            // materialTextBox21
-            // 
-            this.materialTextBox21.AnimateReadOnly = false;
-            this.materialTextBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox21.Depth = 0;
-            this.materialTextBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox21.LeadingIcon = null;
-            this.materialTextBox21.Location = new System.Drawing.Point(1337, 547);
-            this.materialTextBox21.MaxLength = 50;
-            this.materialTextBox21.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox21.Multiline = false;
-            this.materialTextBox21.Name = "materialTextBox21";
-            this.materialTextBox21.Size = new System.Drawing.Size(182, 36);
-            this.materialTextBox21.TabIndex = 71;
-            this.materialTextBox21.Text = "";
-            this.materialTextBox21.TrailingIcon = null;
-            this.materialTextBox21.UseTallSize = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(1079, 257);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 72;
-            // 
-            // materialListView1
-            // 
-            this.materialListView1.AutoSizeTable = false;
-            this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialListView1.Depth = 0;
-            this.materialListView1.FullRowSelect = true;
-            this.materialListView1.HideSelection = false;
-            this.materialListView1.Location = new System.Drawing.Point(17, 592);
-            this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
-            this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialListView1.Name = "materialListView1";
-            this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(1502, 143);
-            this.materialListView1.TabIndex = 73;
-            this.materialListView1.UseCompatibleStateImageBehavior = false;
-            this.materialListView1.View = System.Windows.Forms.View.Details;
-            // 
-            // materialRadioButton17
-            // 
-            this.materialRadioButton17.AutoSize = true;
-            this.materialRadioButton17.Depth = 0;
-            this.materialRadioButton17.Location = new System.Drawing.Point(969, 196);
-            this.materialRadioButton17.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton17.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton17.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton17.Name = "materialRadioButton17";
-            this.materialRadioButton17.Ripple = true;
-            this.materialRadioButton17.Size = new System.Drawing.Size(55, 37);
-            this.materialRadioButton17.TabIndex = 75;
-            this.materialRadioButton17.TabStop = true;
-            this.materialRadioButton17.Text = "No";
-            this.materialRadioButton17.UseVisualStyleBackColor = true;
-            // 
-            // materialRadioButton18
-            // 
-            this.materialRadioButton18.AutoSize = true;
-            this.materialRadioButton18.Depth = 0;
-            this.materialRadioButton18.Location = new System.Drawing.Point(922, 196);
-            this.materialRadioButton18.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton18.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton18.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton18.Name = "materialRadioButton18";
-            this.materialRadioButton18.Ripple = true;
-            this.materialRadioButton18.Size = new System.Drawing.Size(49, 37);
-            this.materialRadioButton18.TabIndex = 74;
-            this.materialRadioButton18.TabStop = true;
-            this.materialRadioButton18.Text = "Si";
-            this.materialRadioButton18.UseVisualStyleBackColor = true;
-            // 
-            // materialRadioButton13
-            // 
-            this.materialRadioButton13.AutoSize = true;
-            this.materialRadioButton13.Depth = 0;
-            this.materialRadioButton13.Location = new System.Drawing.Point(993, 271);
-            this.materialRadioButton13.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton13.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton13.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton13.Name = "materialRadioButton13";
-            this.materialRadioButton13.Ripple = true;
-            this.materialRadioButton13.Size = new System.Drawing.Size(55, 37);
-            this.materialRadioButton13.TabIndex = 77;
-            this.materialRadioButton13.TabStop = true;
-            this.materialRadioButton13.Text = "No";
-            this.materialRadioButton13.UseVisualStyleBackColor = true;
-            // 
-            // materialRadioButton14
-            // 
-            this.materialRadioButton14.AutoSize = true;
-            this.materialRadioButton14.Depth = 0;
-            this.materialRadioButton14.Location = new System.Drawing.Point(946, 271);
-            this.materialRadioButton14.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton14.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton14.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton14.Name = "materialRadioButton14";
-            this.materialRadioButton14.Ripple = true;
-            this.materialRadioButton14.Size = new System.Drawing.Size(49, 37);
-            this.materialRadioButton14.TabIndex = 76;
-            this.materialRadioButton14.TabStop = true;
-            this.materialRadioButton14.Text = "Si";
-            this.materialRadioButton14.UseVisualStyleBackColor = true;
-            // 
-            // materialButton2
-            // 
-            this.materialButton2.AutoSize = false;
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(1354, 197);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(158, 36);
-            this.materialButton2.TabIndex = 78;
-            this.materialButton2.Text = "Guardar";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = false;
-            this.materialButton2.UseVisualStyleBackColor = true;
-            // 
-            // materialButton3
-            // 
-            this.materialButton3.AutoSize = false;
-            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton3.Depth = 0;
-            this.materialButton3.HighEmphasis = true;
-            this.materialButton3.Icon = null;
-            this.materialButton3.Location = new System.Drawing.Point(1354, 283);
-            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton3.Name = "materialButton3";
-            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton3.Size = new System.Drawing.Size(158, 36);
-            this.materialButton3.TabIndex = 79;
-            this.materialButton3.Text = "Cancelar";
-            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton3.UseAccentColor = false;
-            this.materialButton3.UseVisualStyleBackColor = true;
-            // 
-            // materialButton4
-            // 
-            this.materialButton4.AutoSize = false;
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(1354, 241);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(158, 36);
-            this.materialButton4.TabIndex = 80;
-            this.materialButton4.Text = "Modificar";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseVisualStyleBackColor = true;
-            // 
-            // materialButton5
-            // 
-            this.materialButton5.AutoSize = false;
-            this.materialButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton5.Depth = 0;
-            this.materialButton5.HighEmphasis = true;
-            this.materialButton5.Icon = null;
-            this.materialButton5.Location = new System.Drawing.Point(1354, 92);
-            this.materialButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton5.Name = "materialButton5";
-            this.materialButton5.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton5.Size = new System.Drawing.Size(158, 36);
-            this.materialButton5.TabIndex = 81;
-            this.materialButton5.Text = "Eliminar";
-            this.materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton5.UseAccentColor = false;
-            this.materialButton5.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.materialLabel25);
+            this.groupBox1.Controls.Add(this.materialRadioButton1);
+            this.groupBox1.Controls.Add(this.materialRadioButton2);
+            this.groupBox1.Location = new System.Drawing.Point(24, 189);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(224, 54);
+            this.groupBox1.TabIndex = 82;
+            this.groupBox1.TabStop = false;
             // 
             // Maestro_Articulos
             // 
@@ -1369,6 +1380,8 @@ namespace PruebaUIs
             this.Load += new System.EventHandler(this.Maestro_Articulos_Load);
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1452,5 +1465,6 @@ namespace PruebaUIs
         private MaterialSkin.Controls.MaterialButton materialButton4;
         private MaterialSkin.Controls.MaterialButton materialButton3;
         private MaterialSkin.Controls.MaterialButton materialButton2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

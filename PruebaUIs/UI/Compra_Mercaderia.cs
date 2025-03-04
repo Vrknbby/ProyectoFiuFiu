@@ -11,16 +11,17 @@ using System.Windows.Forms;
 
 namespace PruebaUIs
 {
-    public partial class Alamacenes : MaterialForm
+    public partial class Compra_Mercaderia : MaterialForm
     {
-        public Alamacenes()
+        public Compra_Mercaderia()
         {
             InitializeComponent();
         }
 
-        private void Alamacenes_Load(object sender, EventArgs e)
+        private void Compra_Mercaderia_Load(object sender, EventArgs e)
         {
 
         }
+
     }
 }
