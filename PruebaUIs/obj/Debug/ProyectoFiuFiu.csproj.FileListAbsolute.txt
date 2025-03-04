@@ -167,3 +167,4 @@ C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuF
 C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Region_Fisica.resources
 C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Vendedores.resources
 >>>>>>> Andre
+C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.UI.AlmacenUI.resources

@@ -14,6 +14,8 @@ using PruebaUIs.Repository;
 using PruebaUIs.Model;
 using PruebaUIs.Variables;
 using PruebaUIs.UI;
+using PruebaUIs.Model.Parametros;
+using PruebaUIs.Repository.Parametros;
 
 namespace PruebaUIs
 {
@@ -21,7 +23,7 @@ namespace PruebaUIs
     {
         private Proveedor proveedorSelect = null;
         private ProveedorRepository proveedorRepository = new ProveedorRepository();
-
+        private PersonaRepository personaRepository = new PersonaRepository();
         public Provedor()
         {
             InitializeComponent();
@@ -37,6 +39,7 @@ namespace PruebaUIs
                 Accent.Indigo700,
                 TextShade.WHITE);
             CargarProveedores();
+            CargarPersonas();
         }
 
         private void Provedor_Load(object sender, EventArgs e)
@@ -47,7 +50,15 @@ namespace PruebaUIs
 
             }
         }
+        private void CargarPersonas()
+        {
+            var personas = personaRepository.BuscarTodasLasPersonas();
+            personas.Insert(0, new Personas { COD_PER = "", DES_PER = "-- Seleccionar --" });
 
+            cboPersona.DataSource = personas;
+            cboPersona.DisplayMember = "DES_PER";
+            cboPersona.ValueMember = "COD_PER";
+        }
         private void CargarProveedores()
         {
             try
@@ -131,10 +142,17 @@ namespace PruebaUIs
 
         private void GuardarProveedorBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(codPersonaTxt.Text) ||
+            if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+            {
+                MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.",
+                                "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(cboPersona.Text) ||
                 string.IsNullOrWhiteSpace(compraMinimaProveedorTxt.Text) ||
                 string.IsNullOrWhiteSpace(tiempoAtencionProveedorTxt.Text) ||
-                (!siProveedorRbtn.Checked && !noProveedorRbtn.Checked))
+                (!siProveedorRbtn.Checked && !noProveedorRbtn.Checked) ||
+                cboPersona.SelectedIndex <= 0)
             {
                 MessageBox.Show("Complete todos los campos obligatorios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -151,7 +169,7 @@ namespace PruebaUIs
                 flg = false;
             }
             Proveedor proveedor = new Proveedor(GenerarCodigoProveedor(),
-                codPersonaTxt.Text, 
+                cboPersona.SelectedValue.ToString(), 
                 flg,
                 int.Parse(tiempoAtencionProveedorTxt.Text.ToString()),
                 int.Parse(compraMinimaProveedorTxt.Text.ToString()),
@@ -200,7 +218,7 @@ namespace PruebaUIs
                     {
 
                         codProveedorTxt.Text = proveedorSelect.COD_PRV;
-                        codPersonaTxt.Text = proveedorSelect.COD_PER;
+                        cboPersona.SelectedValue = proveedorSelect.COD_PER;
                         codUserTxt.Text = proveedorSelect.COD_USER;
                         compraMinimaProveedorTxt.Text = proveedorSelect.VAL_CMN_UMO.ToString();
                         tiempoAtencionProveedorTxt.Text = proveedorSelect.VAL_TIE_ATC.ToString();
@@ -216,8 +234,9 @@ namespace PruebaUIs
                             siProveedorRbtn.Checked = false;
                         }
                         fechaCreaModAnuTxt.Value = proveedorSelect.FEC_ABM;
+                        cboPersona.Refresh();
+                        Application.DoEvents();
 
-                        codPersonaTxt.Enabled = false;
                         modificarProveedorBtn.Enabled = true;
                         GuardarProveedorBtn.Enabled = false;
                     }
@@ -231,9 +250,12 @@ namespace PruebaUIs
         private void Limpiar()
         {
             codProveedorTxt.Text = "";
-            codUserTxt.Text = Global.UsuarioSesion.COD_USER;
-            codPersonaTxt.Enabled = true;
-            codPersonaTxt.Text = "";
+            if (Global.UsuarioSesion != null && !string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+                codUserTxt.Text = Global.UsuarioSesion.COD_USER;
+            else
+                codUserTxt.Text = ""; cboPersona.SelectedIndex = 0; cboPersona.SelectedIndex = 0;
+
+            cboPersona.Refresh();
             tiempoAtencionProveedorTxt.Text = "";
             compraMinimaProveedorTxt.Text = "";
             siProveedorRbtn.Checked = false;
@@ -251,8 +273,16 @@ namespace PruebaUIs
 
         private void modificarProveedorBtn_Click(object sender, EventArgs e)
         {
+            if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+            {
+                MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.",
+                                "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             DateTime fechaActual = DateTime.Now;
             proveedorSelect.COD_USER = Global.UsuarioSesion.COD_USER;
+            proveedorSelect.COD_PER = cboPersona.SelectedValue.ToString();
+
             if (siProveedorRbtn.Checked)
             {
                 proveedorSelect.FLG_INH_MOV = true;
@@ -275,7 +305,13 @@ namespace PruebaUIs
 
         private void eliminarProveedorBtn_Click(object sender, EventArgs e)
         {
-            if(proveedorSelect == null)
+            if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+            {
+                MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.",
+                                "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (proveedorSelect == null)
             {
                 MessageBox.Show("Seleccione un proveedor para eliminar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

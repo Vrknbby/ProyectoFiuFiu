@@ -40,19 +40,20 @@ namespace PruebaUIs
             this.rbtInhabilitadoNo = new MaterialSkin.Controls.MaterialRadioButton();
             this.rbtInhabilitadoSi = new MaterialSkin.Controls.MaterialRadioButton();
             this.codUserTxt = new MaterialSkin.Controls.MaterialTextBox();
-            this.codPersonaTxt = new MaterialSkin.Controls.MaterialTextBox();
             this.codVendedorTxt = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.cboPersona = new MaterialSkin.Controls.MaterialComboBox();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.cboPersona);
             this.materialCard1.Controls.Add(this.buscarBtn);
             this.materialCard1.Controls.Add(this.tblVendedores);
             this.materialCard1.Controls.Add(this.eliminarBtn);
@@ -63,7 +64,6 @@ namespace PruebaUIs
             this.materialCard1.Controls.Add(this.rbtInhabilitadoNo);
             this.materialCard1.Controls.Add(this.rbtInhabilitadoSi);
             this.materialCard1.Controls.Add(this.codUserTxt);
-            this.materialCard1.Controls.Add(this.codPersonaTxt);
             this.materialCard1.Controls.Add(this.codVendedorTxt);
             this.materialCard1.Controls.Add(this.materialLabel5);
             this.materialCard1.Controls.Add(this.materialLabel4);
@@ -254,7 +254,7 @@ namespace PruebaUIs
             this.codUserTxt.Enabled = false;
             this.codUserTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.codUserTxt.LeadingIcon = null;
-            this.codUserTxt.Location = new System.Drawing.Point(152, 77);
+            this.codUserTxt.Location = new System.Drawing.Point(165, 77);
             this.codUserTxt.MaxLength = 50;
             this.codUserTxt.MouseState = MaterialSkin.MouseState.OUT;
             this.codUserTxt.Multiline = false;
@@ -264,24 +264,6 @@ namespace PruebaUIs
             this.codUserTxt.Text = "";
             this.codUserTxt.TrailingIcon = null;
             this.codUserTxt.UseTallSize = false;
-            // 
-            // codPersonaTxt
-            // 
-            this.codPersonaTxt.AnimateReadOnly = false;
-            this.codPersonaTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.codPersonaTxt.Depth = 0;
-            this.codPersonaTxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.codPersonaTxt.LeadingIcon = null;
-            this.codPersonaTxt.Location = new System.Drawing.Point(152, 138);
-            this.codPersonaTxt.MaxLength = 50;
-            this.codPersonaTxt.MouseState = MaterialSkin.MouseState.OUT;
-            this.codPersonaTxt.Multiline = false;
-            this.codPersonaTxt.Name = "codPersonaTxt";
-            this.codPersonaTxt.Size = new System.Drawing.Size(222, 36);
-            this.codPersonaTxt.TabIndex = 6;
-            this.codPersonaTxt.Text = "";
-            this.codPersonaTxt.TrailingIcon = null;
-            this.codPersonaTxt.UseTallSize = false;
             // 
             // codVendedorTxt
             // 
@@ -296,7 +278,7 @@ namespace PruebaUIs
             this.codVendedorTxt.MouseState = MaterialSkin.MouseState.OUT;
             this.codVendedorTxt.Multiline = false;
             this.codVendedorTxt.Name = "codVendedorTxt";
-            this.codVendedorTxt.Size = new System.Drawing.Size(209, 36);
+            this.codVendedorTxt.Size = new System.Drawing.Size(222, 36);
             this.codVendedorTxt.TabIndex = 5;
             this.codVendedorTxt.Text = "";
             this.codVendedorTxt.TrailingIcon = null;
@@ -346,9 +328,9 @@ namespace PruebaUIs
             this.materialLabel2.Location = new System.Drawing.Point(20, 143);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(113, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(63, 19);
             this.materialLabel2.TabIndex = 1;
-            this.materialLabel2.Text = "Codigo Persona";
+            this.materialLabel2.Text = "Persona:";
             // 
             // materialLabel1
             // 
@@ -361,6 +343,28 @@ namespace PruebaUIs
             this.materialLabel1.Size = new System.Drawing.Size(122, 19);
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Codigo Vendedor";
+            // 
+            // cboPersona
+            // 
+            this.cboPersona.AutoResize = false;
+            this.cboPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cboPersona.Depth = 0;
+            this.cboPersona.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboPersona.DropDownHeight = 174;
+            this.cboPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPersona.DropDownWidth = 121;
+            this.cboPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cboPersona.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cboPersona.FormattingEnabled = true;
+            this.cboPersona.IntegralHeight = false;
+            this.cboPersona.ItemHeight = 43;
+            this.cboPersona.Location = new System.Drawing.Point(152, 139);
+            this.cboPersona.MaxDropDownItems = 4;
+            this.cboPersona.MouseState = MaterialSkin.MouseState.OUT;
+            this.cboPersona.Name = "cboPersona";
+            this.cboPersona.Size = new System.Drawing.Size(259, 49);
+            this.cboPersona.StartIndex = 0;
+            this.cboPersona.TabIndex = 50;
             // 
             // Vendedores
             // 
@@ -389,7 +393,6 @@ namespace PruebaUIs
         private MaterialSkin.Controls.MaterialRadioButton rbtInhabilitadoNo;
         private MaterialSkin.Controls.MaterialRadioButton rbtInhabilitadoSi;
         private MaterialSkin.Controls.MaterialTextBox codUserTxt;
-        private MaterialSkin.Controls.MaterialTextBox codPersonaTxt;
         private MaterialSkin.Controls.MaterialTextBox codVendedorTxt;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
@@ -397,5 +400,6 @@ namespace PruebaUIs
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialButton buscarBtn;
+        private MaterialSkin.Controls.MaterialComboBox cboPersona;
     }
 }

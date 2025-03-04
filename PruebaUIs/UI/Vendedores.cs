@@ -19,6 +19,8 @@ namespace PruebaUIs
     {
         private Vendedor vendedorSelect = null;
         private VendedorRepository vendedorRepository = new VendedorRepository();
+        private PersonaRepository personaRepository = new PersonaRepository();
+
         public Vendedores()
         {
             InitializeComponent();
@@ -32,6 +34,17 @@ namespace PruebaUIs
 
             }
             CargarVendedores();
+            CargarPersonas();
+
+        }
+        private void CargarPersonas()
+        {
+            var personas = personaRepository.BuscarTodasLasPersonas();
+            personas.Insert(0, new Personas { COD_PER = "", DES_PER = "-- Seleccionar --" });
+
+            cboPersona.DataSource = personas;
+            cboPersona.DisplayMember = "DES_PER";
+            cboPersona.ValueMember = "COD_PER";
         }
 
         private void CargarVendedores()
@@ -68,7 +81,7 @@ namespace PruebaUIs
             }
         }
 
-        public string GenerarCodigoProveedor()
+        public string GenerarCodigoVendedor()
         {
             List<Vendedor> vendedores = vendedorRepository.BuscarTodosLosVendedores();
             string ultimoCodigo = vendedores.OrderByDescending(p => p.COD_VEN).Select(p => p.COD_VEN).FirstOrDefault();
@@ -93,7 +106,13 @@ namespace PruebaUIs
 
         private void guardarBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(codPersonaTxt.Text) ||
+            if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+            {
+                MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.",
+                                "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (cboPersona.SelectedIndex <= 0 ||
                 (!rbtInhabilitadoNo.Checked && !rbtInhabilitadoSi.Checked))
             {
                 MessageBox.Show("Complete todos los campos obligatorios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -110,8 +129,8 @@ namespace PruebaUIs
             {
                 flg = false;
             }
-            Vendedor proveedor = new Vendedor(GenerarCodigoProveedor(),
-                codPersonaTxt.Text,
+            Vendedor proveedor = new Vendedor(GenerarCodigoVendedor(),
+                cboPersona.SelectedValue.ToString(),
                 flg,
                 codUserTxt.Text,
                 fechaActual);
@@ -122,6 +141,7 @@ namespace PruebaUIs
 
         private void buscarBtn_Click(object sender, EventArgs e)
         {
+
             CuadroDialogo input = new CuadroDialogo("Ingrese el código del vendedor a buscar", "Buscar Vendedor");
             if (input.ShowDialog() == DialogResult.OK)
             {
@@ -176,7 +196,7 @@ namespace PruebaUIs
                     {
 
                         codVendedorTxt.Text = vendedorSelect.COD_VEN;
-                        codPersonaTxt.Text = vendedorSelect.COD_PER;
+                        cboPersona.SelectedValue = vendedorSelect.COD_PER;
                         codUserTxt.Text = vendedorSelect.COD_USER;
 
                         if (vendedorSelect.FLG_INH_MOV == true)
@@ -191,7 +211,8 @@ namespace PruebaUIs
                         }
                         fechaCreaModAnuTxt.Value = vendedorSelect.FEC_ABM;
 
-                        codPersonaTxt.Enabled = false;
+                        cboPersona.Refresh();
+                        Application.DoEvents();
                         modificarBtn.Enabled = true;
                         guardarBtn.Enabled = false;
                     }
@@ -207,10 +228,11 @@ namespace PruebaUIs
         private void Limpiar()
         {
             codVendedorTxt.Text = "";
-            codUserTxt.Text = Global.UsuarioSesion.COD_USER;
-            codPersonaTxt.Enabled = true;
-            codPersonaTxt.Text = "";
-
+            if (Global.UsuarioSesion != null && !string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+                codUserTxt.Text = Global.UsuarioSesion.COD_USER;
+            else
+                codUserTxt.Text = ""; cboPersona.SelectedIndex = 0;
+            cboPersona.Refresh();
             rbtInhabilitadoSi.Checked = false;
             rbtInhabilitadoNo.Checked = false;
             fechaCreaModAnuTxt.Value = DateTime.Now;
@@ -227,8 +249,16 @@ namespace PruebaUIs
 
         private void modificarBtn_Click(object sender, EventArgs e)
         {
+            if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+            {
+                MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.",
+                                "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             DateTime fechaActual = DateTime.Now;
             vendedorSelect.COD_USER = Global.UsuarioSesion.COD_USER;
+            vendedorSelect.COD_PER = cboPersona.SelectedValue.ToString();
+
             if (rbtInhabilitadoSi.Checked)
             {
                 vendedorSelect.FLG_INH_MOV = true;
@@ -248,6 +278,12 @@ namespace PruebaUIs
 
         private void eliminarBtn_Click(object sender, EventArgs e)
         {
+            if (Global.UsuarioSesion == null || string.IsNullOrWhiteSpace(Global.UsuarioSesion.COD_USER))
+            {
+                MessageBox.Show("El usuario ADMIN solo permite el registro de Usuarios.",
+                                "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (vendedorSelect == null)
             {
                 MessageBox.Show("Seleccione un vendedor para eliminar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
