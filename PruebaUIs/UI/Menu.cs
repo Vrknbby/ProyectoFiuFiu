@@ -182,13 +182,7 @@ namespace PruebaUIs
             }
         }
 
-        private void btnDetalleCompra_Click(object sender, EventArgs e)
-        {
-            Detalle_Compra nuevoform = new Detalle_Compra();
-            nuevoform.Show();
-            nuevoform.FormClosed += (s, args) => this.Show();
-            this.Hide();
-        }
+        
 
         private void btnRegionFisica_Click(object sender, EventArgs e)
         {

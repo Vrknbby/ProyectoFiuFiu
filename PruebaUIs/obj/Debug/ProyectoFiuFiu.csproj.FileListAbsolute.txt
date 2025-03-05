@@ -169,3 +169,6 @@ C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuF
 >>>>>>> Andre
 C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.UI.AlmacenUI.resources
 C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Cabecera_Canje.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Compra_Mercaderia.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Detalle_Canje.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Orden_Compra.resources
