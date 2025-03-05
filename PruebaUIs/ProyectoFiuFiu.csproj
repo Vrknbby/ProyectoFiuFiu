@@ -50,10 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repository\Parametros\ArticuloRepository.cs" />
     <Compile Include="Repository\Parametros\ClienteRepository.cs" />
     <Compile Include="Repository\Parametros\AlmacenRepository.cs" />
     <Compile Include="Repository\Parametros\FabricanteRepository.cs" />
     <Compile Include="Repository\Parametros\FamiliaArticuloRepository.cs" />
+    <Compile Include="Repository\Parametros\LoteArticulosRepository.cs" />
     <Compile Include="Repository\Parametros\MarcasArtRepository.cs" />
     <Compile Include="Repository\Parametros\PersonaRepository.cs" />
     <Compile Include="Repository\Parametros\SegmentosComercialesRepository.cs" />
