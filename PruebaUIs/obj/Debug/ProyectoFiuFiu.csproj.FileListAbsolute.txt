@@ -168,3 +168,14 @@ C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuF
 C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Vendedores.resources
 >>>>>>> Andre
 C:\Users\Andre\Desktop\IDAT\SextoCiclo\ProyectoDesarrolloSoftwareII\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.UI.AlmacenUI.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Detalle_Canje.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Cabecera_Canje.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Cabecera_Compra.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Creacion_Orden_Compra.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Cierre_Orden_Compra.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Compra_Mercaderia.resources
+C:\Users\ragna\Desktop\Carpetas de la Carrera\6to Ciclo\Proyecto Desarrollo de Software 2\Semana6-FiuFiu\fiufiu2\ProyectoFiuFiu\PruebaUIs\obj\Debug\PruebaUIs.Orden_Compra.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Compra_Mercaderia.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Orden_Compra.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Detalle_Canje.resources
+C:\Users\USUARIO\Desktop\PROYECTO FIU FIU\PruebaUIs\PruebaUIs\obj\Debug\PruebaUIs.Cabecera_Canje.resources
