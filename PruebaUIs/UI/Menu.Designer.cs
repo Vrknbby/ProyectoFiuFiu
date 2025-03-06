@@ -55,9 +55,8 @@ namespace PruebaUIs
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            this.btnMercancia = new MaterialSkin.Controls.MaterialButton();
+            this.btnOrdenCompra = new MaterialSkin.Controls.MaterialButton();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.labelGestiondeCompras = new MaterialSkin.Controls.MaterialLabel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -534,9 +533,8 @@ namespace PruebaUIs
             this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard3.Controls.Add(this.materialButton6);
             this.materialCard3.Controls.Add(this.materialButton5);
-            this.materialCard3.Controls.Add(this.materialButton4);
-            this.materialCard3.Controls.Add(this.materialButton3);
-            this.materialCard3.Controls.Add(this.materialButton2);
+            this.materialCard3.Controls.Add(this.btnMercancia);
+            this.materialCard3.Controls.Add(this.btnOrdenCompra);
             this.materialCard3.Controls.Add(this.materialDivider1);
             this.materialCard3.Controls.Add(this.labelGestiondeCompras);
             this.materialCard3.Depth = 0;
@@ -557,7 +555,7 @@ namespace PruebaUIs
             this.materialButton6.Depth = 0;
             this.materialButton6.HighEmphasis = true;
             this.materialButton6.Icon = null;
-            this.materialButton6.Location = new System.Drawing.Point(28, 379);
+            this.materialButton6.Location = new System.Drawing.Point(37, 354);
             this.materialButton6.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton6.Name = "materialButton6";
@@ -577,7 +575,7 @@ namespace PruebaUIs
             this.materialButton5.Depth = 0;
             this.materialButton5.HighEmphasis = true;
             this.materialButton5.Icon = null;
-            this.materialButton5.Location = new System.Drawing.Point(28, 306);
+            this.materialButton5.Location = new System.Drawing.Point(37, 281);
             this.materialButton5.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton5.Name = "materialButton5";
@@ -589,65 +587,47 @@ namespace PruebaUIs
             this.materialButton5.UseAccentColor = false;
             this.materialButton5.UseVisualStyleBackColor = true;
             // 
-            // materialButton4
+            // btnMercancia
             // 
-            this.materialButton4.AutoSize = false;
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(28, 235);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(292, 36);
-            this.materialButton4.TabIndex = 194;
-            this.materialButton4.Text = "Compra de Mercancia";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseVisualStyleBackColor = true;
+            this.btnMercancia.AutoSize = false;
+            this.btnMercancia.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMercancia.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnMercancia.Depth = 0;
+            this.btnMercancia.HighEmphasis = true;
+            this.btnMercancia.Icon = null;
+            this.btnMercancia.Location = new System.Drawing.Point(37, 210);
+            this.btnMercancia.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.btnMercancia.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnMercancia.Name = "btnMercancia";
+            this.btnMercancia.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnMercancia.Size = new System.Drawing.Size(292, 36);
+            this.btnMercancia.TabIndex = 194;
+            this.btnMercancia.Text = "Compra de Mercancia";
+            this.btnMercancia.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnMercancia.UseAccentColor = false;
+            this.btnMercancia.UseVisualStyleBackColor = true;
+            this.btnMercancia.Click += new System.EventHandler(this.btnMercancia_Click);
             // 
-            // materialButton3
+            // btnOrdenCompra
             // 
-            this.materialButton3.AutoSize = false;
-            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton3.Depth = 0;
-            this.materialButton3.HighEmphasis = true;
-            this.materialButton3.Icon = null;
-            this.materialButton3.Location = new System.Drawing.Point(28, 167);
-            this.materialButton3.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton3.Name = "materialButton3";
-            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton3.Size = new System.Drawing.Size(292, 36);
-            this.materialButton3.TabIndex = 193;
-            this.materialButton3.Text = "Cierre de Orden de Compra";
-            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton3.UseAccentColor = false;
-            this.materialButton3.UseVisualStyleBackColor = true;
-            // 
-            // materialButton2
-            // 
-            this.materialButton2.AutoSize = false;
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(28, 101);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(292, 36);
-            this.materialButton2.TabIndex = 192;
-            this.materialButton2.Text = "Creacion de Orden de Compra";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = false;
-            this.materialButton2.UseVisualStyleBackColor = true;
+            this.btnOrdenCompra.AutoSize = false;
+            this.btnOrdenCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOrdenCompra.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnOrdenCompra.Depth = 0;
+            this.btnOrdenCompra.HighEmphasis = true;
+            this.btnOrdenCompra.Icon = null;
+            this.btnOrdenCompra.Location = new System.Drawing.Point(37, 142);
+            this.btnOrdenCompra.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.btnOrdenCompra.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOrdenCompra.Name = "btnOrdenCompra";
+            this.btnOrdenCompra.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnOrdenCompra.Size = new System.Drawing.Size(292, 36);
+            this.btnOrdenCompra.TabIndex = 193;
+            this.btnOrdenCompra.Text = "Orden de Compra";
+            this.btnOrdenCompra.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnOrdenCompra.UseAccentColor = false;
+            this.btnOrdenCompra.UseVisualStyleBackColor = true;
+            this.btnOrdenCompra.Click += new System.EventHandler(this.btnOrdenCompra_Click);
             // 
             // materialDivider1
             // 
@@ -891,7 +871,7 @@ namespace PruebaUIs
             this.materialLabel18.Location = new System.Drawing.Point(31, 384);
             this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel18.Name = "materialLabel18";
-            this.materialLabel18.Size = new System.Drawing.Size(194, 19);
+            this.materialLabel18.Size = new System.Drawing.Size(201, 19);
             this.materialLabel18.TabIndex = 11;
             this.materialLabel18.Text = "Notas de Credito por Venta\r\n";
             // 
@@ -1327,9 +1307,8 @@ namespace PruebaUIs
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private MaterialSkin.Controls.MaterialButton materialButton6;
         private MaterialSkin.Controls.MaterialButton materialButton5;
-        private MaterialSkin.Controls.MaterialButton materialButton4;
-        private MaterialSkin.Controls.MaterialButton materialButton3;
-        private MaterialSkin.Controls.MaterialButton materialButton2;
+        private MaterialSkin.Controls.MaterialButton btnMercancia;
+        private MaterialSkin.Controls.MaterialButton btnOrdenCompra;
     }
 }
 

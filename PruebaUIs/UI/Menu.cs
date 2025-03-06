@@ -304,5 +304,20 @@ namespace PruebaUIs
             this.Hide();
         }
 
+        private void btnOrdenCompra_Click(object sender, EventArgs e)
+        {
+            Orden_Compra nuevoform = new Orden_Compra();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
+
+        private void btnMercancia_Click(object sender, EventArgs e)
+        {
+            Compra_Mercaderia nuevoform = new Compra_Mercaderia();
+            nuevoform.FormClosed += (s, args) => this.Show();
+            nuevoform.Show();
+            this.Hide();
+        }
     }
 }
